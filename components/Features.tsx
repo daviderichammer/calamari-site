@@ -3,25 +3,41 @@ export default function Features() {
   const features = [
     {
       icon: "🖥️",
-      title: "Dedicated Windows VPS",
-      desc: "Your own isolated Windows environment — always-on, managed, and monitored. No shared resources, no noisy neighbors. We handle the infrastructure so you never have to think about it.",
+      title: "Layer 1: Managed Windows VPS",
+      desc: "Your own isolated Windows environment — always-on, managed, and monitored. Up to 7 MT4/MT5 instances, any blend. No shared resources, no noisy neighbors. We handle the infrastructure so you never have to think about it.",
       tags: ["Windows Server", "Always-on", "Fully managed"],
       color: "from-blue-500/20 to-transparent",
       borderColor: "hover:border-blue-500/40",
     },
     {
       icon: "📡",
-      title: "FX Blue Trade Copying",
-      desc: "We use FX Blue Personal Trade Copier — free, proven, and millisecond-level execution. It runs as an EA directly inside MT4/MT5, no API latency, no external dependencies. Sender and receiver on the same VM means essentially zero-latency local copying. We configure and manage it for you.",
-      tags: ["FX Blue", "Platform-level", "Millisecond execution"],
+      title: "Layer 2: FX Blue Trade Copying",
+      desc: "FX Blue Personal Trade Copier — millisecond-level execution, intra-VM. It runs as an EA directly inside MT4/MT5, no API latency, no external dependencies. Sender and receiver on the same VM means essentially zero-latency local copying. We configure and manage it for you.",
+      tags: ["FX Blue", "Millisecond execution", "Intra-VM"],
       color: "from-cyan-500/20 to-transparent",
       borderColor: "hover:border-cyan-500/40",
     },
     {
+      icon: "⚖️",
+      title: "Layer 3: Intelligent Sizing & Filtering",
+      desc: "Per-account rules via FX Blue copier receiver filter: lot scaling based on account size and risk%, symbol blocking, max lot limits. Each receiving account gets its own configuration — sized correctly, filtered correctly.",
+      tags: ["Lot scaling", "Symbol filters", "Per-account rules"],
+      color: "from-yellow-500/20 to-transparent",
+      borderColor: "hover:border-yellow-500/40",
+    },
+    {
+      icon: "🛡️",
+      title: "Layer 4: Monitor & Protect",
+      desc: "Drawdown alerts, daily loss limits, prop firm compliance tracking. If MT5 crashes, the watchdog restarts it automatically. Your accounts never go unmonitored — not at 3am, not on weekends, not ever.",
+      tags: ["Drawdown alerts", "Loss limits", "Auto-restart"],
+      color: "from-red-500/20 to-transparent",
+      borderColor: "hover:border-red-500/40",
+    },
+    {
       icon: "📊",
-      title: "Real-Time Dashboard",
-      desc: "One screen. Every account. See balances, open positions, P&L, and account health across all your prop firms in real time. Full analytics, no tab-switching, no logging into six different portals.",
-      tags: ["Real-time", "Full analytics", "All firms"],
+      title: "Layer 5: Full Visibility Dashboard",
+      desc: "Built-in dashboard replaces fxmonitor/fxmon — no extra EA needed. One screen. Every account. See balances, open positions, P&L, and account health across all your prop firms in real time. Full analytics, no tab-switching.",
+      tags: ["Real-time", "Replaces fxmonitor", "No extra EA"],
       color: "from-green-500/20 to-transparent",
       borderColor: "hover:border-green-500/40",
     },
@@ -34,28 +50,12 @@ export default function Features() {
       borderColor: "hover:border-orange-500/40",
     },
     {
-      icon: "🛡️",
-      title: "24/7 Watchdog Recovery",
-      desc: "If MT5 crashes, the watchdog restarts it automatically. If the VPS goes down, we alert you immediately. Your accounts never go unmonitored — not at 3am, not on weekends, not ever.",
-      tags: ["Auto-restart", "Instant alerts", "Zero babysitting"],
-      color: "from-red-500/20 to-transparent",
-      borderColor: "hover:border-red-500/40",
-    },
-    {
       icon: "🦑",
       title: "Tentacle Agent",
       desc: "Our lightweight agent runs on your VPS and connects it to the Calamari network. It enables remote management, trade data streaming, and signal execution — all encrypted. The nervous system of the whole operation.",
       tags: ["Encrypted", "Lightweight", "Auto-reconnect"],
       color: "from-purple-500/20 to-transparent",
       borderColor: "hover:border-purple-500/40",
-    },
-    {
-      icon: "📱",
-      title: "Calamari App — Coming Soon",
-      desc: "Full mobile access to your dashboard, positions, and alerts. Everything you can do on the web, from your pocket. Built for traders who need to stay connected without being chained to a desk.",
-      tags: ["iOS & Android", "Coming soon", "Full dashboard"],
-      color: "from-pink-500/20 to-transparent",
-      borderColor: "hover:border-pink-500/40",
     },
     {
       icon: "🏢",
@@ -78,16 +78,15 @@ export default function Features() {
         {/* Header */}
         <div className="text-center mb-10 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-blue/10 border border-brand-blue/30 text-brand-cyan text-sm font-medium mb-6">
-            Everything you need
+            The infrastructure stack
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6">
-            Built by traders.
+            You bring the alpha.
             <br />
-            <span className="gradient-text">Trusted with our own money.</span>
+            <span className="gradient-text">We handle the machine.</span>
           </h2>
           <p className="text-base sm:text-lg text-brand-text max-w-2xl mx-auto px-2">
-            Every feature was built because we needed it ourselves. We run our own prop accounts on this platform every day.
-            No bloat. No fluff. Just the tools that actually matter.
+            Alpha is what separates you from a coin flip. Your read on the market. Your timing. Your entries. Every feature below exists so you can focus on that — and nothing else.
           </p>
         </div>
         {/* Features grid — 1 col mobile, 2 col tablet, 4 col desktop */}

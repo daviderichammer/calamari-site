@@ -15,13 +15,12 @@ export default function Problem() {
             The problem
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6">
-            Running multiple prop accounts
+            You have the edge.
             <br />
-            <span className="text-red-400">is a full-time job.</span>
+            <span className="text-red-400">The infrastructure is killing you.</span>
           </h2>
           <p className="text-base sm:text-lg text-brand-text max-w-2xl mx-auto px-2">
-            You know the drill. Multiple VPS logins, multiple MT4/MT5 terminals, multiple prop firm portals.
-            And none of it talks to each other.
+            You know how to trade. You have your alpha — your edge, your strategy, the thing that makes you profitable. But you&apos;re spending more time managing infrastructure than actually trading. That&apos;s backwards.
           </p>
         </div>
         {/* Pain points */}
@@ -67,6 +66,21 @@ export default function Problem() {
               <p className="text-xs sm:text-sm text-brand-text leading-relaxed">{pain.desc}</p>
             </div>
           ))}
+        </div>
+        {/* Anti-Scam Callout */}
+        <div className="mt-10 sm:mt-16 max-w-4xl mx-auto p-6 sm:p-10 rounded-2xl border border-red-500/30 bg-red-500/5">
+          <h3 className="text-xl sm:text-2xl font-black text-brand-heading mb-4 text-center">
+            And then there&apos;s the other problem.
+          </h3>
+          <p className="text-sm sm:text-base text-brand-text leading-relaxed mb-4">
+            You search for a solution and you find a million services offering to trade your prop account for you, pass your challenge for you, or sell you a &quot;secret strategy&quot; for $99/month.
+          </p>
+          <p className="text-sm sm:text-base text-brand-text leading-relaxed mb-4">
+            <strong className="text-brand-heading">They are all scams — by definition.</strong> If they actually had real alpha — a genuine edge, a strategy that consistently beats the market — they would not sell it for any price anyone could afford. They&apos;d be trading it themselves, compounding it into a fund. The fact that they&apos;re selling it to you is proof it doesn&apos;t work.
+          </p>
+          <p className="text-sm sm:text-base text-brand-heading font-semibold leading-relaxed">
+            Calamari is fundamentally different. We are not selling you a strategy. We are helping traders monetize their OWN alpha — their own edge — with full transparency, by providing them a tool. You bring the edge. We handle the machine.
+          </p>
         </div>
         {/* Bottom line */}
         <div className="mt-10 sm:mt-16 max-w-3xl mx-auto text-center px-2">

@@ -40,7 +40,7 @@ export default function Story() {
                 It took months. We got it wrong a few times. But eventually we had something that worked — really worked.
               </p>
               <p>
-                The squid isn&apos;t just a logo. It&apos;s the metaphor that drove the architecture: ten tentacles reaching across all your accounts simultaneously, managing everything in parallel, while you stay focused on what matters — your edge. Squids are faster and more aggressive than octopuses — and that&apos;s exactly the kind of edge Calamari gives you.
+                The squid isn&apos;t just a logo. It&apos;s the metaphor that drove the architecture: ten tentacles reaching across all your accounts simultaneously, managing everything in parallel, while you stay focused on what matters — your edge, your alpha (the thing that separates you from a coin flip). Squids are faster and more aggressive than octopuses — and that&apos;s exactly the kind of edge Calamari gives you.
               </p>
               <p className="text-brand-heading font-semibold">
                 That&apos;s Calamari. Built by traders who were frustrated enough to build it themselves,
@@ -111,6 +111,18 @@ export default function Story() {
           </div>
         </div>
         {/* Quote */}
+        {/* What we are not */}
+        <div className="mt-16 sm:mt-24 p-6 sm:p-10 rounded-2xl border border-brand-border bg-brand-card max-w-4xl mx-auto">
+          <h3 className="text-2xl sm:text-3xl font-black mb-6 text-brand-heading text-center">What we are NOT</h3>
+          <ul className="space-y-4 text-brand-text text-sm sm:text-base">
+            <li className="flex items-center gap-3"><span className="text-red-500 font-bold">✕</span> We are NOT a signal service</li>
+            <li className="flex items-center gap-3"><span className="text-red-500 font-bold">✕</span> We are NOT a prop firm pass service</li>
+            <li className="flex items-center gap-3"><span className="text-red-500 font-bold">✕</span> We are NOT trading your account for you</li>
+            <li className="flex items-center gap-3"><span className="text-red-500 font-bold">✕</span> We are NOT selling you a strategy</li>
+            <li className="flex items-center gap-3 mt-6"><span className="text-green-500 font-bold">✓</span> <strong className="text-brand-heading">We ARE providing infrastructure and tools for traders who already have edge.</strong></li>
+          </ul>
+        </div>
+        
         <div className="mt-12 sm:mt-16 max-w-3xl mx-auto text-center px-2">
           <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 opacity-30">&ldquo;</div>
           <blockquote className="text-lg sm:text-xl lg:text-2xl font-medium text-brand-heading italic leading-relaxed">

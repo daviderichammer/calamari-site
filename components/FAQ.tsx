@@ -2,8 +2,16 @@
 import { useState } from "react";
 const faqs = [
   {
+    q: "Is Calamari a signal service or prop firm pass service?",
+    a: "No. We are not a signal service, and we are not trading your account for you. We are infrastructure. You bring your own strategy — your own alpha, meaning your own edge, your own read on the market, the thing that makes you profitable. We provide the machine that runs it across multiple accounts simultaneously. If you're looking for someone to trade for you, we're not that. If you already know how to trade and want to scale it efficiently, that's exactly what we built this for.",
+  },
+  {
     q: "Will this get my prop firm account banned?",
     a: "No. Calamari runs on a dedicated VPS — your own isolated Windows environment. From the prop firm's perspective, it looks exactly like a normal trader running MT4/MT5 on a VPS. We don't inject into the platform or modify its behavior in any way that would violate terms of service. Thousands of traders use VPS hosting for their prop accounts — that's completely standard practice.",
+  },
+  {
+    q: "Can Calamari see my strategy or copy my trades to other accounts?",
+    a: "No, and we want to be crystal clear about this. We see executions — open trades, close trades, P&L — not your intent or strategy logic. We will never copy your trades to any other account. We will never share your trading data with anyone. Your prop firm accounts are safe from pattern-matching risk on our side. You can revoke access instantly at any time. We are traders ourselves running our own money on this same platform — we built the privacy guarantees we'd want for ourselves.",
   },
   {
     q: "How does the trade copying actually work?",
@@ -71,7 +79,7 @@ export default function FAQ() {
             <span className="gradient-text">actually ask.</span>
           </h2>
           <p className="text-base sm:text-lg text-brand-text">
-            We&apos;ve been asked all of these. Here are the real answers.
+            We&apos;ve been asked all of these. Here are the real answers — no marketing fluff.
           </p>
         </div>
         {/* FAQ accordion */}

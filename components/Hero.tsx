@@ -48,6 +48,17 @@ export default function Hero() {
         <p className="text-sm sm:text-base text-brand-text/70 max-w-2xl mx-auto mb-8 sm:mb-10 animate-fade-in-up px-2" style={{ animationDelay: "0.2s" }}>
           We built this because nothing reliable existed. We run our own prop accounts on it every day. Now it&apos;s yours.
         </p>
+        
+        {/* Anti-Scam Positioning */}
+        <div className="max-w-3xl mx-auto mb-10 sm:mb-12 p-4 sm:p-6 rounded-2xl border border-red-500/30 bg-red-500/5 animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
+          <h3 className="text-xl sm:text-2xl font-black text-brand-heading mb-3">We don&apos;t trade for you. We don&apos;t sell signals. We don&apos;t have a &quot;secret strategy&quot; for $99/month.</h3>
+          <p className="text-sm sm:text-base text-brand-text leading-relaxed">
+            There are a million services offering to trade your prop account for you. They are all scams. If they actually had real alpha — your edge, your strategy, the thing that makes you profitable — they wouldn&apos;t sell it. They&apos;d trade it themselves.
+          </p>
+          <p className="text-sm sm:text-base text-brand-text leading-relaxed mt-2 font-semibold">
+            We built a machine. You bring YOUR edge, your entries, your alpha. We handle the infrastructure.
+          </p>
+        </div>
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-10 sm:mb-16 animate-fade-in-up px-4 sm:px-0" style={{ animationDelay: "0.3s" }}>
           <Link
