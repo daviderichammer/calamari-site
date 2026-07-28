@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
 import Solution from "@/components/Solution";
 import Features from "@/components/Features";
+import DashboardAnalytics from "@/components/DashboardAnalytics";
 import Pricing from "@/components/Pricing";
 import Story from "@/components/Story";
 import FAQ from "@/components/FAQ";
@@ -16,6 +17,7 @@ export default function Home() {
       <Problem />
       <Solution />
       <Features />
+      <DashboardAnalytics />
       <Pricing />
       <Story />
       <FAQ />

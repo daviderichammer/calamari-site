@@ -49,6 +49,12 @@ export default function Navbar() {
               Features
             </a>
             <a
+              href="#dashboard"
+              className="text-brand-text hover:text-brand-cyan transition-colors text-sm font-medium"
+            >
+              Dashboard
+            </a>
+            <a
               href="#pricing"
               className="text-brand-text hover:text-brand-heading transition-colors text-sm font-medium"
             >
@@ -121,6 +127,13 @@ export default function Navbar() {
               onClick={() => setMobileOpen(false)}
             >
               Features
+            </a>
+            <a
+              href="#dashboard"
+              className="block text-brand-text hover:text-brand-cyan transition-colors text-sm font-medium py-2"
+              onClick={() => setMobileOpen(false)}
+            >
+              Dashboard
             </a>
             <a
               href="#pricing"
