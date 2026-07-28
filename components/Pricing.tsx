@@ -69,7 +69,7 @@ export default function Pricing() {
                 "LiveView — see your MT5 screens from anywhere",
                 "24/7 Watchdog with auto-recovery",
                 "Tentacle agent for remote management",
-                "Works with any prop firm (FTMO, The5ers, FundedNext + more)",
+                "Works with any MT4/MT5 prop firm — no special integrations required",
               ].map((feature, j) => (
                 <div key={j} className="flex items-start gap-3 text-sm">
                   <svg

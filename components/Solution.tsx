@@ -64,10 +64,10 @@ export default function Solution() {
                   Active MT4/MT5 Instances
                 </div>
                 {[
-                  { name: "FTMO Challenge #1", firm: "FTMO", balance: "$12,450", pl: "+$340", status: "Running", positions: 3 },
-                  { name: "The5ers Phase 2", firm: "The5ers", balance: "$8,920", pl: "+$210", status: "Running", positions: 2 },
-                  { name: "FundedNext Eval", firm: "FundedNext", balance: "$24,100", pl: "+$580", status: "Running", positions: 5 },
-                  { name: "FTMO Funded", firm: "FTMO", balance: "$2,362", pl: "+$117", status: "Copying", positions: 2 },
+                  { name: "Prop Firm Challenge #1", firm: "Prop Firm A", balance: "$12,450", pl: "+$340", status: "Running", positions: 3 },
+                  { name: "Funded Account Phase 2", firm: "Prop Firm B", balance: "$8,920", pl: "+$210", status: "Running", positions: 2 },
+                  { name: "Evaluation Account", firm: "Prop Firm C", balance: "$24,100", pl: "+$580", status: "Running", positions: 5 },
+                  { name: "Funded Account #2", firm: "Prop Firm A", balance: "$2,362", pl: "+$117", status: "Copying", positions: 2 },
                 ].map((account, i) => (
                   <div
                     key={i}
@@ -124,7 +124,7 @@ export default function Solution() {
             {
               step: "Layer 5",
               title: "Full visibility",
-              desc: "Built-in dashboard replaces fxmonitor/fxmon — no extra EA needed.",
+              desc: "Built-in dashboard replaces third-party monitoring tools — no extra EA needed.",
             },
           ].map((step, i) => (
             <div key={i} className="relative text-center p-4 rounded-xl bg-brand-card/50 border border-brand-border">

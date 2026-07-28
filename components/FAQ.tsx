@@ -15,10 +15,10 @@ const faqs = [
   },
   {
     q: "How does the trade copying actually work?",
-    a: "We use FX Blue Personal Trade Copier — a free, proven EA that runs directly inside MT4/MT5. There's no external API, no cloud round-trip, no latency introduced by a third-party service. The sender and receiver instances run on the same VM, so copying happens at the platform level in milliseconds. We configure and manage FX Blue for you — you don't need to touch it. We tried API-based copiers like MetaAPI. They're not reliable enough for real trading. FX Blue at the platform level is the only approach we trust with our own money.",
+    a: "We use FX Blue Personal Trade Copier — a free, proven EA that runs directly inside MT4/MT5. There's no external API, no cloud round-trip, no latency introduced by a third-party service. The sender and receiver instances run on the same VM, so copying happens at the platform level in milliseconds. We configure and manage FX Blue for you — you don't need to touch it. We tried API-based copiers and cloud-based copy services. They're not reliable enough for real trading. FX Blue at the platform level is the only approach we trust with our own money.",
   },
   {
-    q: "What's the difference between Calamari and MetaAPI or cloud-based copiers?",
+    q: "What's the difference between Calamari and API-based copiers or cloud-based copy services?",
     a: "Cloud-based copiers route your trade signals through an external server. That introduces latency, creates a dependency on a third-party service, and means if their service has an outage, your copies don't execute. FX Blue runs as an EA inside MT4/MT5 on your own VPS — no external dependencies, no API calls, no latency. It's local, platform-level copying. That's why we use it.",
   },
   {
@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     q: "What prop firms are supported?",
-    a: "Any prop firm that uses MT4 or MT5. This includes FTMO, The5ers, FundedNext, True Forex Funds, Apex Trader Funding, TopStep, Earn2Trade, E8 Funding, Fidelcrest, and dozens more. If it runs MT4 or MT5, Calamari supports it.",
+    a: "Any prop firm that uses MT4 or MT5. If it runs MT4 or MT5, Calamari supports it — no special integrations or prop firm partnerships required.",
   },
   {
     q: "How quickly will my VPS be ready after I sign up?",

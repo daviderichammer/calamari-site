@@ -38,20 +38,20 @@ const riskItems = [
 ];
 
 const accounts = [
-  { name: "FTMO Challenge #1", firm: "FTMO", balance: "$15,420", equity: "$16,112", pl: "+$692", positions: 4, status: "Running" },
-  { name: "The5ers Phase 2", firm: "The5ers", balance: "$14,230", equity: "$14,987", pl: "+$757", positions: 3, status: "Running" },
-  { name: "FundedNext Eval", firm: "FundedNext", balance: "$13,650", equity: "$14,381", pl: "+$731", positions: 4, status: "Running" },
-  { name: "Apex Trader", firm: "Apex", balance: "$12,980", equity: "$13,498", pl: "+$518", positions: 3, status: "Copying" },
-  { name: "TopStep", firm: "TopStep", balance: "$11,820", equity: "$12,347", pl: "+$527", positions: 3, status: "Running" },
-  { name: "E8 Funding", firm: "E8", balance: "$9,870", equity: "$10,221", pl: "+$351", positions: 3, status: "Copying" },
-  { name: "True Forex", firm: "TFF", balance: "$16,862", equity: "$17,286", pl: "+$424", positions: 3, status: "Running" },
+  { name: "Prop Firm Challenge #1", firm: "Prop Firm A", balance: "$15,420", equity: "$16,112", pl: "+$692", positions: 4, status: "Running" },
+  { name: "Funded Account Phase 2", firm: "Prop Firm B", balance: "$14,230", equity: "$14,987", pl: "+$757", positions: 3, status: "Running" },
+  { name: "Evaluation Account", firm: "Prop Firm C", balance: "$13,650", equity: "$14,381", pl: "+$731", positions: 4, status: "Running" },
+  { name: "Challenge Account #2", firm: "Prop Firm D", balance: "$12,980", equity: "$13,498", pl: "+$518", positions: 3, status: "Copying" },
+  { name: "Funded Account #3", firm: "Prop Firm E", balance: "$11,820", equity: "$12,347", pl: "+$527", positions: 3, status: "Running" },
+  { name: "Evaluation Account #2", firm: "Prop Firm F", balance: "$9,870", equity: "$10,221", pl: "+$351", positions: 3, status: "Copying" },
+  { name: "Funded Account #4", firm: "Prop Firm G", balance: "$16,862", equity: "$17,286", pl: "+$424", positions: 3, status: "Running" },
 ];
 
 const replacements = [
-  { tool: "fxmonitor", cost: "$29/mo", feature: "Performance analytics" },
-  { tool: "fxmon", cost: "$19/mo", feature: "Account monitoring" },
-  { tool: "MyFxBook", cost: "$25/mo", feature: "Trade analytics" },
-  { tool: "FX Blue Online", cost: "$15/mo", feature: "Equity charts" },
+  { tool: "Third-party monitoring tool", cost: "$29/mo", feature: "Performance analytics" },
+  { tool: "External account monitor", cost: "$19/mo", feature: "Account monitoring" },
+  { tool: "External trade analytics", cost: "$25/mo", feature: "Trade analytics" },
+  { tool: "External equity tracker", cost: "$15/mo", feature: "Equity charts" },
   { tool: "Extra EA", cost: "Resources", feature: "Data collection" },
 ];
 
@@ -87,7 +87,7 @@ export default function DashboardAnalytics() {
 
           {/* Replacement callout */}
           <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-4 px-2">
-            {["fxmonitor", "fxmon", "MyFxBook", "FX Blue Online"].map((tool) => (
+            {["Third-party monitoring", "External analytics", "External trade tracker", "Separate equity tool"].map((tool) => (
               <div key={tool} className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-xs sm:text-sm">
                 <span className="line-through opacity-60">{tool}</span>
                 <span className="text-xs">✕</span>
@@ -452,7 +452,7 @@ export default function DashboardAnalytics() {
         <div className="mb-10 sm:mb-16 rounded-2xl bg-brand-card border border-brand-border overflow-hidden">
           <div className="p-4 sm:p-6 border-b border-brand-border">
             <h3 className="text-lg sm:text-xl font-bold text-brand-heading text-center">
-              Everything fxmonitor does. Built in. No extra EA required.
+              Everything third-party monitoring tools do. Built in. No extra EA required.
             </h3>
             <p className="text-brand-text text-sm text-center mt-2">
               Stop paying for tools that should have been included from day one.
@@ -582,7 +582,7 @@ export default function DashboardAnalytics() {
             Your analytics. Your accounts. One screen.
           </h3>
           <p className="text-brand-text mb-6 leading-relaxed text-sm sm:text-base px-2">
-            Stop juggling fxmonitor, MyFxBook, and three different prop firm portals.
+            Stop juggling external monitoring dashboards and multiple prop firm portals.
             Calamari gives you everything — Calmar ratio, equity curves, drawdown tracking, prop firm compliance,
             and real-time multi-account monitoring — built in, no extra cost, no extra setup.
           </p>

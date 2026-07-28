@@ -3,10 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 const PROP_FIRMS = [
-  "FTMO", "The5ers", "FundedNext", "True Forex Funds", "Apex Trader",
-  "TopStep", "Earn2Trade", "E8 Funding", "Fidelcrest", "MyForexFunds",
-  "FTMO", "The5ers", "FundedNext", "True Forex Funds", "Apex Trader",
-  "TopStep", "Earn2Trade", "E8 Funding", "Fidelcrest", "MyForexFunds",
+  "MT4 Prop Firms", "MT5 Prop Firms", "Funded Accounts", "Challenge Accounts",
+  "Prop Firm Accounts", "Funded Traders", "Prop Trading", "Funded Challenges",
+  "MT4 Prop Firms", "MT5 Prop Firms", "Funded Accounts", "Challenge Accounts",
+  "Prop Firm Accounts", "Funded Traders", "Prop Trading", "Funded Challenges",
 ];
 export default function Hero() {
   const tickerRef = useRef<HTMLDivElement>(null);
@@ -94,7 +94,7 @@ export default function Hero() {
               { value: "24/7", label: "Uptime Monitoring", sub: "Watchdog auto-recovery" },
               { value: "7", label: "MT4/MT5 Instances", sub: "Per VM, any combination" },
               { value: "<1ms", label: "Signal Copy Speed", sub: "FX Blue platform-level" },
-              { value: "100%", label: "Prop Firm Compatible", sub: "FTMO, The5ers, FundedNext + more" },
+              { value: "100%", label: "Prop Firm Compatible", sub: "Any MT4/MT5 prop firm" },
             ].map((stat, i) => (
               <div
                 key={i}

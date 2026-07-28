@@ -28,7 +28,7 @@ export default function Story() {
                 We&apos;re not a SaaS company that decided to build a trading tool. We&apos;re active prop traders running our own accounts on this exact platform every single day. When Calamari goes down, our money is at risk too. That&apos;s not a marketing line — it&apos;s why the reliability bar is where it is.
               </p>
               <p>
-                We were running multiple funded accounts across FTMO, The5ers, and FundedNext simultaneously.
+                We were running multiple funded accounts across several prop firms simultaneously.
                 Three VPS instances, three MT5 terminals, three different prop firm portals — and absolutely
                 zero way to see everything in one place. Every morning started the same way: open three RDP sessions,
                 check that nothing crashed overnight, manually verify positions, copy signals by hand.

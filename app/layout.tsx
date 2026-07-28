@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "One dashboard to rule all your prop firm accounts. Dedicated Windows VPS, MT5 pre-configured, trade copying, 24/7 monitoring, and LiveView. Built by traders, for traders. The squid that runs your prop accounts.",
   keywords:
-    "prop trading, MT5, FTMO, MyForexFunds, The5ers, trade copying, VPS, forex, prop firm, squid",
+    "prop trading, MT5, prop firms, funded accounts, trade copying, VPS, forex, prop firm, squid",
   openGraph: {
     title: "Calamari Trading — Managed Infrastructure for Serious Prop Traders",
     description:

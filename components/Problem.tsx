@@ -49,7 +49,7 @@ export default function Problem() {
             {
               icon: "🌐",
               title: "Six different portals",
-              desc: "FTMO dashboard. The5ers dashboard. FundedNext dashboard. None of them show you the full picture.",
+              desc: "Prop firm dashboard. Another prop firm dashboard. Yet another portal. None of them show you the full picture across all your accounts.",
             },
             {
               icon: "🤯",

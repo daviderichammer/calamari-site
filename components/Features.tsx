@@ -36,8 +36,8 @@ export default function Features() {
     {
       icon: "📊",
       title: "Layer 5: Full Visibility Dashboard",
-      desc: "Built-in dashboard replaces fxmonitor/fxmon — no extra EA needed. One screen. Every account. See balances, open positions, P&L, and account health across all your prop firms in real time. Full analytics, no tab-switching.",
-      tags: ["Real-time", "Replaces fxmonitor", "No extra EA"],
+      desc: "Built-in dashboard replaces third-party monitoring tools — no extra EA needed. One screen. Every account. See balances, open positions, P&L, and account health across all your prop firms in real time. Full analytics, no tab-switching.",
+      tags: ["Real-time", "Built-in analytics", "No extra EA"],
       color: "from-green-500/20 to-transparent",
       borderColor: "hover:border-green-500/40",
     },
@@ -60,8 +60,8 @@ export default function Features() {
     {
       icon: "🏢",
       title: "Works With Any Prop Firm",
-      desc: "FTMO, The5ers, FundedNext, True Forex Funds, Apex, TopStep, Earn2Trade, E8 Funding — if it runs MT4 or MT5, we support it. No special integrations, no prop firm partnerships required.",
-      tags: ["FTMO", "The5ers", "FundedNext", "+20 more"],
+      desc: "Any prop firm that runs MT4 or MT5 — we support it. No special integrations, no prop firm partnerships required. If it runs MT4 or MT5, Calamari works with it.",
+      tags: ["MT4 prop firms", "MT5 prop firms", "20+ firms supported"],
       color: "from-indigo-500/20 to-transparent",
       borderColor: "hover:border-indigo-500/40",
     },
@@ -130,7 +130,7 @@ export default function Features() {
                 Why FX Blue — not API-based copiers
               </h3>
               <p className="text-brand-text text-sm leading-relaxed mb-3">
-                We tried MetaAPI and cloud-based copiers. They introduce latency, they have outages, and when they fail, your trades don&apos;t copy. That&apos;s not acceptable when real money is on the line.
+                We tried API-based copiers and cloud-based copy services. They introduce latency, they have outages, and when they fail, your trades don&apos;t copy. That&apos;s not acceptable when real money is on the line.
               </p>
               <p className="text-brand-text text-sm leading-relaxed">
                 FX Blue Personal Trade Copier runs as an EA directly inside MT4/MT5 — no external API calls, no network round-trips. Sender and receiver on the same VM means the copy happens at the platform level, in milliseconds. <strong className="text-brand-heading">This is the only approach we trust with our own money.</strong>

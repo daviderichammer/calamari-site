@@ -86,7 +86,7 @@ export default function Footer() {
                 Compatible With
               </h4>
               <div className="flex flex-wrap gap-2">
-                {["FTMO", "MFF", "The5ers", "FundedNext", "+more"].map((firm, i) => (
+                {["MT4 Prop Firms", "MT5 Prop Firms", "Funded Accounts", "Challenge Accounts"].map((firm, i) => (
                   <span
                     key={i}
                     className="text-xs px-2 py-1 rounded bg-brand-card border border-brand-border text-brand-text"
