@@ -9,13 +9,13 @@ export default function Footer() {
       {/* Top gradient */}
       <div className="absolute top-0 left-0 right-0 h-px section-divider" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 mb-8 sm:mb-12">
           {/* Brand */}
-          <div className="md:col-span-2">
+          <div className="sm:col-span-2">
             <div className="flex items-center gap-3 mb-4">
               <div className="relative w-10 h-10">
-                <Image src="/logo.png" alt="Calamari Trading" fill className="object-contain" />
+                <Image src="/logo.png" alt="Calamari Trading — squid mascot" fill className="object-contain" />
               </div>
               <div>
                 <span className="text-lg font-bold gradient-text">Calamari</span>
@@ -23,7 +23,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-brand-text text-sm leading-relaxed max-w-sm mb-6">
-              Managed infrastructure for serious prop traders. Dedicated Windows VPS, MT5 pre-configured, 
+              Managed infrastructure for serious prop traders. Dedicated Windows VPS, MT5 pre-configured,
               trade copying, and 24/7 monitoring — all from one dashboard.
             </p>
             <div className="flex items-center gap-2 text-xs text-brand-text">
@@ -100,12 +100,12 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-8 border-t border-brand-border flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="pt-6 sm:pt-8 border-t border-brand-border flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
           <p className="text-xs text-brand-text">
             © {new Date().getFullYear()} Calamari Trading. All rights reserved.
           </p>
           <p className="text-xs text-brand-text text-center sm:text-right max-w-md">
-            Trading involves significant risk of loss. Calamari Trading provides infrastructure services only 
+            Trading involves significant risk of loss. Calamari Trading provides infrastructure services only
             and does not provide financial advice. Past performance is not indicative of future results.
           </p>
         </div>

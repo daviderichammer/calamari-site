@@ -53,7 +53,7 @@ const faqs = [
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   return (
-    <section id="faq" className="relative py-24 overflow-hidden">
+    <section id="faq" className="relative py-16 sm:py-24 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-0 right-0 h-px section-divider" />
@@ -61,21 +61,21 @@ export default function FAQ() {
       </div>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-blue/10 border border-brand-blue/30 text-brand-cyan text-sm font-medium mb-6">
             FAQ
           </div>
-          <h2 className="text-4xl sm:text-5xl font-black mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6">
             Questions traders
             <br />
             <span className="gradient-text">actually ask.</span>
           </h2>
-          <p className="text-lg text-brand-text">
+          <p className="text-base sm:text-lg text-brand-text">
             We&apos;ve been asked all of these. Here are the real answers.
           </p>
         </div>
         {/* FAQ accordion */}
-        <div className="space-y-3">
+        <div className="space-y-2 sm:space-y-3">
           {faqs.map((faq, i) => (
             <div
               key={i}
@@ -86,10 +86,11 @@ export default function FAQ() {
               }`}
             >
               <button
-                className="w-full text-left px-6 py-5 flex items-center justify-between gap-4"
+                className="w-full text-left px-4 sm:px-6 py-4 sm:py-5 flex items-center justify-between gap-3 sm:gap-4 touch-manipulation"
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                aria-expanded={openIndex === i}
               >
-                <span className="text-base font-semibold text-brand-heading">{faq.q}</span>
+                <span className="text-sm sm:text-base font-semibold text-brand-heading">{faq.q}</span>
                 <svg
                   className={`w-5 h-5 text-brand-text flex-shrink-0 transition-transform duration-300 ${
                     openIndex === i ? "rotate-180 text-brand-cyan" : ""
@@ -107,7 +108,7 @@ export default function FAQ() {
                 </svg>
               </button>
               {openIndex === i && (
-                <div className="px-6 pb-5">
+                <div className="px-4 sm:px-6 pb-4 sm:pb-5">
                   <p className="text-brand-text leading-relaxed text-sm">{faq.a}</p>
                 </div>
               )}
@@ -115,11 +116,11 @@ export default function FAQ() {
           ))}
         </div>
         {/* Still have questions */}
-        <div className="mt-12 text-center">
+        <div className="mt-10 sm:mt-12 text-center">
           <p className="text-brand-text mb-4">Still have questions?</p>
           <a
             href="mailto:support@calamaritrading.ai"
-            className="inline-flex items-center gap-2 text-brand-cyan hover:text-white transition-colors font-medium"
+            className="inline-flex items-center gap-2 text-brand-cyan hover:text-white transition-colors font-medium touch-manipulation"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />

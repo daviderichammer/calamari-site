@@ -67,7 +67,7 @@ export default function Features() {
     },
   ];
   return (
-    <section id="features" className="relative py-24 overflow-hidden">
+    <section id="features" className="relative py-16 sm:py-24 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-0 right-0 h-px section-divider" />
@@ -76,38 +76,38 @@ export default function Features() {
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-blue/10 border border-brand-blue/30 text-brand-cyan text-sm font-medium mb-6">
             Everything you need
           </div>
-          <h2 className="text-4xl sm:text-5xl font-black mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6">
             Built by traders.
             <br />
             <span className="gradient-text">Trusted with our own money.</span>
           </h2>
-          <p className="text-lg text-brand-text max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-brand-text max-w-2xl mx-auto px-2">
             Every feature was built because we needed it ourselves. We run our own prop accounts on this platform every day.
             No bloat. No fluff. Just the tools that actually matter.
           </p>
         </div>
-        {/* Features grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Features grid — 1 col mobile, 2 col tablet, 4 col desktop */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {features.map((feature, i) => (
             <div
               key={i}
-              className={`group relative rounded-2xl p-6 bg-brand-card border border-brand-border ${feature.borderColor} transition-all duration-300 hover:-translate-y-1`}
+              className={`group relative rounded-2xl p-5 sm:p-6 bg-brand-card border border-brand-border ${feature.borderColor} transition-all duration-300 hover:-translate-y-1`}
             >
               {/* Gradient overlay on hover */}
               <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
               <div className="relative">
                 {/* Icon */}
-                <div className="text-4xl mb-4">{feature.icon}</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">{feature.icon}</div>
                 {/* Title */}
-                <h3 className="text-base font-bold text-brand-heading mb-3">{feature.title}</h3>
+                <h3 className="text-sm sm:text-base font-bold text-brand-heading mb-2 sm:mb-3">{feature.title}</h3>
                 {/* Description */}
-                <p className="text-sm text-brand-text leading-relaxed mb-4">{feature.desc}</p>
+                <p className="text-xs sm:text-sm text-brand-text leading-relaxed mb-3 sm:mb-4">{feature.desc}</p>
                 {/* Tags */}
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {feature.tags.map((tag, j) => (
                     <span
                       key={j}
@@ -123,11 +123,11 @@ export default function Features() {
         </div>
 
         {/* FX Blue callout */}
-        <div className="mt-12 rounded-2xl bg-brand-card border border-brand-border p-8 max-w-4xl mx-auto">
-          <div className="flex flex-col md:flex-row gap-6 items-start">
-            <div className="text-4xl flex-shrink-0">📡</div>
+        <div className="mt-8 sm:mt-12 rounded-2xl bg-brand-card border border-brand-border p-5 sm:p-8 max-w-4xl mx-auto">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start">
+            <div className="text-3xl sm:text-4xl flex-shrink-0">📡</div>
             <div>
-              <h3 className="text-lg font-bold text-brand-heading mb-2">
+              <h3 className="text-base sm:text-lg font-bold text-brand-heading mb-2">
                 Why FX Blue — not API-based copiers
               </h3>
               <p className="text-brand-text text-sm leading-relaxed mb-3">
@@ -141,14 +141,15 @@ export default function Features() {
         </div>
 
         {/* Bottom highlight */}
-        <div className="mt-10 rounded-2xl gradient-border p-8 text-center max-w-3xl mx-auto">
-          <div className="text-4xl mb-4">🐙</div>
-          <h3 className="text-2xl font-bold text-brand-heading mb-3">
-            Seven tentacles. One brain.
+        <div className="mt-8 sm:mt-10 rounded-2xl gradient-border p-6 sm:p-8 text-center max-w-3xl mx-auto">
+          <div className="text-3xl sm:text-4xl mb-4">🦑</div>
+          <h3 className="text-xl sm:text-2xl font-bold text-brand-heading mb-3">
+            Ten tentacles. One brain.
           </h3>
-          <p className="text-brand-text">
-            Just like a real octopus, Calamari extends its reach across all your accounts simultaneously —
+          <p className="text-sm sm:text-base text-brand-text">
+            Just like a real squid, Calamari extends its reach across all your accounts simultaneously —
             monitoring, copying, recovering, and reporting — all from a single intelligent core.
+            Squids are faster and more aggressive than octopuses — exactly the edge you need.
             Up to 7 MT4/MT5 instances per VM. You stay in control without being everywhere at once.
           </p>
         </div>

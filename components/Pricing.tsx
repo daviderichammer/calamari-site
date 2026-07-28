@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="relative py-24 overflow-hidden">
+    <section id="pricing" className="relative py-16 sm:py-24 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-0 right-0 h-px section-divider" />
@@ -11,41 +11,41 @@ export default function Pricing() {
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-blue/10 border border-brand-blue/30 text-brand-cyan text-sm font-medium mb-6">
             Simple, transparent pricing
           </div>
-          <h2 className="text-4xl sm:text-5xl font-black mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6">
             One price. Everything included.
             <br />
             <span className="gradient-text">No tiers. No gotchas.</span>
           </h2>
-          <p className="text-lg text-brand-text max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-brand-text max-w-2xl mx-auto px-2">
             We ran the numbers. A raw VPS costs $20–50/month and you still have to build everything yourself.
             Calamari gives you the VPS <em>plus</em> the full managed stack — for less than the cost of one blown challenge.
           </p>
         </div>
 
-        {/* Single pricing card */}
-        <div className="max-w-lg mx-auto">
-          <div className="relative rounded-2xl p-8 bg-brand-card border border-brand-blue/50 pricing-popular shadow-2xl shadow-brand-blue/20">
+        {/* Single pricing card — full width on mobile, max-lg on desktop */}
+        <div className="w-full sm:max-w-lg sm:mx-auto">
+          <div className="relative rounded-2xl p-6 sm:p-8 bg-brand-card border border-brand-blue/50 pricing-popular shadow-2xl shadow-brand-blue/20">
             {/* Badge */}
             <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-              <div className="px-4 py-1.5 rounded-full text-xs font-bold text-white bg-gradient-to-r from-brand-blue to-brand-purple shadow-lg">
+              <div className="px-4 py-1.5 rounded-full text-xs font-bold text-white bg-gradient-to-r from-brand-blue to-brand-purple shadow-lg whitespace-nowrap">
                 Everything Included
               </div>
             </div>
 
             {/* Plan name */}
-            <div className="mb-2">
-              <h3 className="text-2xl font-black text-brand-heading">Calamari VM</h3>
+            <div className="mb-2 mt-2">
+              <h3 className="text-xl sm:text-2xl font-black text-brand-heading">Calamari VM</h3>
               <p className="text-sm text-brand-text mt-1">One dedicated Windows VPS. Up to 7 MT4/MT5 instances. Fully managed.</p>
             </div>
 
             {/* Price */}
-            <div className="mb-8 mt-6">
+            <div className="mb-6 sm:mb-8 mt-4 sm:mt-6">
               <div className="flex items-baseline gap-1">
-                <span className="text-5xl font-black gradient-text">$199</span>
+                <span className="text-4xl sm:text-5xl font-black gradient-text">$199</span>
                 <span className="text-brand-text text-sm">/month per VM</span>
               </div>
               <div className="text-xs text-brand-text mt-1">Billed monthly. Cancel anytime.</div>
@@ -54,7 +54,7 @@ export default function Pricing() {
             {/* CTA */}
             <Link
               href="/checkout"
-              className="block text-center w-full py-4 rounded-xl font-bold text-base transition-all duration-300 mb-8 btn-primary text-white"
+              className="block text-center w-full py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base transition-all duration-300 mb-6 sm:mb-8 btn-primary text-white"
             >
               Get Started — $199/mo
             </Link>
@@ -106,17 +106,17 @@ export default function Pricing() {
         </div>
 
         {/* Value comparison */}
-        <div className="mt-16 rounded-2xl bg-brand-card border border-brand-border p-8 max-w-4xl mx-auto">
-          <h3 className="text-lg font-bold text-brand-heading mb-6 text-center">
+        <div className="mt-10 sm:mt-16 rounded-2xl bg-brand-card border border-brand-border p-4 sm:p-8 max-w-4xl mx-auto">
+          <h3 className="text-base sm:text-lg font-bold text-brand-heading mb-4 sm:mb-6 text-center">
             Why Calamari beats DIY every time
           </h3>
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm">
+          <div className="overflow-x-auto -mx-4 sm:mx-0 px-4 sm:px-0">
+            <table className="w-full text-xs sm:text-sm min-w-[400px]">
               <thead>
                 <tr className="border-b border-brand-border">
-                  <th className="text-left py-3 text-brand-text font-medium">Feature</th>
-                  <th className="text-center py-3 text-brand-text font-medium">DIY Setup</th>
-                  <th className="text-center py-3 text-brand-cyan font-medium">Calamari</th>
+                  <th className="text-left py-2 sm:py-3 text-brand-text font-medium pr-2">Feature</th>
+                  <th className="text-center py-2 sm:py-3 text-brand-text font-medium px-2">DIY Setup</th>
+                  <th className="text-center py-2 sm:py-3 text-brand-cyan font-medium pl-2">Calamari</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-brand-border">
@@ -131,9 +131,9 @@ export default function Pricing() {
                   ["Total cost (7 instances)", "$140–350/mo + 10hrs/wk", "$199/mo, zero maintenance"],
                 ].map(([feature, diy, cal], i) => (
                   <tr key={i} className="hover:bg-brand-blue/5 transition-colors">
-                    <td className="py-3 text-brand-heading font-medium">{feature}</td>
-                    <td className="py-3 text-center text-red-400">{diy}</td>
-                    <td className="py-3 text-center text-green-400 font-semibold">{cal}</td>
+                    <td className="py-2 sm:py-3 text-brand-heading font-medium pr-2">{feature}</td>
+                    <td className="py-2 sm:py-3 text-center text-red-400 px-2">{diy}</td>
+                    <td className="py-2 sm:py-3 text-center text-green-400 font-semibold pl-2">{cal}</td>
                   </tr>
                 ))}
               </tbody>
@@ -142,7 +142,7 @@ export default function Pricing() {
         </div>
 
         {/* Money back */}
-        <div className="text-center mt-10">
+        <div className="text-center mt-8 sm:mt-10 px-4">
           <p className="text-brand-text text-sm">
             <span className="text-green-400 font-semibold">7-day money-back guarantee.</span>{" "}
             If Calamari doesn&apos;t work for you in the first week, we&apos;ll refund you. No questions asked.
