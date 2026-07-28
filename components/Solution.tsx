@@ -1,35 +1,37 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
+
 export default function Solution() {
   return (
-    <section id="solution" className="relative py-16 sm:py-24 overflow-hidden">
-      {/* Background glow */}
+    <section id="how-it-works" className="relative py-16 sm:py-24 overflow-hidden">
+      {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-blue/10 rounded-full blur-[120px]" />
+        <div className="absolute top-0 left-0 right-0 h-px section-divider" />
+        <div className="absolute bottom-0 left-0 right-0 h-px section-divider" />
+        <div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-brand-blue/8 rounded-full blur-[120px]" />
       </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-10 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-blue/10 border border-brand-blue/30 text-brand-cyan text-sm font-medium mb-6">
-            The Solution
+            How it works
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6">
-            You bring the alpha — your read on the market.
+            Simple in concept.
             <br />
-            <span className="gradient-text">We handle the machine.</span>
+            <span className="gradient-text">Serious in execution.</span>
           </h2>
-          <p className="text-base sm:text-lg text-brand-text max-w-3xl mx-auto px-2">
-            You focus purely on entries and exits. Calamari handles distribution, sizing, filtering, and risk across all your accounts.
+          <p className="text-base sm:text-lg text-brand-text max-w-2xl mx-auto px-2">
+            You trade on your device. Calamari distributes those trades across all your prop accounts — sized correctly, filtered correctly, monitored continuously.
           </p>
         </div>
-        {/* Dashboard mockup */}
-        <div className="relative mb-12 sm:mb-20">
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-darker pointer-events-none z-10" />
-          {/* Mock Dashboard UI */}
-          <div className="terminal max-w-5xl mx-auto overflow-hidden rounded-2xl shadow-2xl glow-blue">
-            {/* Terminal header */}
-            <div className="terminal-header">
+
+        {/* Dashboard visual mockup */}
+        <div className="mb-16 sm:mb-24 max-w-5xl mx-auto">
+          <div className="rounded-2xl overflow-hidden border border-brand-border shadow-2xl shadow-brand-blue/10">
+            {/* Browser chrome */}
+            <div className="bg-[#0F1120] border-b border-[#1E2035] px-3 sm:px-4 py-2 sm:py-3 flex items-center gap-2">
               <div className="terminal-dot bg-red-500" />
               <div className="terminal-dot bg-yellow-500" />
               <div className="terminal-dot bg-green-500" />
@@ -46,7 +48,7 @@ export default function Solution() {
                 {[
                   { label: "Total Balance", value: "$47,832", change: "+2.4%", up: true },
                   { label: "Open Positions", value: "12", change: "4 accounts", up: true },
-                  { label: "Today's P&L", value: "+$1,247", change: "+2.67%", up: true },
+                  { label: "Today&apos;s P&L", value: "+$1,247", change: "+2.67%", up: true },
                   { label: "VPS Uptime", value: "99.98%", change: "30 days", up: true },
                 ].map((stat, i) => (
                   <div key={i} className="bg-[#0F1120] rounded-xl p-2 sm:p-4 border border-[#1E2035]">
@@ -98,88 +100,45 @@ export default function Solution() {
             </div>
           </div>
         </div>
-        {/* How it works */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 max-w-7xl mx-auto">
-          {[
-            {
-              step: "Layer 1",
-              title: "We host your VMs",
-              desc: "Always-on managed Windows VPS, up to 7 MT4/MT5 instances any blend.",
-            },
-            {
-              step: "Layer 2",
-              title: "We copy your trades",
-              desc: "FX Blue Personal Trade Copier, millisecond-level, intra-VM.",
-            },
-            {
-              step: "Layer 3",
-              title: "We size and filter",
-              desc: "Per-account rules, lot scaling based on account size/risk%, symbol blocking.",
-            },
-            {
-              step: "Layer 4",
-              title: "We monitor & protect",
-              desc: "Drawdown alerts, daily loss limits, prop firm compliance tracking.",
-            },
-            {
-              step: "Layer 5",
-              title: "Full visibility",
-              desc: "Built-in dashboard replaces third-party monitoring tools — no extra EA needed.",
-            },
-          ].map((step, i) => (
-            <div key={i} className="relative text-center p-4 rounded-xl bg-brand-card/50 border border-brand-border">
-              <div className="relative z-10">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl gradient-border mb-3">
-                  <span className="text-sm font-black gradient-text">{step.step}</span>
-                </div>
-                <h3 className="text-sm sm:text-base font-bold text-brand-heading mb-2">{step.title}</h3>
-                <p className="text-xs sm:text-sm text-brand-text leading-relaxed">{step.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-        
-        {/* How it works */}
-        <div className="mt-16 sm:mt-24 text-center max-w-4xl mx-auto">
-          <h3 className="text-2xl sm:text-3xl font-black mb-8 text-brand-heading">How it works</h3>
+
+        {/* Three-step explanation */}
+        <div className="text-center max-w-4xl mx-auto mb-16 sm:mb-24">
+          <h3 className="text-2xl sm:text-3xl font-black mb-8 text-brand-heading">Three steps. One platform.</h3>
           <div className="text-left space-y-4 sm:space-y-6">
             <div className="p-4 sm:p-6 rounded-xl bg-[#0F1120] border border-[#1E2035]">
-              <p className="text-sm sm:text-base text-brand-text"><strong className="text-brand-cyan">1.</strong> You trade on YOUR device — your phone, your laptop, MT5, however you want. That&apos;s your signal account.</p>
+              <p className="text-sm sm:text-base text-brand-text"><strong className="text-brand-cyan">1. You trade on your device.</strong> Your phone, your laptop, MT4, MT5 — however you trade. That account becomes your signal source.</p>
             </div>
             <div className="p-4 sm:p-6 rounded-xl bg-[#0F1120] border border-[#1E2035]">
-              <p className="text-sm sm:text-base text-brand-text"><strong className="text-brand-cyan">2.</strong> Calamari copies those trades to your other accounts (prop firms, funded accounts, personal accounts).</p>
+              <p className="text-sm sm:text-base text-brand-text"><strong className="text-brand-cyan">2. Calamari copies those trades.</strong> To your prop firm accounts, funded accounts, and personal accounts — all running on your dedicated VM, all sized and filtered per-account.</p>
             </div>
             <div className="p-4 sm:p-6 rounded-xl bg-[#0F1120] border border-[#1E2035]">
-              <p className="text-sm sm:text-base text-brand-text"><strong className="text-brand-cyan">3.</strong> Each receiving account has its own rules: lot sizing based on account size, symbol filters, risk limits.</p>
-            </div>
-            <div className="p-4 sm:p-6 rounded-xl bg-[#0F1120] border border-[#1E2035]">
-              <p className="text-sm sm:text-base text-brand-text"><strong className="text-brand-cyan">4.</strong> You focus purely on entries and exits. Calamari handles distribution, sizing, filtering, and risk.</p>
+              <p className="text-sm sm:text-base text-brand-text"><strong className="text-brand-cyan">3. You focus on entries and exits.</strong> Calamari handles distribution, sizing, filtering, monitoring, and recovery. Your accounts are our priority.</p>
             </div>
           </div>
         </div>
-        
+
         {/* Trust & Security */}
-        <div className="mt-16 sm:mt-24 text-center max-w-4xl mx-auto">
+        <div className="text-center max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-sm font-medium mb-6">
-            Trust & Security
+            Trust &amp; Security
           </div>
-          <h3 className="text-2xl sm:text-3xl font-black mb-8 text-brand-heading">Your trades stay yours. Period.</h3>
+          <h3 className="text-2xl sm:text-3xl font-black mb-8 text-brand-heading">Your accounts are our priority.</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
             <div className="p-4 rounded-xl border border-brand-border bg-brand-card flex items-start gap-3">
               <span className="text-green-400">✓</span>
-              <p className="text-sm text-brand-text">We don&apos;t see your strategy — we see executions, not intent.</p>
+              <p className="text-sm text-brand-text">We do not see your strategy — we see executions, not intent.</p>
             </div>
             <div className="p-4 rounded-xl border border-brand-border bg-brand-card flex items-start gap-3">
               <span className="text-green-400">✓</span>
-              <p className="text-sm text-brand-text">We will NEVER copy your trades to any other account.</p>
+              <p className="text-sm text-brand-text">We do not copy your trades to any other account.</p>
             </div>
             <div className="p-4 rounded-xl border border-brand-border bg-brand-card flex items-start gap-3">
               <span className="text-green-400">✓</span>
-              <p className="text-sm text-brand-text">We will NEVER share your trading data.</p>
+              <p className="text-sm text-brand-text">We do not share your trading data with any third party.</p>
             </div>
             <div className="p-4 rounded-xl border border-brand-border bg-brand-card flex items-start gap-3">
               <span className="text-green-400">✓</span>
-              <p className="text-sm text-brand-text">Your prop firm accounts are safe — no pattern-matching risk from our side.</p>
+              <p className="text-sm text-brand-text">Dedicated resources — your VM is yours alone. No shared environments.</p>
             </div>
             <div className="p-4 rounded-xl border border-brand-border bg-brand-card flex items-start gap-3">
               <span className="text-green-400">✓</span>
@@ -192,14 +151,14 @@ export default function Solution() {
           </div>
           <p className="text-sm sm:text-base text-brand-text mt-8 font-semibold">We are traders ourselves running our own money on this same platform.</p>
         </div>
-        
+
         {/* CTA */}
         <div className="text-center mt-10 sm:mt-16 px-4">
           <Link
             href="/checkout"
             className="btn-primary inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-sm sm:text-base font-bold text-white w-full sm:w-auto justify-center"
           >
-            Get Your Setup Running Today
+            Start for $199/month
             <svg className="w-4 sm:w-5 h-4 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>

@@ -10,13 +10,13 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Calamari Trading — Managed Infrastructure for Serious Prop Traders",
   description:
-    "One dashboard to rule all your prop firm accounts. Dedicated Windows VPS, MT5 pre-configured, trade copying, 24/7 monitoring, and LiveView. Built by traders, for traders. The squid that runs your prop accounts.",
+    "Built for MT4 & MT5 prop firms. Dedicated Windows VPS, up to 7 MT4/MT5 instances, FX Blue trade copying, 99.9% uptime target, and LiveView. Built by traders, for traders.",
   keywords:
-    "prop trading, MT5, prop firms, funded accounts, trade copying, VPS, forex, prop firm, squid",
+    "prop trading, MT4, MT5, prop firms, funded accounts, trade copying, VPS, forex, prop firm infrastructure",
   openGraph: {
     title: "Calamari Trading — Managed Infrastructure for Serious Prop Traders",
     description:
-      "One dashboard to rule all your prop firm accounts. Built by traders, for traders.",
+      "Built for MT4 & MT5 prop firms. One dashboard for all your prop accounts.",
     url: "https://calamaritrading.ai",
     siteName: "Calamari Trading",
     type: "website",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Calamari Trading — Managed Infrastructure for Serious Prop Traders",
-    description: "One dashboard to rule all your prop firm accounts.",
+    description: "Built for MT4 & MT5 prop firms. One dashboard for all your prop accounts.",
   },
 };
 
@@ -45,6 +45,26 @@ export default function RootLayout({
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
           rel="stylesheet"
+        />
+        {/* Tawk.to Live Chat Widget
+            TO ACTIVATE: Replace TAWK_PROPERTY_ID and TAWK_WIDGET_ID below
+            with your actual values from tawk.to > Administration > Chat Widget > Direct Chat Link
+            Format: https://embed.tawk.to/{PROPERTY_ID}/{WIDGET_ID}
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+              (function(){
+                var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+                s1.async=true;
+                s1.src='https://embed.tawk.to/TAWK_PROPERTY_ID/TAWK_WIDGET_ID';
+                s1.charset='UTF-8';
+                s1.setAttribute('crossorigin','*');
+                s0.parentNode.insertBefore(s1,s0);
+              })();
+            `,
+          }}
         />
       </head>
       <body className="bg-brand-darker text-brand-heading font-sans antialiased">

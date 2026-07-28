@@ -4,7 +4,7 @@ export default function Features() {
     {
       icon: "🖥️",
       title: "Layer 1: Managed Windows VPS",
-      desc: "Your own isolated Windows environment — always-on, managed, and monitored. Up to 7 MT4/MT5 instances, any blend. No shared resources, no noisy neighbors. We handle the infrastructure so you never have to think about it.",
+      desc: "Your own isolated Windows environment — always-on, managed, and monitored. Up to 7 MT4/MT5 instances, any blend. Dedicated resources — your VM is yours alone. We handle the infrastructure so you never have to think about it.",
       tags: ["Windows Server", "Always-on", "Fully managed"],
       color: "from-blue-500/20 to-transparent",
       borderColor: "hover:border-blue-500/40",
@@ -12,8 +12,8 @@ export default function Features() {
     {
       icon: "📡",
       title: "Layer 2: FX Blue Trade Copying",
-      desc: "FX Blue Personal Trade Copier — millisecond-level execution, intra-VM. It runs as an EA directly inside MT4/MT5, no API latency, no external dependencies. Sender and receiver on the same VM means essentially zero-latency local copying. We configure and manage it for you.",
-      tags: ["FX Blue", "Millisecond execution", "Intra-VM"],
+      desc: "FX Blue Personal Trade Copier — sub-second local copy propagation, intra-VM. It runs as an EA directly inside MT4/MT5, no API latency, no external dependencies. Sender and receiver on the same VM means platform-level execution speed. We configure and manage it for you.",
+      tags: ["FX Blue", "Sub-second execution", "Intra-VM"],
       color: "from-cyan-500/20 to-transparent",
       borderColor: "hover:border-cyan-500/40",
     },
@@ -28,7 +28,7 @@ export default function Features() {
     {
       icon: "🛡️",
       title: "Layer 4: Monitor & Protect",
-      desc: "Drawdown alerts, daily loss limits, prop firm compliance tracking. If MT5 crashes, the watchdog restarts it automatically. Your accounts never go unmonitored — not at 3am, not on weekends, not ever.",
+      desc: "Drawdown alerts, daily loss limits, prop firm compliance tracking. If MT4/MT5 crashes, the watchdog restarts it automatically. Your accounts never go unmonitored — not at 3am, not on weekends.",
       tags: ["Drawdown alerts", "Loss limits", "Auto-restart"],
       color: "from-red-500/20 to-transparent",
       borderColor: "hover:border-red-500/40",
@@ -44,7 +44,7 @@ export default function Features() {
     {
       icon: "🔭",
       title: "LiveView",
-      desc: "See your MT5 terminals in real time directly from your browser. No RDP client needed. Watch your charts, verify your trades, and troubleshoot — from your phone if you want. Your screens, anywhere.",
+      desc: "See your MT4/MT5 terminals in real time directly from your browser. No RDP client needed. Watch your charts, verify your trades, and troubleshoot — from your phone if you want. Your screens, anywhere.",
       tags: ["Browser-based", "No RDP needed", "Mobile access"],
       color: "from-orange-500/20 to-transparent",
       borderColor: "hover:border-orange-500/40",
@@ -59,13 +59,14 @@ export default function Features() {
     },
     {
       icon: "🏢",
-      title: "Works With Any Prop Firm",
-      desc: "Any prop firm that runs MT4 or MT5 — we support it. No special integrations, no prop firm partnerships required. If it runs MT4 or MT5, Calamari works with it.",
-      tags: ["MT4 prop firms", "MT5 prop firms", "20+ firms supported"],
+      title: "Built for MT4 & MT5 Prop Firms",
+      desc: "Works with any prop firm that supports MetaTrader 4 or MetaTrader 5. No special integrations, no prop firm partnerships required. FTMO, The5ers, FundedNext, and any other MT4/MT5 firm — subject to current program rules.",
+      tags: ["MT4 prop firms", "MT5 prop firms", "Any MT4/MT5 firm"],
       color: "from-indigo-500/20 to-transparent",
       borderColor: "hover:border-indigo-500/40",
     },
   ];
+
   return (
     <section id="features" className="relative py-16 sm:py-24 overflow-hidden">
       {/* Background */}
@@ -81,31 +82,27 @@ export default function Features() {
             The infrastructure stack
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6">
-            You bring the alpha.
+            Five layers of infrastructure.
             <br />
-            <span className="gradient-text">We handle the machine.</span>
+            <span className="gradient-text">One monthly price.</span>
           </h2>
           <p className="text-base sm:text-lg text-brand-text max-w-2xl mx-auto px-2">
-            Alpha is what separates you from a coin flip. Your read on the market. Your timing. Your entries. Every feature below exists so you can focus on that — and nothing else.
+            Every layer below exists so you can focus on your edge — your read on the market, your timing, your entries — and nothing else.
           </p>
         </div>
-        {/* Features grid — 1 col mobile, 2 col tablet, 4 col desktop */}
+
+        {/* Features grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {features.map((feature, i) => (
             <div
               key={i}
               className={`group relative rounded-2xl p-5 sm:p-6 bg-brand-card border border-brand-border ${feature.borderColor} transition-all duration-300 hover:-translate-y-1`}
             >
-              {/* Gradient overlay on hover */}
               <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
               <div className="relative">
-                {/* Icon */}
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">{feature.icon}</div>
-                {/* Title */}
                 <h3 className="text-sm sm:text-base font-bold text-brand-heading mb-2 sm:mb-3">{feature.title}</h3>
-                {/* Description */}
                 <p className="text-xs sm:text-sm text-brand-text leading-relaxed mb-3 sm:mb-4">{feature.desc}</p>
-                {/* Tags */}
                 <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {feature.tags.map((tag, j) => (
                     <span
@@ -130,10 +127,10 @@ export default function Features() {
                 Why FX Blue — not API-based copiers
               </h3>
               <p className="text-brand-text text-sm leading-relaxed mb-3">
-                We tried API-based copiers and cloud-based copy services. They introduce latency, they have outages, and when they fail, your trades don&apos;t copy. That&apos;s not acceptable when real money is on the line.
+                API-based and cloud-based copy services introduce latency, have outages, and when they fail, your trades do not copy. That is not acceptable when real money is on the line.
               </p>
               <p className="text-brand-text text-sm leading-relaxed">
-                FX Blue Personal Trade Copier runs as an EA directly inside MT4/MT5 — no external API calls, no network round-trips. Sender and receiver on the same VM means the copy happens at the platform level, in milliseconds. <strong className="text-brand-heading">This is the only approach we trust with our own money.</strong>
+                FX Blue Personal Trade Copier runs as an EA directly inside MT4/MT5 — no external API calls, no network round-trips. Sender and receiver on the same VM means the copy happens at the platform level, in sub-second time. <strong className="text-brand-heading">This is the only approach we trust with our own money.</strong>
               </p>
             </div>
           </div>
@@ -148,7 +145,6 @@ export default function Features() {
           <p className="text-sm sm:text-base text-brand-text">
             Just like a real squid, Calamari extends its reach across all your accounts simultaneously —
             monitoring, copying, recovering, and reporting — all from a single intelligent core.
-            Squids are faster and more aggressive than octopuses — exactly the edge you need.
             Up to 7 MT4/MT5 instances per VM. You stay in control without being everywhere at once.
           </p>
         </div>
