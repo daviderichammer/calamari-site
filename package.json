@@ -1,0 +1,35 @@
+{
+  "name": "calamari-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -p 3001",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@stripe/react-stripe-js": "^2.7.3",
+    "@stripe/stripe-js": "^3.5.0",
+    "axios": "^1.7.2",
+    "framer-motion": "^11.2.10",
+    "lucide-react": "^0.400.0",
+    "next": "14.2.5",
+    "nodemailer": "^6.9.13",
+    "react": "^18",
+    "react-dom": "^18",
+    "stripe": "^14.21.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "@types/nodemailer": "^6.4.15",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.9.3"
+  }
+}
