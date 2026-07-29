@@ -23,21 +23,31 @@ export default function Security() {
           <section>
             <h2 className="text-xl font-bold text-brand-heading mb-3">1. Isolated Infrastructure Architecture</h2>
             <p>
-              We do not use shared hosting environments for trading terminals. Every customer is provisioned with an isolated Windows Virtual Private Server (VPS). Your trading terminals run in a sandboxed environment completely separate from other users. These virtual machines are deployed within secure virtual networks with strict firewall rules, exposing only the necessary ports for connectivity and remote management.
+              Each customer receives an isolated Windows VM with allocated CPU, memory and storage. Customers do not share an operating-system environment or trading-terminal installation. These virtual machines are deployed within secure virtual networks with strict firewall rules, exposing only the necessary ports for connectivity and remote management.
             </p>
           </section>
 
           <section>
             <h2 className="text-xl font-bold text-brand-heading mb-3">2. Credential Vault Architecture</h2>
             <p>
-              Your trading-platform credentials are never stored in plain text. They are encrypted at rest using AES-256 encryption and stored in Calamari's credential vault. This vault is logically separated from the primary application database. The encryption keys required to decrypt these credentials are managed independently. This separation ensures that a compromise of the application database would not expose your credentials.
+              Trading-platform credentials are encrypted before storage in Calamari&apos;s segregated credential vault. Credentials are never stored in plaintext. Administrative access is restricted, time-limited and logged. Customers can rotate credentials at any time. Credentials are permanently deleted upon service cancellation.
             </p>
+            <p className="mt-4">
+              Additional details:
+            </p>
+            <ul>
+              <li>Encryption keys are stored separately from encrypted credential data. A compromise of the application database would not expose your credentials.</li>
+              <li>Only automated provisioning systems decrypt credentials during terminal configuration. Human staff cannot retrieve plaintext passwords.</li>
+              <li>Every credential access — automated or manual — is logged with timestamp and purpose.</li>
+              <li>Customers can update credentials through the dashboard at any time.</li>
+              <li>Credentials are permanently deleted within 30 days of cancellation, or immediately upon explicit request.</li>
+            </ul>
           </section>
 
           <section>
             <h2 className="text-xl font-bold text-brand-heading mb-3">3. External Heartbeat Monitoring</h2>
             <p>
-              Our monitoring systems operate <em>outside</em> your VM. We use external heartbeat monitoring to track the health of your infrastructure. This means that if your VM crashes, freezes, or loses network connectivity, our systems detect the failure immediately and can initiate automated recovery procedures, rather than relying on an internal agent that would fail alongside the VM.
+              Calamari continuously monitors supported VM and terminal health signals while the service is operational, including nights and weekends. Monitoring systems operate <em>outside</em> your VM. External heartbeat monitoring means that if your VM crashes, freezes, or loses network connectivity, our systems detect the failure independently and can initiate automated recovery procedures, rather than relying on an internal agent that would fail alongside the VM.
             </p>
           </section>
 
@@ -49,9 +59,9 @@ export default function Security() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">5. Access Controls and Auditing</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">5. Support Access Model</h2>
             <p>
-              Access to Calamari's internal management systems is strictly limited based on the principle of least privilege through Role-Based Access Control (RBAC). Calamari support staff do not have standing access to your virtual machines. If you require interactive technical support, you must explicitly grant temporary, time-bound approval before any session begins. Every administrative action, credential access, and support event is logged, and these audit logs are continuously monitored.
+              Staff do not have standing access to your VM. Temporary support access requires your explicit authorization before any session begins. All access events — including the timestamp, purpose, and personnel involved — are logged and continuously monitored. Calamari does not inspect, analyze, copy or reuse your trading strategy. Role-Based Access Control (RBAC) and Multi-Factor Authentication (MFA) are required for all administrative access.
             </p>
           </section>
 
@@ -59,6 +69,13 @@ export default function Security() {
             <h2 className="text-xl font-bold text-brand-heading mb-3">6. Data Lifecycle and Deletion</h2>
             <p>
               When you cancel your Calamari Trading service, your infrastructure is immediately queued for decommissioning. We retain your encrypted data and virtual machine snapshots for 30 days post-cancellation to allow for account recovery if you change your mind. After 30 days, or immediately upon your explicit request, all virtual machines are destroyed and all associated data, including credentials and trading history, are permanently wiped from our databases.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">7. Data Sharing Policy</h2>
+            <p>
+              We do not sell your data. We do not use your trading data for advertising, signal generation, or any proprietary trading purposes. We do not disclose your trading data to other traders. Limited data may be processed by our infrastructure providers solely to operate Calamari, subject to strict contractual confidentiality and security obligations.
             </p>
           </section>
 

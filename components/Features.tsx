@@ -3,8 +3,8 @@ export default function Features() {
   const features = [
     {
       icon: "🖥️",
-      title: "Layer 1: Managed Windows VPS",
-      desc: "Your own isolated Windows environment — always-on, managed, and monitored. Up to 7 MT4/MT5 instances, any blend. Dedicated resources — your VM is yours alone. We handle the infrastructure so you never have to think about it.",
+      title: "Layer 1: Managed Windows VM",
+      desc: "Each customer receives an isolated Windows VM with allocated CPU, memory and storage. Customers do not share an operating-system environment or trading-terminal installation. Always-on, managed, and monitored. Up to 7 MT4/MT5 instances, any blend. We handle the infrastructure so you never have to think about it.",
       tags: ["Windows Server", "Always-on", "Fully managed"],
       color: "from-blue-500/20 to-transparent",
       borderColor: "hover:border-blue-500/40",
@@ -12,8 +12,8 @@ export default function Features() {
     {
       icon: "📡",
       title: "Layer 2: FX Blue Trade Copying",
-      desc: "FX Blue Personal Trade Copier — sub-second local copy propagation, intra-VM. It runs as an EA directly inside MT4/MT5, no API latency, no external dependencies. Sender and receiver on the same VM means platform-level execution speed. We configure and manage it for you.",
-      tags: ["FX Blue", "Sub-second execution", "Intra-VM"],
+      desc: "FX Blue Personal Trade Copier runs as an EA directly inside MT4/MT5. Sender and receiver terminals communicate locally within the same VM, avoiding an external cloud-copying relay — sub-second local copy propagation. We configure and manage it for you.",
+      tags: ["FX Blue", "Sub-second local copy", "Intra-VM"],
       color: "from-cyan-500/20 to-transparent",
       borderColor: "hover:border-cyan-500/40",
     },
@@ -36,7 +36,7 @@ export default function Features() {
     {
       icon: "📊",
       title: "Layer 5: Full Visibility Dashboard",
-      desc: "Built-in dashboard replaces third-party monitoring tools — no extra EA needed. One screen. Every account. See balances, open positions, P&L, and account health across all your prop firms in real time. Full analytics, no tab-switching.",
+      desc: "Built-in dashboard replaces third-party monitoring tools — no extra EA needed. One screen. Every account. See balances, open positions, P&L, and account health across your MT4/MT5 accounts in real time. Full analytics, no tab-switching.",
       tags: ["Real-time", "Built-in analytics", "No extra EA"],
       color: "from-green-500/20 to-transparent",
       borderColor: "hover:border-green-500/40",
@@ -52,16 +52,16 @@ export default function Features() {
     {
       icon: "🦑",
       title: "Tentacle Agent",
-      desc: "Our lightweight agent runs on your VPS and connects it to the Calamari network. It enables remote management, trade data streaming, and signal execution — all encrypted. The nervous system of the whole operation.",
+      desc: "Our lightweight agent runs on your VM and connects it to the Calamari network. It enables remote management, trade data streaming, and health telemetry — all encrypted. The nervous system of the whole operation.",
       tags: ["Encrypted", "Lightweight", "Auto-reconnect"],
       color: "from-purple-500/20 to-transparent",
       borderColor: "hover:border-purple-500/40",
     },
     {
       icon: "🏢",
-      title: "Built for MT4 & MT5 Prop Firms",
-      desc: "Calamari can operate with most standard MT4 and MT5 broker terminals. Prop-firm rules vary by firm, program, phase and account ownership. We review intended configurations during onboarding, but customers remain responsible for confirming compliance with their agreements. No special integrations, no prop firm partnerships required. FTMO, The5ers, FundedNext, and any other MT4/MT5 firm — subject to current program rules.",
-      tags: ["MT4 prop firms", "MT5 prop firms", "Any MT4/MT5 firm"],
+      title: "MT4 & MT5 Terminal Compatible",
+      desc: "Calamari is technically compatible with standard MT4 and MT5 terminals. Firm, program and account eligibility is reviewed during onboarding. No special integrations or prop firm partnerships required.",
+      tags: ["MT4 compatible", "MT5 compatible", "Onboarding review"],
       color: "from-indigo-500/20 to-transparent",
       borderColor: "hover:border-indigo-500/40",
     },
@@ -159,7 +159,7 @@ export default function Features() {
           ))}
         </div>
 
-        {/* FX Blue callout */}
+        {/* FX Blue callout — condensed */}
         <div className="mt-8 sm:mt-12 rounded-2xl bg-brand-card border border-brand-border p-5 sm:p-8 max-w-4xl mx-auto">
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start">
             <div className="text-3xl sm:text-4xl flex-shrink-0">📡</div>
@@ -167,11 +167,10 @@ export default function Features() {
               <h3 className="text-base sm:text-lg font-bold text-brand-heading mb-2">
                 Why FX Blue — not API-based copiers
               </h3>
-              <p className="text-brand-text text-sm leading-relaxed mb-3">
-                API-based and cloud-based copy services introduce latency, have outages, and when they fail, your trades do not copy. That is not acceptable when real money is on the line.
-              </p>
               <p className="text-brand-text text-sm leading-relaxed">
-                FX Blue Personal Trade Copier runs as an EA directly inside MT4/MT5 — no external API calls, no network round-trips. Sender and receiver on the same VM means the copy happens at the platform level, in sub-second time. <strong className="text-brand-heading">This is the only approach we trust with our own money.</strong>
+                API-based and cloud-based copy services introduce latency, have outages, and when they fail, your trades do not copy.
+                FX Blue Personal Trade Copier runs as an EA directly inside MT4/MT5. Sender and receiver terminals communicate locally within the same VM,
+                avoiding an external cloud-copying relay. <strong className="text-brand-heading">This is the only approach we trust with our own money.</strong>
               </p>
             </div>
           </div>
@@ -184,39 +183,48 @@ export default function Features() {
             Ten tentacles. One brain.
           </h3>
           <p className="text-sm sm:text-base text-brand-text">
-            Just like a real squid, Calamari extends its reach across all your accounts simultaneously —
+            Just like a real squid, Calamari extends its reach across your accounts simultaneously —
             monitoring, copying, recovering, and reporting — all from a single intelligent core.
             Up to 7 MT4/MT5 instances per VM. You stay in control without being everywhere at once.
           </p>
         </div>
 
-        {/* What Calamari Adds Section */}
+        {/* What Calamari Adds Section — prominent */}
         <div className="mt-16 sm:mt-24 max-w-4xl mx-auto">
           <div className="text-center mb-8 sm:mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-blue/10 border border-brand-blue/30 text-brand-cyan text-sm font-medium mb-4">
+              The managed-service layer
+            </div>
             <h2 className="text-2xl sm:text-3xl font-black text-brand-heading mb-4">
               What Calamari adds around the copier
             </h2>
-            <p className="text-sm sm:text-base text-brand-text">
-              We use the FX Blue Personal Trade Copier as our execution engine. Here is the infrastructure we build around it.
+            <p className="text-sm sm:text-base text-brand-text max-w-2xl mx-auto">
+              FX Blue performs local copying. Calamari operates, monitors and supervises the environment around it.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
             {[
-              "External health monitoring (outside-the-VM heartbeat)",
               "Centralized account telemetry",
-              "Copy-event visibility",
+              "External VM and terminal health monitoring (outside-the-VM heartbeat)",
               "Automatic terminal recovery",
-              "Managed configuration and testing",
-              "Browser-based terminal visibility (LiveView)",
-              "Cross-account risk monitoring",
-              "Incident investigation",
-              "Human support and escalation"
+              "Consolidated copy-event visibility",
+              "Browser-based LiveView",
+              "Managed symbol and sizing configuration",
+              "Controlled onboarding and test-copy validation",
+              "Incident investigation and support",
+              "Cross-account risk visibility",
+              "Administrative and configuration logging",
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-3 p-4 rounded-xl bg-brand-card border border-brand-border">
                 <span className="text-brand-cyan flex-shrink-0">✓</span>
                 <span className="text-sm font-medium text-brand-text">{item}</span>
               </div>
             ))}
+          </div>
+          <div className="p-5 rounded-2xl bg-brand-blue/5 border border-brand-blue/20 text-center">
+            <p className="text-sm sm:text-base text-brand-text italic">
+              &ldquo;FX Blue performs local copying. Calamari operates, monitors and supervises the environment around it.&rdquo;
+            </p>
           </div>
         </div>
 

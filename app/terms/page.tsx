@@ -14,7 +14,7 @@ export default function Terms() {
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-brand-heading mb-4">
             Terms of Service
           </h1>
-          <p className="text-brand-text">Last Updated: October 2023</p>
+          <p className="text-brand-text">Last Updated: July 2025</p>
         </div>
 
         {/* Content */}
@@ -23,14 +23,14 @@ export default function Terms() {
           <section>
             <h2 className="text-xl font-bold text-brand-heading mb-3">1. Contracting Entity</h2>
             <p>
-              These Terms of Service ("Terms") constitute a legally binding agreement between you ("Customer") and Calamari Trading LLC ("Calamari", "we", "us", or "our") governing your access to and use of the Calamari Trading platform and related infrastructure services (the "Services"). By accessing or using the Services, you agree to be bound by these Terms.
+              These Terms of Service (&ldquo;Terms&rdquo;) constitute a legally binding agreement between you (&ldquo;Customer&rdquo;) and Calamari Trading LLC (&ldquo;Calamari&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) governing your access to and use of the Calamari Trading platform and related infrastructure services (the &ldquo;Services&rdquo;). By accessing or using the Services, you agree to be bound by these Terms.
             </p>
           </section>
 
           <section>
             <h2 className="text-xl font-bold text-brand-heading mb-3">2. Service Description</h2>
             <p>
-              Calamari provides managed infrastructure and software configuration services for traders. Specifically, we provision and manage Windows Virtual Private Servers (VPS), install and configure MetaTrader 4 (MT4) and MetaTrader 5 (MT5) terminals, and set up trade copying software. 
+              Calamari provides managed infrastructure and software configuration services for traders. Specifically, we provision and manage Windows Virtual Machines (VMs), install and configure MetaTrader 4 (MT4) and MetaTrader 5 (MT5) terminals, and set up trade copying software.
               <br/><br/>
               <strong>Calamari is strictly an infrastructure provider. We do not provide trading signals, investment advice, or account management services.</strong> You are solely responsible for all trading decisions executed on your infrastructure.
             </p>
@@ -60,45 +60,53 @@ export default function Terms() {
           <section>
             <h2 className="text-xl font-bold text-brand-heading mb-3">5. Credential Responsibilities</h2>
             <p>
-              To configure the Services, you must provide accurate login credentials for your MT4 and MT5 accounts. You are responsible for ensuring these credentials are correct. Calamari encrypts and stores these credentials securely to maintain and recover your terminal connections. You must notify us immediately if you suspect your credentials have been compromised.
+              To configure the Services, you must provide accurate login credentials for your MT4 and MT5 accounts. You are responsible for ensuring these credentials are correct. Trading-platform credentials are encrypted before storage in Calamari&apos;s segregated credential vault. Credentials are never stored in plaintext. Administrative access is restricted, time-limited and logged. You can rotate credentials at any time through the dashboard. Credentials are permanently deleted upon service cancellation. You must notify us immediately if you suspect your credentials have been compromised.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">6. Third-Party Platforms</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">6. VM Isolation</h2>
             <p>
-              The Services interact with third-party platforms, including MT4, MT5, brokers, and proprietary trading firms. We do not control these third parties. We are not responsible for their performance, uptime, rule changes, or any actions they take regarding your accounts. Compatibility with specific prop firms may change without notice.
+              Each customer receives an isolated Windows VM with allocated CPU, memory and storage. Customers do not share an operating-system environment or trading-terminal installation.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">7. Intellectual Property</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">7. Third-Party Platforms and Compatibility</h2>
+            <p>
+              The Services interact with third-party platforms, including MT4, MT5, brokers, and proprietary trading firms. Calamari is technically compatible with standard MT4 and MT5 terminals. Firm, program and account eligibility is reviewed during onboarding. We do not control these third parties and are not responsible for their performance, uptime, rule changes, or any actions they take regarding your accounts. Compatibility with specific prop firms may change without notice. Customers remain responsible for confirming compliance with their broker and firm agreements.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">8. Intellectual Property</h2>
             <p>
               Calamari retains all rights, title, and interest in and to the platform, dashboard, infrastructure management tools, and associated intellectual property. You retain all rights to your trading strategies, Expert Advisors (EAs), and trading data.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">8. Data Ownership</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">9. Data Ownership</h2>
             <p>
               You own all trading execution data generated on your provisioned VM. We process this data solely to provide the Services, populate your dashboard, and monitor system health.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">9. Service Level</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">10. Service Level</h2>
             <p>
-              We target a 99.9% uptime for our infrastructure services. However, this is a target, not a guarantee. We may perform scheduled maintenance with advance notice. We are not responsible for downtime caused by third-party cloud providers or factors outside our control.
+              We target a 99.9% uptime for our infrastructure services. However, this is a target, not a guarantee. We may perform scheduled maintenance with advance notice. We are not responsible for downtime caused by third-party cloud providers or factors outside our control. Calamari continuously monitors supported VM and terminal health signals while the service is operational, including nights and weekends.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">10. Limitation of Liability</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">11. Limitation of Liability</h2>
             <p>
               To the maximum extent permitted by law, Calamari shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or use. We are an infrastructure provider and are not responsible for:
               <ul>
                 <li>Trading losses or missed profits.</li>
-                <li>Broker or prop firm platform issues, slippage, or execution delays.</li>
+                <li>Broker execution speed, fills and slippage, which remain dependent on the broker, market conditions and network connectivity.</li>
+                <li>Broker or prop firm platform issues or execution delays.</li>
                 <li>Account breaches due to prop firm rule violations.</li>
                 <li>Copy-trade failures or software glitches.</li>
                 <li>Market conditions.</li>
@@ -108,70 +116,70 @@ export default function Terms() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">11. Indemnification</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">12. Indemnification</h2>
             <p>
               You agree to indemnify, defend, and hold harmless Calamari Trading LLC, its officers, directors, employees, and agents from any claims, liabilities, damages, losses, and expenses (including legal fees) arising out of your use of the Services, your violation of these Terms, or your violation of any broker or proprietary trading firm rules.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">12. Termination</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">13. Termination</h2>
             <p>
-              Either party may terminate this agreement with 30 days' written notice. We may terminate your access immediately for breach of these Terms. Upon cancellation, your infrastructure will be decommissioned. Your data and encrypted credentials will be permanently deleted within 30 days of cancellation, or immediately upon your explicit request.
+              Either party may terminate this agreement with 30 days&apos; written notice. We may terminate your access immediately for breach of these Terms. Upon cancellation, your infrastructure will be decommissioned. Trading-platform credentials and all associated data will be permanently deleted within 30 days of cancellation, or immediately upon your explicit request.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">13. Refund Policy</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">14. Refund Policy</h2>
             <p>
               We offer a 7-day money-back guarantee starting from the date your service is activated. If you are unsatisfied within this period, you may request a full refund. After 7 days, all payments are non-refundable.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">14. Force Majeure</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">15. Force Majeure</h2>
             <p>
               Neither party shall be liable for any failure or delay in performance due to causes beyond their reasonable control, including acts of God, natural disasters, war, terrorism, or internet/infrastructure outages.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">15. Beta and Roadmap Features</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">16. Beta and Roadmap Features</h2>
             <p>
-              Features labeled as "Beta" or "Roadmap" are in active development. They are provided "as is" without warranties of any kind and may be modified or removed at our discretion.
+              Features labeled as &ldquo;Beta&rdquo; or &ldquo;Roadmap&rdquo; are in active development. They are provided &ldquo;as is&rdquo; without warranties of any kind and may be modified or removed at our discretion.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">16. Modifications</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">17. Modifications</h2>
             <p>
-              We reserve the right to modify these Terms. We will provide 30 days' notice for material changes by posting the updated Terms or via email. Your continued use of the Services constitutes acceptance of the revised Terms.
+              We reserve the right to modify these Terms. We will provide 30 days&apos; notice for material changes by posting the updated Terms or via email. Your continued use of the Services constitutes acceptance of the revised Terms.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">17. Governing Law</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">18. Governing Law</h2>
             <p>
               Any dispute arising out of or relating to these Terms or the Services shall be resolved through binding arbitration administered by a mutually agreed-upon arbitration body.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">18. Severability</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">19. Severability</h2>
             <p>
               If any provision of these Terms is found to be unenforceable or invalid, that provision will be limited or eliminated to the minimum extent necessary so that the Terms will otherwise remain in full force and effect.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">19. Entire Agreement</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">20. Entire Agreement</h2>
             <p>
               These Terms constitute the entire agreement between you and Calamari Trading LLC regarding the Services and supersede all prior agreements and understandings.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">20. Contact Information</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">21. Contact Information</h2>
             <p>
               For questions regarding these Terms, please contact us at{" "}
               <a href="mailto:support@calamaritrading.ai" className="text-brand-cyan hover:underline">

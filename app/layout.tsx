@@ -8,23 +8,23 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Calamari Trading — Managed Infrastructure for Serious Prop Traders",
+  title: "Calamari Trading | Managed MT4/MT5 Infrastructure for Prop Traders",
   description:
-    "Built for MT4 & MT5 prop firms. Dedicated Windows VPS, up to 7 MT4/MT5 instances, FX Blue trade copying, 99.9% uptime target, and LiveView. Built by traders, for traders.",
+    "Managed MT4/MT5 infrastructure for prop firm traders. Dedicated Windows VM, up to 7 MT4/MT5 instances, FX Blue trade copying, 99.9% uptime target, and LiveView. Built by traders, for traders.",
   keywords:
     "prop trading, MT4, MT5, prop firms, funded accounts, trade copying, VPS, forex, prop firm infrastructure",
   openGraph: {
-    title: "Calamari Trading — Managed Infrastructure for Serious Prop Traders",
+    title: "Calamari Trading | Managed MT4/MT5 Infrastructure for Prop Traders",
     description:
-      "Built for MT4 & MT5 prop firms. One dashboard for all your prop accounts.",
+      "Managed MT4/MT5 infrastructure for prop firm traders. Your MT4 and MT5 Accounts. One Managed Platform.",
     url: "https://calamaritrading.ai",
     siteName: "Calamari Trading",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Calamari Trading — Managed Infrastructure for Serious Prop Traders",
-    description: "Built for MT4 & MT5 prop firms. One dashboard for all your prop accounts.",
+    title: "Calamari Trading | Managed MT4/MT5 Infrastructure for Prop Traders",
+    description: "Managed MT4/MT5 infrastructure for prop firm traders. Your MT4 and MT5 Accounts. One Managed Platform.",
   },
 };
 

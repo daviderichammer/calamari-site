@@ -28,7 +28,7 @@ export default function CompatibilityMatrix() {
     },
     {
       firm: "Other MT4/MT5 firms",
-      program: "Any MT4/MT5 program",
+      program: "Standard MT4/MT5 programs",
       platform: "MT4 / MT5",
       status: "Reviewed at onboarding",
       statusColor: "text-brand-cyan bg-brand-cyan/10 border-brand-cyan/20",
@@ -48,7 +48,7 @@ export default function CompatibilityMatrix() {
         {/* Header */}
         <div className="text-center mb-10 sm:mb-14">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-blue/10 border border-brand-blue/30 text-brand-cyan text-sm font-medium mb-6">
-            Prop firm compatibility
+            Compatibility status
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6">
             Know before you sign up.
@@ -56,7 +56,7 @@ export default function CompatibilityMatrix() {
             <span className="gradient-text">Verified compatibility.</span>
           </h2>
           <p className="text-base sm:text-lg text-brand-text max-w-2xl mx-auto px-2">
-            Compatibility is reviewed during onboarding. Rules vary by firm, program, and account phase.
+            Calamari is technically compatible with standard MT4 and MT5 terminals. Firm, program and account eligibility is reviewed during onboarding.
             The table below reflects known status at the time of writing.
           </p>
         </div>
@@ -115,7 +115,7 @@ export default function CompatibilityMatrix() {
         {/* General MT4/MT5 statement */}
         <div className="mt-4 text-center">
           <p className="text-sm text-brand-text/60">
-            Calamari can operate with most standard MT4 and MT5 broker terminals. Prop-firm rules vary by firm, program, phase and account ownership. We review intended configurations during onboarding, but customers remain responsible for confirming compliance with their agreements.
+            Calamari is technically compatible with standard MT4 and MT5 broker terminals. Firm, program and account eligibility is reviewed during onboarding, but customers remain responsible for confirming compliance with their agreements.
             If your firm is not listed, compatibility will be confirmed during your onboarding review.
           </p>
         </div>

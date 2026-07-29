@@ -9,117 +9,72 @@ export default function Story() {
         <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-brand-purple/10 rounded-full blur-[120px]" />
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 items-start">
-          {/* Left: Origin story */}
-          <div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-purple/10 border border-brand-purple/30 text-purple-400 text-sm font-medium mb-6">
-              Our Story
-            </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 sm:mb-8">
-              We named it after
-              <br />
-              <span className="gradient-text-purple">the metric that matters.</span>
-            </h2>
-            <div className="space-y-4 sm:space-y-6 text-brand-text leading-relaxed text-sm sm:text-base">
-              <p>
-                <strong className="text-brand-heading">Calamari = Calmar + AI.</strong> The Calmar ratio — annualized return divided by maximum drawdown — is the number that separates disciplined traders from gamblers. We obsess over it, so we named our platform after it.
-              </p>
-              <p>
-                We are active prop traders who were running multiple funded accounts simultaneously: multiple VPS instances, multiple terminals, multiple portals, and no way to see everything in one place. We looked for a solution, found nothing reliable, and built it ourselves. We still run our own accounts on this platform every day. When Calamari goes down, our money is at risk too.
-              </p>
-              <p className="text-brand-heading font-semibold">
-                That is Calamari. Built by traders who were frustrated enough to build it themselves, and confident enough in what we built to offer it to you.
-              </p>
-            </div>
 
-            {/* Company Identity */}
-            <div className="mt-8 p-5 sm:p-6 rounded-2xl bg-brand-card border border-brand-purple/20">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="text-xl">📍</span>
-                <span className="text-sm font-bold text-brand-heading">About the company</span>
-              </div>
-              <div className="space-y-3 text-sm text-brand-text">
-                <div className="flex items-start gap-3">
-                  <span className="text-brand-cyan font-semibold flex-shrink-0">Location</span>
-                  <span>Built by prop traders. Operating entity registered internationally.</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <span className="text-brand-cyan font-semibold flex-shrink-0">Team</span>
-                  <span>The Calamari Team — active Forex and CFD prop traders. We trade the same accounts this platform manages.</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <span className="text-brand-cyan font-semibold flex-shrink-0">Mission</span>
-                  <span>Infrastructure for traders who manage their own accounts. Not signals. Not account management. Tools.</span>
-                </div>
-              </div>
+        {/* Master-Terminal Architecture Details */}
+        <div className="mb-16 sm:mb-24 max-w-4xl mx-auto">
+          <div className="text-center mb-8 sm:mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-blue/10 border border-brand-blue/30 text-brand-cyan text-sm font-medium mb-4">
+              Architecture details
             </div>
+            <h2 className="text-2xl sm:text-3xl font-black text-brand-heading mb-4">
+              How the master-terminal model works
+            </h2>
           </div>
 
-          {/* Right: AI intelligence layer */}
-          <div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-blue/10 border border-brand-blue/30 text-brand-cyan text-sm font-medium mb-6">
-              Intelligent Infrastructure
-            </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 sm:mb-8">
-              Designed to identify preventable configuration, execution and risk problems<br />
-              <span className="gradient-text">early enough for corrective action.</span>
-            </h2>
-            <p className="text-sm sm:text-base text-brand-text leading-relaxed mb-6 sm:mb-8">
-              Intelligent rule analysis, anomaly detection, and predictive risk warnings — so you can identify a preventable breach early enough to take action.
+          <div className="p-5 sm:p-6 rounded-2xl bg-brand-blue/5 border border-brand-blue/20 mb-8">
+            <p className="text-sm sm:text-base text-brand-text leading-relaxed italic">
+              &ldquo;Your designated master account remains connected through a terminal on the Calamari VM. You may trade that account normally from your phone or computer. When the VM terminal detects the resulting trade, the local copier distributes the configured instructions to the receiving terminals.&rdquo;
             </p>
-            <div className="space-y-4">
-              {[
-                {
-                  icon: "🔎",
-                  title: "Prop firm rule analysis",
-                  desc: "Analyzes your prop firm program rules and flags gaps or conflicts in your configuration before they become a problem.",
-                  color: "border-brand-blue/30 bg-brand-blue/5",
-                },
-                {
-                  icon: "📡",
-                  title: "Anomaly detection",
-                  desc: "Detects unusual patterns in trade execution and account behavior — unusual lot sizes, unexpected symbol activity, copy failures.",
-                  color: "border-brand-cyan/30 bg-brand-cyan/5",
-                },
-                {
-                  icon: "⚠️",
-                  title: "Predictive breach-risk warnings",
-                  desc: "Warns you before you hit a limit: \"You are 80% toward your daily loss limit with 3 open positions.\" Early enough to act.",
-                  color: "border-yellow-500/30 bg-yellow-500/5",
-                },
-                {
-                  icon: "🛠️",
-                  title: "Configuration pitfall identification",
-                  desc: "Flags issues like mismatched contract sizes between master and receiver, or symbol naming differences that could cause copy failures.",
-                  color: "border-orange-500/30 bg-orange-500/5",
-                },
-                {
-                  icon: "🩺",
-                  title: "Automated incident diagnosis",
-                  desc: "When something goes wrong, the system diagnoses the cause automatically — so you know what happened and why, without digging through logs.",
-                  color: "border-brand-purple/30 bg-brand-purple/5",
-                },
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className={`flex gap-3 sm:gap-4 p-4 sm:p-5 rounded-xl border ${item.color} transition-all duration-300 hover:scale-[1.02]`}
-                >
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              {
+                icon: "📱",
+                title: "Trade from anywhere",
+                desc: "MetaTrader allows simultaneous logins. You can place trades into the master account from your phone, laptop, or any device. The terminal on the VM detects those trades and triggers the copy.",
+              },
+              {
+                icon: "🔢",
+                title: "Terminal limit includes master",
+                desc: "The master terminal counts toward the stated limit. Up to 7 total terminals per VM — including the master. For example: 1 master + 6 receivers.",
+              },
+              {
+                icon: "🗂️",
+                title: "Multiple master accounts",
+                desc: "Multiple master accounts can be configured for traders running different strategies across separate account groups. Each master drives its own set of receivers.",
+              },
+              {
+                icon: "⚡",
+                title: "Manual changes persist",
+                desc: "If you manually alter a receiver account, the change persists until the next copy event overrides it. Be aware of this when making manual adjustments.",
+              },
+              {
+                icon: "🔌",
+                title: "Disconnect behavior",
+                desc: "If the master account or broker connection disconnects, copying pauses until reconnection. The watchdog detects this condition and alerts you.",
+              },
+              {
+                icon: "📊",
+                title: "Broker execution is independent",
+                desc: "Sub-second local copy propagation describes the intra-VM copy speed. Broker execution speed, fills and slippage remain dependent on the broker, market conditions and network connectivity.",
+              },
+            ].map((item, i) => (
+              <div key={i} className="p-4 sm:p-5 rounded-xl bg-brand-card border border-brand-border">
+                <div className="flex items-start gap-3">
                   <div className="text-xl sm:text-2xl flex-shrink-0 mt-0.5">{item.icon}</div>
                   <div>
                     <div className="text-sm sm:text-base font-bold text-brand-heading mb-1">{item.title}</div>
                     <div className="text-xs sm:text-sm text-brand-text">{item.desc}</div>
                   </div>
                 </div>
-              ))}
-            </div>
-            <p className="text-xs text-brand-text/60 mt-4 italic">
-              Anomaly detection and predictive risk warnings are on the active development roadmap.
-            </p>
+              </div>
+            ))}
           </div>
         </div>
 
         {/* Ideal Customer Definition */}
-        <div className="mt-12 sm:mt-16 rounded-2xl bg-brand-card border border-brand-border p-6 sm:p-10 max-w-4xl mx-auto">
+        <div className="rounded-2xl bg-brand-card border border-brand-border p-6 sm:p-10 max-w-4xl mx-auto">
           <div className="text-center mb-6 sm:mb-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-blue/10 border border-brand-blue/30 text-brand-cyan text-sm font-medium mb-4">
               Who Calamari is built for

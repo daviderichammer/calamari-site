@@ -23,7 +23,7 @@ export default function Solution() {
             <span className="gradient-text">Serious in execution.</span>
           </h2>
           <p className="text-base sm:text-lg text-brand-text max-w-2xl mx-auto px-2">
-            You trade on your device. Calamari distributes those trades across all your prop accounts — sized correctly, filtered correctly, monitored continuously.
+            You trade on your device. Calamari distributes those trades across your MT4 and MT5 accounts — sized correctly, filtered correctly, monitored continuously.
           </p>
         </div>
 
@@ -49,7 +49,7 @@ export default function Solution() {
                   { label: "Total Balance", value: "$47,832", change: "+2.4%", up: true },
                   { label: "Open Positions", value: "12", change: "4 accounts", up: true },
                   { label: "Today&apos;s P&L", value: "+$1,247", change: "+2.67%", up: true },
-                  { label: "VPS Uptime", value: "99.98%", change: "30 days", up: true },
+                  { label: "VM Uptime", value: "99.98%", change: "30 days", up: true },
                 ].map((stat, i) => (
                   <div key={i} className="bg-[#0F1120] rounded-xl p-2 sm:p-4 border border-[#1E2035]">
                     <div className="text-xs text-brand-text mb-1">{stat.label}</div>
@@ -106,13 +106,13 @@ export default function Solution() {
           <h3 className="text-2xl sm:text-3xl font-black mb-8 text-brand-heading">Three steps. One platform.</h3>
           <div className="text-left space-y-4 sm:space-y-6">
             <div className="p-4 sm:p-6 rounded-xl bg-[#0F1120] border border-[#1E2035]">
-              <p className="text-sm sm:text-base text-brand-text"><strong className="text-brand-cyan">1. You trade on your device.</strong> Your phone, your laptop, MT4, MT5 — however you trade. That account becomes your signal source.</p>
+              <p className="text-sm sm:text-base text-brand-text"><strong className="text-brand-cyan">1. You trade on your device.</strong> Your phone, your laptop, MT4, MT5 — however you trade. Your designated master account remains connected through a terminal on the Calamari VM. You may trade that account normally from your phone or computer. When the VM terminal detects the resulting trade, the local copier distributes the configured instructions to the receiving terminals.</p>
             </div>
             <div className="p-4 sm:p-6 rounded-xl bg-[#0F1120] border border-[#1E2035]">
-              <p className="text-sm sm:text-base text-brand-text"><strong className="text-brand-cyan">2. Calamari copies those trades.</strong> To your prop firm accounts, funded accounts, and personal accounts — all running on your dedicated VM, all sized and filtered per-account.</p>
+              <p className="text-sm sm:text-base text-brand-text"><strong className="text-brand-cyan">2. Calamari copies those trades.</strong> To your MT4 and MT5 accounts — all running on your dedicated VM, all sized and filtered per-account. Sender and receiver terminals communicate locally within the same VM, avoiding an external cloud-copying relay. Broker execution speed, fills and slippage remain dependent on the broker, market conditions and network connectivity.</p>
             </div>
             <div className="p-4 sm:p-6 rounded-xl bg-[#0F1120] border border-[#1E2035]">
-              <p className="text-sm sm:text-base text-brand-text"><strong className="text-brand-cyan">3. You focus on entries and exits.</strong> Calamari handles distribution, sizing, filtering, monitoring, and recovery. Your accounts are our priority.</p>
+              <p className="text-sm sm:text-base text-brand-text"><strong className="text-brand-cyan">3. You focus on entries and exits.</strong> Calamari handles distribution, sizing, filtering, monitoring, and recovery. Calamari continuously monitors supported VM and terminal health signals while the service is operational, including nights and weekends.</p>
             </div>
           </div>
         </div>
@@ -126,7 +126,7 @@ export default function Solution() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
             <div className="p-4 rounded-xl border border-brand-border bg-brand-card flex items-start gap-3">
               <span className="text-green-400">✓</span>
-              <p className="text-sm text-brand-text">We do not see your strategy — we see executions, not intent.</p>
+              <p className="text-sm text-brand-text">Calamari does not inspect, analyze, copy or reuse your trading strategy. Staff do not have standing access to your VM. Temporary support access requires authorization and is logged.</p>
             </div>
             <div className="p-4 rounded-xl border border-brand-border bg-brand-card flex items-start gap-3">
               <span className="text-green-400">✓</span>
@@ -138,7 +138,7 @@ export default function Solution() {
             </div>
             <div className="p-4 rounded-xl border border-brand-border bg-brand-card flex items-start gap-3">
               <span className="text-green-400">✓</span>
-              <p className="text-sm text-brand-text">Dedicated resources — your VM is yours alone. No shared environments.</p>
+              <p className="text-sm text-brand-text">Each customer receives an isolated Windows VM with allocated CPU, memory and storage. Customers do not share an operating-system environment or trading-terminal installation.</p>
             </div>
             <div className="p-4 rounded-xl border border-brand-border bg-brand-card flex items-start gap-3">
               <span className="text-green-400">✓</span>
@@ -146,7 +146,7 @@ export default function Solution() {
             </div>
             <div className="p-4 rounded-xl border border-brand-border bg-brand-card flex items-start gap-3">
               <span className="text-green-400">✓</span>
-              <p className="text-sm text-brand-text">Full transparency: you see everything happening on your dashboard in real-time.</p>
+              <p className="text-sm text-brand-text">Full transparency: you see everything happening on your dashboard in real-time. <Link href="/security" className="text-brand-cyan hover:underline">Full security details →</Link></p>
             </div>
           </div>
           <p className="text-sm sm:text-base text-brand-text mt-8 font-semibold">We are traders ourselves running our own money on this same platform.</p>

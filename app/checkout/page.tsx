@@ -9,11 +9,11 @@ const PLAN = {
   name: "Calamari VM",
   price: 199,
   features: [
-    "Dedicated Windows VPS (always-on, managed, monitored)",
+    "Dedicated Windows VM (always-on, managed, monitored)",
     "Up to 7 MT4/MT5 instances — any combination",
     "FX Blue trade copying (configured and managed by us)",
     "Real-time dashboard with full analytics",
-    "LiveView — see your MT5 screens from anywhere",
+    "LiveView — see your MT4/MT5 screens from anywhere",
     "24/7 Watchdog with auto-recovery",
     "Tentacle agent for remote management",
   ],
@@ -111,7 +111,7 @@ function CheckoutForm() {
             Welcome to Calamari!
           </h1>
           <p className="text-brand-text mb-6">
-            Your account has been created and your VPS is being provisioned.
+            Your account has been created. Our team will contact you to begin onboarding and VM provisioning.
             Check your email at <strong className="text-brand-cyan">{result.email}</strong> for your login credentials.
           </p>
           <div className="bg-brand-card border border-green-500/30 rounded-xl p-6 mb-8 text-left">
@@ -119,7 +119,7 @@ function CheckoutForm() {
             <ul className="space-y-2 text-sm text-brand-text">
               <li className="flex items-center gap-2">
                 <span className="w-5 h-5 rounded-full bg-green-500/20 text-green-400 flex items-center justify-center text-xs">1</span>
-                Your VPS is being provisioned (5–15 minutes)
+                Our team will contact you to begin onboarding (typically within 24 hours)
               </li>
               <li className="flex items-center gap-2">
                 <span className="w-5 h-5 rounded-full bg-green-500/20 text-green-400 flex items-center justify-center text-xs">2</span>
@@ -152,7 +152,7 @@ function CheckoutForm() {
         <div className="text-center">
           <div className="text-6xl mb-6 animate-float">🦑</div>
           <h2 className="text-2xl font-bold text-brand-heading mb-3">Processing your order...</h2>
-          <p className="text-brand-text">Setting up your account and provisioning your VPS.</p>
+          <p className="text-brand-text">Setting up your account. Our team will reach out to begin onboarding.</p>
           <div className="mt-8 flex justify-center">
             <div className="w-8 h-8 border-2 border-brand-blue border-t-transparent rounded-full animate-spin" />
           </div>

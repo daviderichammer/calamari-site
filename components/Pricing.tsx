@@ -25,6 +25,7 @@ export default function Pricing() {
               keep it running, and are reachable when something goes wrong.
             </p>
           </div>
+
           {/* Single pricing card */}
           <div className="w-full sm:max-w-lg sm:mx-auto">
             <div className="relative rounded-2xl p-6 sm:p-8 bg-brand-card border border-brand-blue/50 pricing-popular shadow-2xl shadow-brand-blue/20">
@@ -37,7 +38,7 @@ export default function Pricing() {
               {/* Plan name */}
               <div className="mb-2 mt-2">
                 <h3 className="text-xl sm:text-2xl font-black text-brand-heading">Calamari VM</h3>
-                <p className="text-sm text-brand-text mt-1">One dedicated Windows VPS. Up to 7 MT4/MT5 instances. Fully managed.</p>
+                <p className="text-sm text-brand-text mt-1">One dedicated Windows VM. Up to 7 MT4/MT5 instances. Fully managed.</p>
               </div>
               {/* Price */}
               <div className="mb-6 sm:mb-8 mt-4 sm:mt-6">
@@ -64,14 +65,14 @@ export default function Pricing() {
               {/* Features */}
               <div className="space-y-3">
                 {[
-                  "Dedicated Windows VPS (always-on, managed, monitored)",
+                  "Dedicated Windows VM (always-on, managed, monitored)",
                   "Up to 7 MT4/MT5 instances — any combination",
                   "FX Blue trade copying (configured and managed by us)",
                   "Real-time dashboard with full analytics",
                   "LiveView — see your MT4/MT5 screens from anywhere",
                   "99.9% uptime target with Watchdog auto-recovery",
                   "Tentacle agent for remote management",
-                  "Works with any MT4/MT5 prop firm — no special integrations required",
+                  "Compatibility reviewed during onboarding — no special integrations required",
                 ].map((feature, j) => (
                   <div key={j} className="flex items-start gap-3 text-sm">
                     <svg
@@ -107,35 +108,46 @@ export default function Pricing() {
             </div>
           </div>
 
-          {/* Human accountability comparison */}
+          {/* Responsibility-shift comparison table */}
           <div className="mt-10 sm:mt-16 rounded-2xl bg-brand-card border border-brand-border p-4 sm:p-8 max-w-4xl mx-auto">
             <h3 className="text-base sm:text-lg font-bold text-brand-heading mb-2 text-center">
-              What you are actually paying for
+              What responsibility shifts when you use Calamari
             </h3>
             <p className="text-sm text-brand-text text-center mb-6 max-w-2xl mx-auto">
-              A raw VPS may cost considerably less than Calamari. The difference is the managed setup, monitoring, visibility, recovery and support layer.
+              A raw VPS costs less. Calamari is designed for traders who value managed setup, monitoring, visibility and operational accountability more than minimizing infrastructure cost.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-              {[
-                { phase: "Calamari", items: ["VM provisioned and managed", "Installation handled", "Configuration handled", "Automated monitoring", "Watchdog and support", "Dashboard included", "Test trade and approval process"] },
-                { phase: "Raw VPS", items: ["Customer selects and provisions server", "Customer installs and updates terminals", "Customer configures copier mappings", "Customer monitors terminal health", "Customer diagnoses failed terminals", "Customer builds own consolidated view", "Customer owns all migration risk"] },
-              ].map((group, i) => (
-                <div key={i} className={`p-4 rounded-xl border ${i === 0 ? "border-red-500/20 bg-red-500/5" : "border-brand-blue/20 bg-brand-blue/5"}`}>
-                  <div className={`text-xs font-bold uppercase tracking-wider mb-3 ${i === 0 ? "text-red-400" : "text-brand-cyan"}`}>
-                    {group.phase}
-                  </div>
-                  <ul className="space-y-1.5">
-                    {group.items.map((item, j) => (
-                      <li key={j} className="flex items-start gap-2 text-xs sm:text-sm text-brand-text">
-                        <span className={`mt-1 flex-shrink-0 ${i === 3 ? "text-red-400" : "text-green-400"}`}>
-                          {i === 0 ? "✗" : "✓"}
-                        </span>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm min-w-[480px]">
+                <thead>
+                  <tr className="border-b border-brand-border">
+                    <th className="text-left py-3 px-4 text-xs font-bold text-brand-text uppercase tracking-wider">Task</th>
+                    <th className="text-left py-3 px-4 text-xs font-bold text-brand-text uppercase tracking-wider">With a raw VPS</th>
+                    <th className="text-left py-3 px-4 text-xs font-bold text-brand-cyan uppercase tracking-wider">With Calamari</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-brand-border">
+                  {[
+                    ["Server provisioning", "You select and provision the server", "VM provisioned and managed"],
+                    ["Terminal installation", "You install and update terminals", "Installation handled"],
+                    ["Copier configuration", "You configure copier mappings", "Configuration handled and tested"],
+                    ["Health monitoring", "You monitor terminal health", "Automated monitoring and alerting"],
+                    ["Failure recovery", "You diagnose and fix failures", "Watchdog recovery and support"],
+                    ["Account visibility", "You build your own consolidated view", "Dashboard and LiveView included"],
+                    ["Migration & recovery risk", "You own all migration and recovery risk", "Managed failover and test process"],
+                  ].map(([task, vps, cal], i) => (
+                    <tr key={i} className="hover:bg-brand-blue/5 transition-colors">
+                      <td className="py-3 px-4 font-semibold text-brand-heading text-xs sm:text-sm">{task}</td>
+                      <td className="py-3 px-4 text-brand-text/70 text-xs sm:text-sm">{vps}</td>
+                      <td className="py-3 px-4 text-brand-cyan text-xs sm:text-sm font-medium">{cal}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div className="mt-6 p-4 rounded-xl bg-brand-blue/5 border border-brand-blue/20">
+              <p className="text-sm text-brand-text italic text-center">
+                &ldquo;A raw VPS costs less. Calamari is designed for traders who value managed setup, monitoring, visibility and operational accountability more than minimizing infrastructure cost.&rdquo;
+              </p>
             </div>
           </div>
 
@@ -187,7 +199,7 @@ export default function Pricing() {
                   step: "02",
                   icon: "🔍",
                   title: "We verify compatibility and provision your VM",
-                  desc: "We confirm your accounts are compatible with MT4/MT5 and provision your dedicated Windows VPS. Each customer receives an isolated Windows VM with allocated CPU, memory and storage. Customers do not share Windows environments or application instances.",
+                  desc: "We confirm your accounts are compatible with MT4/MT5 and provision your dedicated Windows VM. Each customer receives an isolated Windows VM with allocated CPU, memory and storage. Customers do not share an operating-system environment or trading-terminal installation.",
                   color: "border-brand-cyan/40 bg-brand-cyan/5",
                   dot: "bg-brand-cyan",
                 },
@@ -195,7 +207,7 @@ export default function Pricing() {
                   step: "03",
                   icon: "⚙️",
                   title: "Terminals installed, credentials entered securely",
-                  desc: "We install and configure your MT4/MT5 terminals. Your trading-platform credentials are provided once during onboarding and stored encrypted (AES-256) in Calamari's credential vault. They are used exclusively to configure and maintain your MT4/MT5 terminals. Credentials are never shared externally, are accessible only to authorized operations staff with logged access, and are permanently deleted upon service cancellation.",
+                  desc: "We install and configure your MT4/MT5 terminals. Trading-platform credentials are encrypted before storage in Calamari's segregated credential vault. Credentials are never stored in plaintext. Administrative access is restricted, time-limited and logged. Customers can rotate credentials at any time. Credentials are permanently deleted upon service cancellation.",
                   color: "border-green-500/40 bg-green-500/5",
                   dot: "bg-green-400",
                 },
@@ -203,7 +215,7 @@ export default function Pricing() {
                   step: "04",
                   icon: "🗺️",
                   title: "Master and receivers mapped, risk settings reviewed",
-                  desc: "We configure FX Blue: your signal account is set as master, each prop account as a receiver with its own lot-sizing rules, symbol filters, and risk limits.",
+                  desc: "We configure FX Blue: your master account is set as sender, each prop account as a receiver with its own lot-sizing rules, symbol filters, and risk limits. Sender and receiver terminals communicate locally within the same VM.",
                   color: "border-yellow-500/40 bg-yellow-500/5",
                   dot: "bg-yellow-400",
                 },
@@ -219,7 +231,7 @@ export default function Pricing() {
                   step: "06",
                   icon: "🚀",
                   title: "You are live — monitor everything from one dashboard",
-                  desc: "Your setup is active. Every account, every position, every copy event — visible in real time from your Calamari dashboard. The watchdog runs continuously.",
+                  desc: "Your setup is active. Every account, every position, every copy event — visible in real time from your Calamari dashboard. Calamari continuously monitors supported VM and terminal health signals while the service is operational, including nights and weekends.",
                   color: "border-brand-purple/40 bg-brand-purple/5",
                   dot: "bg-brand-purple",
                 },

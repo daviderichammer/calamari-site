@@ -33,10 +33,10 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               {[
+                { label: "How It Works", href: "/#how-it-works" },
                 { label: "Features", href: "/#features" },
-                { label: "Dashboard", href: "/#dashboard" },
                 { label: "Pricing", href: "/#pricing" },
-                { label: "Our Story", href: "/#story" },
+                { label: "Compatibility", href: "/#compatibility" },
                 { label: "FAQ", href: "/#faq" },
                 { label: "Dashboard Login", href: "https://dashboard.calamaritrading.ai" },
               ].map((link, i) => (

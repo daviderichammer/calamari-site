@@ -14,7 +14,7 @@ export default function Privacy() {
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-brand-heading mb-4">
             Privacy Policy
           </h1>
-          <p className="text-brand-text">Last Updated: October 2023</p>
+          <p className="text-brand-text">Last Updated: July 2025</p>
         </div>
 
         {/* Content */}
@@ -23,7 +23,7 @@ export default function Privacy() {
           <section>
             <h2 className="text-xl font-bold text-brand-heading mb-3">1. Data Controller</h2>
             <p>
-              Calamari Trading LLC ("Calamari", "we", "us", or "our") acts as the data controller for the personal information you provide to us when using our platform and infrastructure services.
+              Calamari Trading LLC (&ldquo;Calamari&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) acts as the data controller for the personal information you provide to us when using our platform and infrastructure services.
             </p>
           </section>
 
@@ -46,19 +46,36 @@ export default function Privacy() {
           <section>
             <h2 className="text-xl font-bold text-brand-heading mb-3">3. How Credentials Are Stored</h2>
             <p>
-              Your trading-platform credentials are encrypted at rest using AES-256 encryption. They are stored in Calamari's secure credential vault, which is physically and logically separated from our primary application database. The encryption keys are managed independently. Every access to this vault by our systems or authorized personnel is logged with a timestamp and reason.
+              Trading-platform credentials are encrypted before storage in Calamari&apos;s segregated credential vault. Credentials are never stored in plaintext. Administrative access is restricted, time-limited and logged. Customers can rotate credentials at any time. Credentials are permanently deleted upon service cancellation.
             </p>
+            <p className="mt-4">
+              Additional details on credential security:
+            </p>
+            <ul>
+              <li>Encryption keys are stored separately from encrypted credential data. A compromise of the application database would not expose your credentials.</li>
+              <li>Only automated provisioning systems decrypt credentials during terminal configuration. Human staff cannot retrieve plaintext passwords.</li>
+              <li>Every credential access — automated or manual — is logged with timestamp and purpose.</li>
+              <li>Customers can update credentials through the dashboard at any time.</li>
+              <li>Credentials are permanently deleted within 30 days of cancellation, or immediately upon explicit request.</li>
+            </ul>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">4. Who Can Access Your VM</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">4. VM Isolation</h2>
             <p>
-              Your VM is isolated. Access is strictly limited to authorized Calamari operations staff for the sole purpose of maintenance, provisioning, and support. We employ a just-in-time access model, meaning staff do not have standing access. If you require interactive technical support that involves accessing your VM, you must explicitly approve the session. All access events are logged.
+              Each customer receives an isolated Windows VM with allocated CPU, memory and storage. Customers do not share an operating-system environment or trading-terminal installation. Your VM is deployed within a secure virtual network with strict firewall rules.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">5. Data Retention and Deletion</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">5. Support Access Model</h2>
+            <p>
+              Staff do not have standing access to your VM. Temporary support access requires your explicit authorization before any session begins. All access events — including the timestamp, purpose, and personnel involved — are logged. Calamari does not inspect, analyze, copy or reuse your trading strategy.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">6. Data Retention and Deletion</h2>
             <p>
               We retain your data only as long as your service is active. Upon cancellation:
               <ul>
@@ -71,7 +88,7 @@ export default function Privacy() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">6. Subprocessors</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">7. Subprocessors</h2>
             <p>
               We use trusted third-party subprocessors to operate our Services:
               <ul>
@@ -79,33 +96,40 @@ export default function Privacy() {
                 <li><strong>Stripe:</strong> For payment processing.</li>
                 <li><strong>Monitoring Tools:</strong> For tracking system health metrics (CPU, memory, uptime).</li>
               </ul>
-              <strong>We do not share your trading data with subprocessors.</strong> They only process the infrastructure metrics required to keep the systems running.
+              <strong>We do not share your trading data with subprocessors.</strong> They only process the infrastructure metrics required to keep the systems running. All subprocessors are subject to contractual confidentiality and security obligations.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">7. Data Sharing and Confidentiality</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">8. Data Sharing and Confidentiality</h2>
             <p>
               We do not sell your data. We do not use your trading data for advertising, signal generation, or any proprietary trading purposes. We do not disclose your trading data to other traders. Limited data may be processed by our infrastructure providers solely to operate Calamari, subject to strict contractual confidentiality and security obligations.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">8. Security Measures and Backups</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">9. Security Measures and Backups</h2>
             <p>
               We implement robust security measures, including encryption at rest and in transit, Role-Based Access Control (RBAC), Multi-Factor Authentication (MFA) for administrative access, and continuous monitoring. Your VM state is periodically backed up to allow for rapid recovery in the event of hardware failure. These backups are encrypted and subject to the same strict access controls and retention policies as live data.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">9. Breach Notification</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">10. Monitoring</h2>
+            <p>
+              Calamari continuously monitors supported VM and terminal health signals while the service is operational, including nights and weekends. Monitoring systems operate outside your VM, using external heartbeat checks so that VM-level failures are detected independently.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">11. Breach Notification</h2>
             <p>
               In the event of a data breach that compromises your personal information or trading credentials, we will notify you via email within 72 hours of discovering the breach, outlining the nature of the incident and the steps we are taking to mitigate it.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">10. Customer Rights</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">12. Customer Rights</h2>
             <p>
               You have the right to:
               <ul>
@@ -119,21 +143,21 @@ export default function Privacy() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">11. International Transfers</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">13. International Transfers</h2>
             <p>
               Your data may be transferred to, and maintained on, computers located outside of your state, province, country, or other governmental jurisdiction where the data protection laws may differ from those of your jurisdiction. We ensure appropriate safeguards are in place for any such transfers.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">12. Policy Updates</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">14. Policy Updates</h2>
             <p>
-              We may update this Privacy Policy periodically. We will provide 30 days' notice for material changes by posting the updated policy on our website or notifying you via email.
+              We may update this Privacy Policy periodically. We will provide 30 days&apos; notice for material changes by posting the updated policy on our website or notifying you via email.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">13. Contact Information</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">15. Contact Information</h2>
             <p>
               For privacy-related inquiries or to exercise your data rights, please contact us at{" "}
               <a href="mailto:privacy@calamaritrading.ai" className="text-brand-cyan hover:underline">

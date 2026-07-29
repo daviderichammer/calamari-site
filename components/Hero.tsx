@@ -1,17 +1,8 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useRef } from "react";
-
-const PROP_FIRMS = [
-  "FTMO", "The5ers", "FundedNext", "MyForexFunds", "True Forex Funds",
-  "E8 Funding", "Apex Trader Funding", "Topstep", "Funded Engineer",
-  "FTMO", "The5ers", "FundedNext", "MyForexFunds", "True Forex Funds",
-  "E8 Funding", "Apex Trader Funding", "Topstep", "Funded Engineer",
-];
 
 export default function Hero() {
-  const tickerRef = useRef<HTMLDivElement>(null);
   return (
     <section className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-16 sm:pt-20 pb-8 sm:pb-16">
       {/* Background */}
@@ -45,14 +36,14 @@ export default function Hero() {
         {/* Outcome statement */}
         <p className="text-base sm:text-xl lg:text-2xl text-brand-text max-w-3xl mx-auto mb-3 sm:mb-4 animate-fade-in-up px-2" style={{ animationDelay: "0.1s" }}>
           Calamari keeps every MT4 and MT5 account correctly sized, synchronized, and within its individual limits —
-          so you can execute one decision and have it applied correctly across all your accounts.
+          so you can execute one decision and have it applied correctly across your accounts.
         </p>
 
         {/* Implementation detail explanation */}
         <p className="text-sm sm:text-base text-brand-text/70 max-w-2xl mx-auto mb-4 sm:mb-6 animate-fade-in-up px-2" style={{ animationDelay: "0.15s" }}>
-          Under the hood: a dedicated Windows VPS hosts your master MT5 and all receiver accounts. FX Blue Personal Trade Copier
-          runs locally on that VM — no cloud round-trips, no API latency — copying trades in sub-second time with per-account lot
-          sizing, symbol filters, and risk limits applied automatically.
+          Under the hood: a dedicated Windows VM hosts your master terminal and all receiver accounts. FX Blue Personal Trade Copier
+          runs locally on that VM — sender and receiver terminals communicate locally within the same VM, avoiding an external cloud-copying relay.
+          Sub-second local copy propagation, with per-account lot sizing, symbol filters, and risk limits applied automatically.
         </p>
 
         <p className="text-sm sm:text-base text-brand-text/70 max-w-2xl mx-auto mb-8 sm:mb-10 animate-fade-in-up px-2" style={{ animationDelay: "0.2s" }}>
@@ -127,7 +118,7 @@ export default function Hero() {
                       <div className="text-lg">🦑</div>
                       <div>
                         <div className="text-xs font-bold text-brand-heading">Designated master account</div>
-                        <div className="text-xs text-brand-text/60">FX Blue sender</div>
+                        <div className="text-xs text-brand-text/60">FX Blue sender terminal</div>
                       </div>
                     </div>
                     {/* Divider with arrow */}
@@ -150,26 +141,26 @@ export default function Hero() {
                         </div>
                       </div>
                     ))}
-                    <div className="text-center text-xs text-brand-text/40 font-mono">+ up to 7 total</div>
+                    <div className="text-center text-xs text-brand-text/40 font-mono">+ up to 7 total including master</div>
                   </div>
                 </div>
-                <div className="text-xs text-brand-cyan/80 font-semibold text-center">Always-on VPS — everything runs here</div>
+                <div className="text-xs text-brand-cyan/80 font-semibold text-center">Always-on VM — everything runs here</div>
               </div>
             </div>
 
             {/* Diagram footnote */}
             <div className="mt-6 pt-4 border-t border-brand-border grid grid-cols-1 sm:grid-cols-3 gap-3 text-center">
               <div className="text-xs text-brand-text/60">
-                <span className="text-brand-cyan font-semibold">Sub-second copy speed</span><br />
-                Sender and receiver on the same VM — no network latency
+                <span className="text-brand-cyan font-semibold">Sub-second local copy propagation</span><br />
+                No external network round trip between sender and receiver terminals
               </div>
               <div className="text-xs text-brand-text/60">
                 <span className="text-brand-cyan font-semibold">Per-account sizing</span><br />
                 Each receiver has its own lot scale, symbol filter, and risk limit
               </div>
               <div className="text-xs text-brand-text/60">
-                <span className="text-brand-cyan font-semibold">Always monitored</span><br />
-                Watchdog auto-restarts MT4/MT5 if it crashes — 24/7
+                <span className="text-brand-cyan font-semibold">Continuously monitored</span><br />
+                Watchdog auto-restarts terminals if they crash — nights and weekends included
               </div>
             </div>
           </div>
@@ -192,9 +183,9 @@ export default function Hero() {
           <div className="grid grid-cols-2 gap-3 sm:gap-6 text-left w-full max-w-sm sm:max-w-none sm:w-auto">
             {[
               { value: "99.9%", label: "Uptime Target", sub: "Watchdog auto-recovery" },
-              { value: "7", label: "MT4/MT5 Instances", sub: "Per VM, any combination" },
+              { value: "7", label: "MT4/MT5 Instances", sub: "Per VM, including master" },
               { value: "<1s", label: "Local Copy Speed", sub: "Sub-second intra-VM propagation" },
-              { value: "MT4 & MT5", label: "MT4 & MT5 Compatible", sub: "most standard MT4 and MT5 broker terminals" },
+              { value: "MT4 & MT5", label: "Terminal Compatible", sub: "Most standard MT4 and MT5 broker terminals" },
             ].map((stat, i) => (
               <div
                 key={i}
@@ -208,20 +199,17 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Prop firm ticker */}
-        <div className="relative overflow-hidden py-4">
-          <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-20 bg-gradient-to-r from-brand-darker to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-20 bg-gradient-to-l from-brand-darker to-transparent z-10" />
-          <div
-            ref={tickerRef}
-            className="flex gap-6 sm:gap-8 animate-ticker whitespace-nowrap"
+        {/* Compatibility link — replaces ticker */}
+        <div className="text-center mb-4 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+          <a
+            href="#compatibility"
+            className="text-sm text-brand-cyan hover:text-white transition-colors font-medium inline-flex items-center gap-1"
           >
-            {PROP_FIRMS.map((firm, i) => (
-              <span key={i} className="text-xs sm:text-sm text-brand-text/50 font-medium flex-shrink-0">
-                {firm}
-              </span>
-            ))}
-          </div>
+            See current compatibility status
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
         </div>
       </div>
     </section>

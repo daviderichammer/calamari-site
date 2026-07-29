@@ -53,16 +53,16 @@ export default function Navbar() {
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center gap-6 lg:gap-8">
               <a
+                href="#how-it-works"
+                className="text-brand-text hover:text-brand-heading transition-colors text-sm font-medium"
+              >
+                How It Works
+              </a>
+              <a
                 href="#features"
                 className="text-brand-text hover:text-brand-heading transition-colors text-sm font-medium"
               >
                 Features
-              </a>
-              <a
-                href="#dashboard"
-                className="text-brand-text hover:text-brand-cyan transition-colors text-sm font-medium"
-              >
-                Dashboard
               </a>
               <a
                 href="#pricing"
@@ -71,10 +71,10 @@ export default function Navbar() {
                 Pricing
               </a>
               <a
-                href="#story"
+                href="#compatibility"
                 className="text-brand-text hover:text-brand-heading transition-colors text-sm font-medium"
               >
-                Our Story
+                Compatibility
               </a>
               <a
                 href="#faq"
@@ -134,10 +134,10 @@ export default function Navbar() {
           {mobileOpen && (
             <div className="md:hidden bg-brand-darker/98 backdrop-blur-xl border-t border-brand-border py-3 px-2 space-y-1">
               {[
+                { label: "How It Works", href: "#how-it-works" },
                 { label: "Features", href: "#features" },
-                { label: "Dashboard", href: "#dashboard" },
                 { label: "Pricing", href: "#pricing" },
-                { label: "Our Story", href: "#story" },
+                { label: "Compatibility", href: "#compatibility" },
                 { label: "FAQ", href: "#faq" },
               ].map((item) => (
                 <a
