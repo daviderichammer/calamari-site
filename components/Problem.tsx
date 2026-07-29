@@ -6,7 +6,7 @@ export default function Problem() {
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-0 right-0 h-px section-divider" />
         <div className="absolute bottom-0 left-0 right-0 h-px section-divider" />
-        <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-brand-purple/8 rounded-full blur-[120px]" />
+        <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-brand-purple/10 rounded-full blur-[120px]" />
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}

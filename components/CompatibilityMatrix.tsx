@@ -42,7 +42,7 @@ export default function CompatibilityMatrix() {
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-0 right-0 h-px section-divider" />
         <div className="absolute bottom-0 left-0 right-0 h-px section-divider" />
-        <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-brand-blue/8 rounded-full blur-[120px]" />
+        <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-brand-blue/10 rounded-full blur-[120px]" />
       </div>
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
