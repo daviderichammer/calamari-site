@@ -61,12 +61,11 @@ export default function Story() {
               Intelligent Infrastructure
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 sm:mb-8">
-              The AI layer that
-              <br />
-              <span className="gradient-text">protects your accounts.</span>
+              Designed to identify preventable configuration, execution and risk problems<br />
+              <span className="gradient-text">early enough for corrective action.</span>
             </h2>
             <p className="text-sm sm:text-base text-brand-text leading-relaxed mb-6 sm:mb-8">
-              Intelligent rule analysis, anomaly detection, and predictive risk warnings — so you never lose an account to a preventable breach.
+              Intelligent rule analysis, anomaly detection, and predictive risk warnings — so you can identify a preventable breach early enough to take action.
             </p>
             <div className="space-y-4">
               {[

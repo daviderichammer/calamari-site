@@ -134,7 +134,7 @@ export default function Solution() {
             </div>
             <div className="p-4 rounded-xl border border-brand-border bg-brand-card flex items-start gap-3">
               <span className="text-green-400">✓</span>
-              <p className="text-sm text-brand-text">We do not share your trading data with any third party.</p>
+              <p className="text-sm text-brand-text">We do not sell trading data or disclose it for advertising, signal generation or use by other traders. Limited data may be processed by infrastructure and service providers solely to operate Calamari, subject to contractual confidentiality and security obligations.</p>
             </div>
             <div className="p-4 rounded-xl border border-brand-border bg-brand-card flex items-start gap-3">
               <span className="text-green-400">✓</span>

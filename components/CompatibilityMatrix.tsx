@@ -115,7 +115,7 @@ export default function CompatibilityMatrix() {
         {/* General MT4/MT5 statement */}
         <div className="mt-4 text-center">
           <p className="text-sm text-brand-text/60">
-            Calamari works with any prop firm that uses MetaTrader 4 or MetaTrader 5.
+            Calamari can operate with most standard MT4 and MT5 broker terminals. Prop-firm rules vary by firm, program, phase and account ownership. We review intended configurations during onboarding, but customers remain responsible for confirming compliance with their agreements.
             If your firm is not listed, compatibility will be confirmed during your onboarding review.
           </p>
         </div>

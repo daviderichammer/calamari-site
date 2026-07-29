@@ -126,7 +126,7 @@ export default function Hero() {
                     <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-brand-blue/10 border border-brand-blue/30">
                       <div className="text-lg">🦑</div>
                       <div>
-                        <div className="text-xs font-bold text-brand-heading">Master MT5</div>
+                        <div className="text-xs font-bold text-brand-heading">Designated master account</div>
                         <div className="text-xs text-brand-text/60">FX Blue sender</div>
                       </div>
                     </div>
@@ -194,7 +194,7 @@ export default function Hero() {
               { value: "99.9%", label: "Uptime Target", sub: "Watchdog auto-recovery" },
               { value: "7", label: "MT4/MT5 Instances", sub: "Per VM, any combination" },
               { value: "<1s", label: "Local Copy Speed", sub: "Sub-second intra-VM propagation" },
-              { value: "MT4 & MT5", label: "Prop Firm Compatible", sub: "Any MT4/MT5 prop firm" },
+              { value: "MT4 & MT5", label: "MT4 & MT5 Compatible", sub: "most standard MT4 and MT5 broker terminals" },
             ].map((stat, i) => (
               <div
                 key={i}

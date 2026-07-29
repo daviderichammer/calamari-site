@@ -1,132 +1,64 @@
 import Link from "next/link";
-import type { Metadata } from "next";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Security | Calamari Trading",
-  description:
-    "How Calamari Trading secures your trading infrastructure — dedicated VMs, AES-256 encryption, access controls, and audit logging.",
+  description: "Security architecture and practices for Calamari Trading.",
 };
 
-export default function SecurityPage() {
+export default function Security() {
   return (
-    <div className="min-h-screen bg-brand-darker text-brand-text">
-      {/* Header */}
-      <div className="border-b border-brand-border bg-brand-darker/90 backdrop-blur-xl sticky top-0 z-10">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 text-brand-heading font-bold text-lg hover:text-brand-cyan transition-colors">
-            <span className="text-brand-cyan">🦑</span> Calamari Trading
-          </Link>
-          <Link href="/" className="text-sm text-brand-text hover:text-brand-heading transition-colors">
-            ← Back to Home
-          </Link>
-        </div>
-      </div>
-
-      {/* Content */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
-        <div className="mb-10">
-          <h1 className="text-3xl sm:text-4xl font-bold text-brand-heading mb-3">Security at Calamari Trading</h1>
-          <p className="text-brand-text text-sm">Last Updated: July 29, 2026</p>
+    <div className="min-h-screen pt-24 pb-16 sm:pt-32 sm:pb-24">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="mb-12 sm:mb-16">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-brand-heading mb-4">
+            Security Architecture
+          </h1>
+          <p className="text-brand-text">How we protect your infrastructure and credentials.</p>
         </div>
 
-        {/* Intro */}
-        <p className="text-base text-brand-text leading-relaxed mb-10">
-          At Calamari Trading, we understand that providing infrastructure for your trading operations requires an uncompromising approach to security. This page outlines the architecture, practices, and controls we use to protect your data, credentials, and virtual machines.
-        </p>
-
-        {/* Security summary table */}
-        <div className="mb-12 overflow-x-auto rounded-xl border border-brand-border">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="bg-brand-card border-b border-brand-border">
-                <th className="text-left px-4 py-3 text-brand-heading font-semibold">Security Control</th>
-                <th className="text-left px-4 py-3 text-brand-heading font-semibold">Implementation</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-brand-border">
-              <tr className="hover:bg-brand-card/40 transition-colors">
-                <td className="px-4 py-3 text-brand-heading font-medium">Credential Encryption</td>
-                <td className="px-4 py-3 text-brand-text">AES-256 at rest; TLS 1.2+ in transit</td>
-              </tr>
-              <tr className="hover:bg-brand-card/40 transition-colors">
-                <td className="px-4 py-3 text-brand-heading font-medium">VM Isolation</td>
-                <td className="px-4 py-3 text-brand-text">Dedicated VMs — no shared hosting</td>
-              </tr>
-              <tr className="hover:bg-brand-card/40 transition-colors">
-                <td className="px-4 py-3 text-brand-heading font-medium">Dashboard Access</td>
-                <td className="px-4 py-3 text-brand-text">MFA available; IP allowlisting supported</td>
-              </tr>
-              <tr className="hover:bg-brand-card/40 transition-colors">
-                <td className="px-4 py-3 text-brand-heading font-medium">Support Access</td>
-                <td className="px-4 py-3 text-brand-text">Just-in-time; requires customer approval</td>
-              </tr>
-              <tr className="hover:bg-brand-card/40 transition-colors">
-                <td className="px-4 py-3 text-brand-heading font-medium">Audit Logging</td>
-                <td className="px-4 py-3 text-brand-text">All admin actions logged and auditable</td>
-              </tr>
-              <tr className="hover:bg-brand-card/40 transition-colors">
-                <td className="px-4 py-3 text-brand-heading font-medium">Credential Rotation</td>
-                <td className="px-4 py-3 text-brand-text">Supported and encouraged</td>
-              </tr>
-              <tr className="hover:bg-brand-card/40 transition-colors">
-                <td className="px-4 py-3 text-brand-heading font-medium">Data Deletion</td>
-                <td className="px-4 py-3 text-brand-text">Full deletion within 30 days of cancellation</td>
-              </tr>
-              <tr className="hover:bg-brand-card/40 transition-colors">
-                <td className="px-4 py-3 text-brand-heading font-medium">Security Reviews</td>
-                <td className="px-4 py-3 text-brand-text">Quarterly minimum</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div className="prose-legal space-y-10 text-brand-text leading-relaxed">
-
-          {/* Section 1 */}
+        {/* Content */}
+        <div className="prose prose-invert prose-brand max-w-none space-y-8 sm:space-y-10">
+          
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">1. Infrastructure Architecture</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">1. Isolated Infrastructure Architecture</h2>
             <p>
-              We do not use shared hosting for trading terminals. Every customer is provisioned with isolated, dedicated Windows Virtual Private Servers. Your trading terminals run in a sandboxed environment completely separate from other users. These virtual machines are deployed within secure virtual networks with strict firewall rules, exposing only the necessary ports for connectivity and remote management.
+              We do not use shared hosting environments for trading terminals. Every customer is provisioned with an isolated Windows Virtual Private Server (VPS). Your trading terminals run in a sandboxed environment completely separate from other users. These virtual machines are deployed within secure virtual networks with strict firewall rules, exposing only the necessary ports for connectivity and remote management.
             </p>
           </section>
 
-          {/* Section 2 */}
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">2. Credential Protection</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">2. Credential Vault Architecture</h2>
             <p>
-              All sensitive data, including broker account numbers, trading passwords, and proprietary trading firm credentials, are encrypted at rest using industry-standard AES-256 encryption. All communications between your browser, our dashboard API, and the underlying infrastructure are secured using TLS 1.2 or higher. Our platform also supports and encourages regular rotation of your trading credentials to maintain a strong security posture over time.
+              Your trading-platform credentials are never stored in plain text. They are encrypted at rest using AES-256 encryption and stored in Calamari's credential vault. This vault is logically separated from the primary application database. The encryption keys required to decrypt these credentials are managed independently. This separation ensures that a compromise of the application database would not expose your credentials.
             </p>
           </section>
 
-          {/* Section 3 */}
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">3. Access Controls</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">3. External Heartbeat Monitoring</h2>
             <p>
-              Access to Calamari&apos;s internal management systems is strictly limited based on the principle of least privilege through Role-Based Access Control. Multi-Factor Authentication is available and strongly recommended for securing your Calamari dashboard access. Additionally, customers can configure IP allowlisting to restrict dashboard and API access to trusted IP addresses only, adding an extra layer of defense against unauthorized access.
+              Our monitoring systems operate <em>outside</em> your VM. We use external heartbeat monitoring to track the health of your infrastructure. This means that if your VM crashes, freezes, or loses network connectivity, our systems detect the failure immediately and can initiate automated recovery procedures, rather than relying on an internal agent that would fail alongside the VM.
             </p>
           </section>
 
-          {/* Section 4 */}
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">4. Support Access and Auditing</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">4. LiveView Streaming</h2>
             <p>
-              Calamari support staff do not have standing access to your virtual machines or unencrypted credentials. If you require interactive technical support that involves accessing your virtual machine, you must explicitly grant temporary, time-bound approval before any session begins. Every administrative action, API call, and support access event is logged, and these audit logs are continuously monitored for anomalous activity.
+              Our LiveView feature allows you to view your MT4/MT5 terminals from your browser. This is a secure, real-time stream. We do not record, store, or retain screenshots or video of your terminal sessions. The data is transmitted securely via TLS and exists only while your LiveView session is active.
             </p>
           </section>
 
-          {/* Section 5 */}
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">5. Data Lifecycle and Deletion</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">5. Access Controls and Auditing</h2>
+            <p>
+              Access to Calamari's internal management systems is strictly limited based on the principle of least privilege through Role-Based Access Control (RBAC). Calamari support staff do not have standing access to your virtual machines. If you require interactive technical support, you must explicitly grant temporary, time-bound approval before any session begins. Every administrative action, credential access, and support event is logged, and these audit logs are continuously monitored.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">6. Data Lifecycle and Deletion</h2>
             <p>
               When you cancel your Calamari Trading service, your infrastructure is immediately queued for decommissioning. We retain your encrypted data and virtual machine snapshots for 30 days post-cancellation to allow for account recovery if you change your mind. After 30 days, or immediately upon your explicit request, all virtual machines are destroyed and all associated data, including credentials and trading history, are permanently wiped from our databases.
-            </p>
-          </section>
-
-          {/* Section 6 */}
-          <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">6. Continuous Monitoring and Reviews</h2>
-            <p>
-              We employ continuous monitoring tools to track the health, performance, and security posture of our infrastructure. This includes automated scanning for vulnerabilities and regular patching of host operating systems to ensure your trading environment remains secure and resilient against emerging threats. We conduct formal security reviews at least quarterly.
             </p>
           </section>
 
@@ -140,7 +72,6 @@ export default function SecurityPage() {
               </a>. We take all reports seriously and will investigate promptly.
             </p>
           </section>
-
         </div>
 
         {/* Footer nav */}

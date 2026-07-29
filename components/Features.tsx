@@ -60,7 +60,7 @@ export default function Features() {
     {
       icon: "🏢",
       title: "Built for MT4 & MT5 Prop Firms",
-      desc: "Works with any prop firm that supports MetaTrader 4 or MetaTrader 5. No special integrations, no prop firm partnerships required. FTMO, The5ers, FundedNext, and any other MT4/MT5 firm — subject to current program rules.",
+      desc: "Calamari can operate with most standard MT4 and MT5 broker terminals. Prop-firm rules vary by firm, program, phase and account ownership. We review intended configurations during onboarding, but customers remain responsible for confirming compliance with their agreements. No special integrations, no prop firm partnerships required. FTMO, The5ers, FundedNext, and any other MT4/MT5 firm — subject to current program rules.",
       tags: ["MT4 prop firms", "MT5 prop firms", "Any MT4/MT5 firm"],
       color: "from-indigo-500/20 to-transparent",
       borderColor: "hover:border-indigo-500/40",
@@ -188,6 +188,76 @@ export default function Features() {
             monitoring, copying, recovering, and reporting — all from a single intelligent core.
             Up to 7 MT4/MT5 instances per VM. You stay in control without being everywhere at once.
           </p>
+        </div>
+
+        {/* What Calamari Adds Section */}
+        <div className="mt-16 sm:mt-24 max-w-4xl mx-auto">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-black text-brand-heading mb-4">
+              What Calamari adds around the copier
+            </h2>
+            <p className="text-sm sm:text-base text-brand-text">
+              We use the FX Blue Personal Trade Copier as our execution engine. Here is the infrastructure we build around it.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              "External health monitoring (outside-the-VM heartbeat)",
+              "Centralized account telemetry",
+              "Copy-event visibility",
+              "Automatic terminal recovery",
+              "Managed configuration and testing",
+              "Browser-based terminal visibility (LiveView)",
+              "Cross-account risk monitoring",
+              "Incident investigation",
+              "Human support and escalation"
+            ].map((item, i) => (
+              <div key={i} className="flex items-center gap-3 p-4 rounded-xl bg-brand-card border border-brand-border">
+                <span className="text-brand-cyan flex-shrink-0">✓</span>
+                <span className="text-sm font-medium text-brand-text">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Capability Status Table */}
+        <div className="mt-16 sm:mt-24 max-w-4xl mx-auto mb-16">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-black text-brand-heading mb-4">
+              Capability Status
+            </h2>
+            <p className="text-sm sm:text-base text-brand-text">
+              What is live today versus what is on the roadmap.
+            </p>
+          </div>
+          <div className="rounded-2xl bg-brand-card border border-brand-border overflow-hidden">
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm min-w-[500px]">
+                <thead>
+                  <tr className="border-b border-brand-border bg-brand-darker/50">
+                    <th className="text-left py-4 px-6 text-xs font-bold text-brand-text uppercase tracking-wider">Capability</th>
+                    <th className="text-left py-4 px-6 text-xs font-bold text-brand-text uppercase tracking-wider">Current Behavior</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-brand-border">
+                  {[
+                    { cap: "Daily-loss monitoring", status: "Displays and alerts", color: "text-green-400" },
+                    { cap: "Maximum-drawdown monitoring", status: "Displays and alerts", color: "text-green-400" },
+                    { cap: "Lot scaling", status: "Configured through FX Blue", color: "text-green-400" },
+                    { cap: "Prohibited-symbol filtering", status: "Blocks configured symbols", color: "text-green-400" },
+                    { cap: "Emergency account pause", status: "Manual (support request)", color: "text-yellow-400" },
+                    { cap: "Pre-trade breach prevention", status: "Roadmap", color: "text-brand-cyan" },
+                    { cap: "Automatic liquidation", status: "Roadmap", color: "text-brand-cyan" }
+                  ].map((row, i) => (
+                    <tr key={i} className="hover:bg-brand-blue/5 transition-colors">
+                      <td className="py-4 px-6 font-semibold text-brand-heading">{row.cap}</td>
+                      <td className={`py-4 px-6 font-medium ${row.color}`}>{row.status}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
     </section>

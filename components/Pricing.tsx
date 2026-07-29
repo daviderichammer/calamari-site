@@ -113,24 +113,22 @@ export default function Pricing() {
               What you are actually paying for
             </h3>
             <p className="text-sm text-brand-text text-center mb-6 max-w-2xl mx-auto">
-              A raw VPS is $20–50/month. Calamari is $199/month. The difference is not the server — it is the accountable humans behind it.
+              A raw VPS may cost considerably less than Calamari. The difference is the managed setup, monitoring, visibility, recovery and support layer.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               {[
-                { phase: "Setup", items: ["Initial setup and configuration", "Compatibility review for each prop firm and program", "FX Blue copier configuration", "Symbol mapping between master and receivers", "Risk-setting review with you"] },
-                { phase: "Go-Live", items: ["Test-trade validation before production", "You approve before anything goes live", "Full walkthrough of your dashboard", "Confirmation that every receiver is copying correctly"] },
-                { phase: "Ongoing", items: ["Active failure alerts — you hear about problems before you notice them", "Incident diagnosis when something goes wrong", "Configuration maintenance as your accounts change", "Recovery support after any failure"] },
-                { phase: "What DIY costs you", items: ["Hours setting up each MT4/MT5 instance", "Hours configuring FX Blue correctly", "Waking up to a crashed terminal at 3am", "Diagnosing copy failures yourself", "No one to call when it breaks"] },
+                { phase: "Calamari", items: ["VM provisioned and managed", "Installation handled", "Configuration handled", "Automated monitoring", "Watchdog and support", "Dashboard included", "Test trade and approval process"] },
+                { phase: "Raw VPS", items: ["Customer selects and provisions server", "Customer installs and updates terminals", "Customer configures copier mappings", "Customer monitors terminal health", "Customer diagnoses failed terminals", "Customer builds own consolidated view", "Customer owns all migration risk"] },
               ].map((group, i) => (
-                <div key={i} className={`p-4 rounded-xl border ${i === 3 ? "border-red-500/20 bg-red-500/5" : "border-brand-blue/20 bg-brand-blue/5"}`}>
-                  <div className={`text-xs font-bold uppercase tracking-wider mb-3 ${i === 3 ? "text-red-400" : "text-brand-cyan"}`}>
+                <div key={i} className={`p-4 rounded-xl border ${i === 0 ? "border-red-500/20 bg-red-500/5" : "border-brand-blue/20 bg-brand-blue/5"}`}>
+                  <div className={`text-xs font-bold uppercase tracking-wider mb-3 ${i === 0 ? "text-red-400" : "text-brand-cyan"}`}>
                     {group.phase}
                   </div>
                   <ul className="space-y-1.5">
                     {group.items.map((item, j) => (
                       <li key={j} className="flex items-start gap-2 text-xs sm:text-sm text-brand-text">
                         <span className={`mt-1 flex-shrink-0 ${i === 3 ? "text-red-400" : "text-green-400"}`}>
-                          {i === 3 ? "✗" : "✓"}
+                          {i === 0 ? "✗" : "✓"}
                         </span>
                         {item}
                       </li>
@@ -189,7 +187,7 @@ export default function Pricing() {
                   step: "02",
                   icon: "🔍",
                   title: "We verify compatibility and provision your VM",
-                  desc: "We confirm your accounts are compatible with MT4/MT5 and provision your dedicated Windows VPS. Your VM is isolated — no shared resources.",
+                  desc: "We confirm your accounts are compatible with MT4/MT5 and provision your dedicated Windows VPS. Each customer receives an isolated Windows VM with allocated CPU, memory and storage. Customers do not share Windows environments or application instances.",
                   color: "border-brand-cyan/40 bg-brand-cyan/5",
                   dot: "bg-brand-cyan",
                 },
@@ -197,7 +195,7 @@ export default function Pricing() {
                   step: "03",
                   icon: "⚙️",
                   title: "Terminals installed, credentials entered securely",
-                  desc: "We install and configure your MT4/MT5 terminals. Your login credentials are entered directly on your VM — we do not store or transmit them externally.",
+                  desc: "We install and configure your MT4/MT5 terminals. Your trading-platform credentials are provided once during onboarding and stored encrypted (AES-256) in Calamari's credential vault. They are used exclusively to configure and maintain your MT4/MT5 terminals. Credentials are never shared externally, are accessible only to authorized operations staff with logged access, and are permanently deleted upon service cancellation.",
                   color: "border-green-500/40 bg-green-500/5",
                   dot: "bg-green-400",
                 },

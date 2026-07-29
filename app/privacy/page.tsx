@@ -1,137 +1,146 @@
 import Link from "next/link";
-import type { Metadata } from "next";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Privacy Policy | Calamari Trading",
-  description:
-    "Calamari Trading Privacy Policy — how we collect, store, and protect your data.",
+  description: "Privacy Policy for Calamari Trading.",
 };
 
-export default function PrivacyPage() {
+export default function Privacy() {
   return (
-    <div className="min-h-screen bg-brand-darker text-brand-text">
-      {/* Header */}
-      <div className="border-b border-brand-border bg-brand-darker/90 backdrop-blur-xl sticky top-0 z-10">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 text-brand-heading font-bold text-lg hover:text-brand-cyan transition-colors">
-            <span className="text-brand-cyan">🦑</span> Calamari Trading
-          </Link>
-          <Link href="/" className="text-sm text-brand-text hover:text-brand-heading transition-colors">
-            ← Back to Home
-          </Link>
-        </div>
-      </div>
-
-      {/* Content */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
-        <div className="mb-10">
-          <h1 className="text-3xl sm:text-4xl font-bold text-brand-heading mb-3">Privacy Policy</h1>
-          <p className="text-brand-text text-sm">Last Updated: July 29, 2026</p>
+    <div className="min-h-screen pt-24 pb-16 sm:pt-32 sm:pb-24">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="mb-12 sm:mb-16">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-brand-heading mb-4">
+            Privacy Policy
+          </h1>
+          <p className="text-brand-text">Last Updated: October 2023</p>
         </div>
 
-        <div className="prose-legal space-y-10 text-brand-text leading-relaxed">
-
-          <p className="text-base">
-            At Calamari Trading (&ldquo;Calamari,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;), we take your privacy and the security of your data seriously. This Privacy Policy explains how we collect, use, store, and protect your information when you use our website and managed infrastructure services (the &ldquo;Services&rdquo;).
-          </p>
-
-          {/* Section 1 */}
+        {/* Content */}
+        <div className="prose prose-invert prose-brand max-w-none space-y-8 sm:space-y-10">
+          
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">1. Information We Collect</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">1. Data Controller</h2>
             <p>
-              We collect several types of information to provide and improve our services. This includes account information such as your name, email address, and billing details, which are processed securely via our payment processor, Stripe. We also collect trading credentials, including MetaTrader 4 and MetaTrader 5 account numbers, passwords, and server details necessary to configure your virtual private server instances. Furthermore, we collect infrastructure data, such as terminal health metrics, CPU and RAM usage, and the connection status of your virtual machines. Finally, we collect trading metadata, including trade execution data, account balances, and equity metrics required to provide dashboard analytics and monitoring services.
+              Calamari Trading LLC ("Calamari", "we", "us", or "our") acts as the data controller for the personal information you provide to us when using our platform and infrastructure services.
             </p>
           </section>
 
-          {/* Section 2 */}
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">2. How We Use Your Information</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">2. What Data We Collect</h2>
             <p>
-              We use your data strictly to provide and improve our infrastructure services. This includes provisioning and maintaining your dedicated Windows virtual private server environments, configuring and monitoring your trading terminals, and displaying analytics and account health on your Calamari dashboard. We also use this information to process payments and provide customer support.
-            </p>
-            <p className="mt-3 font-semibold text-brand-heading">
-              We do not sell, rent, or share your personal information or trading data with third parties for marketing or advertising purposes.
-            </p>
-          </section>
-
-          {/* Section 3 */}
-          <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">3. Data Security and Credential Storage</h2>
-            <p>
-              Protecting your trading credentials is our highest priority. All trading passwords and sensitive credentials are encrypted at rest using AES-256 encryption. Additionally, all data transmitted between your browser and our servers is secured using industry-standard TLS encryption. Our encryption keys are strictly managed and isolated from the application database to ensure maximum security.
+              We collect the following categories of data:
+              <ul>
+                <li><strong>Account Information:</strong> Name, email address, and payment information (processed securely via Stripe).</li>
+                <li><strong>Trading-Platform Credentials:</strong> Broker or prop firm account numbers, passwords, and server details. These are stored securely as described in Section 3.</li>
+                <li><strong>Trade Execution Data:</strong> Orders, positions, and trading history generated on your provisioned Virtual Machine (VM).</li>
+                <li><strong>Terminal Health Metrics:</strong> CPU usage, memory consumption, connection status, and application crash logs.</li>
+                <li><strong>Dashboard Usage Data:</strong> How you interact with the Calamari dashboard.</li>
+                <li><strong>LiveView Session Data:</strong> LiveView streams your terminal interface directly to your browser. We do <strong>not</strong> retain or store these screenshots; they are streamed only.</li>
+                <li><strong>Support Interaction Records:</strong> Communications with our support team.</li>
+              </ul>
             </p>
           </section>
 
-          {/* Section 4 */}
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">4. Access Controls and Logging</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">3. How Credentials Are Stored</h2>
             <p>
-              Your virtual machines are dedicated exclusively to you. Calamari support staff cannot access your virtual machine or view your unencrypted credentials without your explicit, time-bound approval. Furthermore, all administrative actions and system access events are logged and audited regularly to maintain a secure and accountable environment.
+              Your trading-platform credentials are encrypted at rest using AES-256 encryption. They are stored in Calamari's secure credential vault, which is physically and logically separated from our primary application database. The encryption keys are managed independently. Every access to this vault by our systems or authorized personnel is logged with a timestamp and reason.
             </p>
           </section>
 
-          {/* Section 5 */}
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">5. Subprocessors and Data Location</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">4. Who Can Access Your VM</h2>
             <p>
-              We use trusted third-party subprocessors to provide our Services. Our infrastructure is hosted on dedicated secure servers, and we use internal tools to monitor server health and uptime.
+              Your VM is isolated. Access is strictly limited to authorized Calamari operations staff for the sole purpose of maintenance, provisioning, and support. We employ a just-in-time access model, meaning staff do not have standing access. If you require interactive technical support that involves accessing your VM, you must explicitly approve the session. All access events are logged.
             </p>
           </section>
 
-          {/* Section 6 */}
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">6. Data Retention and Deletion</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">5. Data Retention and Deletion</h2>
             <p>
-              We retain your data for as long as your account is active. If you cancel your subscription, we retain your data for 30 days to allow for easy reactivation should you choose to return. After this 30-day period, your virtual machines, credentials, and associated data are permanently and irreversibly deleted. You also have the right to request immediate deletion of your data upon cancellation by contacting our support team.
+              We retain your data only as long as your service is active. Upon cancellation:
+              <ul>
+                <li>Your infrastructure is queued for decommissioning.</li>
+                <li>We retain your encrypted data and VM snapshots for 30 days post-cancellation to allow for account recovery.</li>
+                <li>After 30 days, all VMs are destroyed, and all associated data (including credentials and trading history) are permanently wiped.</li>
+              </ul>
+              You may request immediate deletion of all data upon cancellation by contacting support.
             </p>
           </section>
 
-          {/* Section 7 */}
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">7. Your Data Rights</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">6. Subprocessors</h2>
             <p>
-              Depending on your jurisdiction, you may have specific rights regarding your personal data. These rights may include accessing the personal data we hold about you, requesting correction of inaccurate data, requesting deletion of your data, or requesting a portable copy of your data. To exercise these rights, please contact us at{" "}
+              We use trusted third-party subprocessors to operate our Services:
+              <ul>
+                <li><strong>Cloud Infrastructure Providers:</strong> For hosting your VMs.</li>
+                <li><strong>Stripe:</strong> For payment processing.</li>
+                <li><strong>Monitoring Tools:</strong> For tracking system health metrics (CPU, memory, uptime).</li>
+              </ul>
+              <strong>We do not share your trading data with subprocessors.</strong> They only process the infrastructure metrics required to keep the systems running.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">7. Data Sharing and Confidentiality</h2>
+            <p>
+              We do not sell your data. We do not use your trading data for advertising, signal generation, or any proprietary trading purposes. We do not disclose your trading data to other traders. Limited data may be processed by our infrastructure providers solely to operate Calamari, subject to strict contractual confidentiality and security obligations.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">8. Security Measures and Backups</h2>
+            <p>
+              We implement robust security measures, including encryption at rest and in transit, Role-Based Access Control (RBAC), Multi-Factor Authentication (MFA) for administrative access, and continuous monitoring. Your VM state is periodically backed up to allow for rapid recovery in the event of hardware failure. These backups are encrypted and subject to the same strict access controls and retention policies as live data.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">9. Breach Notification</h2>
+            <p>
+              In the event of a data breach that compromises your personal information or trading credentials, we will notify you via email within 72 hours of discovering the breach, outlining the nature of the incident and the steps we are taking to mitigate it.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">10. Customer Rights</h2>
+            <p>
+              You have the right to:
+              <ul>
+                <li>Access the personal data we hold about you.</li>
+                <li>Correct inaccurate data.</li>
+                <li>Request deletion of your data.</li>
+                <li>Request a portable copy of your data.</li>
+                <li>Rotate or update your trading credentials at any time through the dashboard.</li>
+              </ul>
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">11. International Transfers</h2>
+            <p>
+              Your data may be transferred to, and maintained on, computers located outside of your state, province, country, or other governmental jurisdiction where the data protection laws may differ from those of your jurisdiction. We ensure appropriate safeguards are in place for any such transfers.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">12. Policy Updates</h2>
+            <p>
+              We may update this Privacy Policy periodically. We will provide 30 days' notice for material changes by posting the updated policy on our website or notifying you via email.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">13. Contact Information</h2>
+            <p>
+              For privacy-related inquiries or to exercise your data rights, please contact us at{" "}
               <a href="mailto:privacy@calamaritrading.ai" className="text-brand-cyan hover:underline">
                 privacy@calamaritrading.ai
               </a>.
             </p>
           </section>
-
-          {/* Section 8 */}
-          <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">8. Breach Notification</h2>
-            <p>
-              In the unlikely event of a data breach that compromises your personal information or trading credentials, we will notify you via email within 72 hours of discovering the breach, in accordance with applicable laws and our commitment to transparency.
-            </p>
-          </section>
-
-          {/* Section 9 */}
-          <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">9. Security Reviews</h2>
-            <p>
-              We conduct regular security reviews, at least quarterly, to assess our infrastructure, update dependencies, and ensure compliance with our security standards and industry best practices.
-            </p>
-          </section>
-
-          {/* Section 10 */}
-          <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">10. Changes to this Policy</h2>
-            <p>
-              We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will notify you of any material changes by posting the new policy on this page and updating the &ldquo;Last Updated&rdquo; date at the top of the document.
-            </p>
-          </section>
-
-          {/* Section 11 */}
-          <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">11. Contact Us</h2>
-            <p>
-              For any privacy-related questions or concerns, please contact us at{" "}
-              <a href="mailto:privacy@calamaritrading.ai" className="text-brand-cyan hover:underline">
-                privacy@calamaritrading.ai
-              </a>.
-            </p>
-          </section>
-
         </div>
 
         {/* Footer nav */}
