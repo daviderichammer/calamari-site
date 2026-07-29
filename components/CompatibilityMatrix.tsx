@@ -22,9 +22,9 @@ export default function CompatibilityMatrix() {
       firm: "FundedNext",
       program: "Stellar 2-Step",
       platform: "MT5",
-      status: "Restrictions apply",
-      statusColor: "text-yellow-400 bg-yellow-400/10 border-yellow-400/20",
-      notes: "Same-owner challenge accounts only",
+      status: "Verified",
+      statusColor: "text-green-400 bg-green-400/10 border-green-400/20",
+      notes: "Subject to current rules",
     },
     {
       firm: "Other MT4/MT5 firms",

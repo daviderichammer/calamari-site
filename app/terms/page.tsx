@@ -138,7 +138,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-xl font-bold text-brand-heading mb-3">13. Governing Law and Dispute Resolution</h2>
             <p>
-              These Terms shall be governed by and construed in accordance with the laws of the State of Florida, without regard to its conflict of law principles. Any dispute arising out of or relating to these Terms or the Services shall be resolved through binding arbitration administered by the American Arbitration Association in Hillsborough County, Florida.
+              These Terms shall be governed by and construed in accordance with generally accepted principles of commercial law. Any dispute arising out of or relating to these Terms or the Services shall be resolved through binding arbitration administered by a mutually agreed-upon arbitration body.
             </p>
           </section>
 

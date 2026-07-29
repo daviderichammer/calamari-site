@@ -32,7 +32,7 @@ export default function Hero() {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-brand-blue/10 border border-brand-blue/30 text-brand-cyan text-xs sm:text-sm font-medium mb-6 sm:mb-8 animate-fade-in">
           <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse flex-shrink-0" />
-          Built by prop traders in Tampa, FL. Running live. Trusted with our own money.
+          Built by prop traders. Running live. Trusted with our own money.
         </div>
 
         {/* Main headline — outcome-led */}
@@ -91,7 +91,7 @@ export default function Hero() {
               How the system works
             </div>
             {/* Diagram */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-0">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
               {/* You / Your Device */}
               <div className="flex flex-col items-center gap-2 flex-shrink-0">
                 <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-brand-blue/10 border border-brand-blue/30 flex items-center justify-center text-2xl sm:text-3xl">
@@ -105,56 +105,55 @@ export default function Hero() {
               </div>
 
               {/* Arrow */}
-              <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-0 mx-0 sm:mx-4">
-                <div className="hidden sm:block w-8 h-px bg-brand-blue/40" />
+              <div className="flex flex-col sm:flex-row items-center gap-1 mx-0 sm:mx-2">
+                <div className="hidden sm:block w-6 h-px bg-brand-blue/40" />
                 <div className="text-brand-cyan text-xs font-mono px-2 py-1 rounded bg-brand-blue/10 border border-brand-blue/20 whitespace-nowrap">
-                  Your trade signal
+                  Place trade on master
                 </div>
-                <div className="hidden sm:block w-8 h-px bg-brand-blue/40" />
+                <div className="hidden sm:block w-6 h-px bg-brand-blue/40" />
                 <div className="hidden sm:block text-brand-blue/60">▶</div>
               </div>
 
-              {/* Calamari VM */}
-              <div className="flex flex-col items-center gap-2 flex-shrink-0">
-                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-brand-purple/10 border-2 border-brand-purple/50 flex items-center justify-center text-3xl sm:text-4xl relative">
-                  🦑
+              {/* Calamari VM — contains everything */}
+              <div className="flex flex-col items-center gap-3 flex-shrink-0">
+                <div className="rounded-2xl border-2 border-brand-purple/50 bg-brand-purple/5 p-4 sm:p-5 relative">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-brand-purple/20 border border-brand-purple/40 text-xs font-bold text-purple-300 whitespace-nowrap">
+                    Calamari VM
+                  </div>
                   <div className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-green-400 border-2 border-brand-darker animate-pulse" />
-                </div>
-                <div className="text-center">
-                  <div className="text-xs sm:text-sm font-bold text-brand-heading">Calamari VM</div>
-                  <div className="text-xs text-brand-text/60">Master MT5 + FX Blue</div>
-                  <div className="text-xs text-brand-cyan/80 font-semibold">Always-on VPS</div>
-                </div>
-              </div>
-
-              {/* Arrow to receivers */}
-              <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-0 mx-0 sm:mx-4">
-                <div className="hidden sm:block w-8 h-px bg-brand-cyan/40" />
-                <div className="text-brand-cyan text-xs font-mono px-2 py-1 rounded bg-brand-cyan/10 border border-brand-cyan/20 whitespace-nowrap">
-                  FX Blue copies locally
-                </div>
-                <div className="hidden sm:block w-8 h-px bg-brand-cyan/40" />
-                <div className="hidden sm:block text-brand-cyan/60">▶</div>
-              </div>
-
-              {/* Receivers */}
-              <div className="flex flex-col items-center gap-2">
-                <div className="flex flex-col gap-2">
-                  {[
-                    { label: "Receiver 1", sub: "Sized for $10k account" },
-                    { label: "Receiver 2", sub: "Sized for $25k account" },
-                    { label: "Receiver 3", sub: "Sized for $50k account" },
-                  ].map((r, i) => (
-                    <div key={i} className="flex items-center gap-2 px-3 py-2 rounded-xl bg-green-500/5 border border-green-500/20">
-                      <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse flex-shrink-0" />
+                  <div className="flex flex-col gap-2 mt-2">
+                    {/* Master MT5 + FX Blue */}
+                    <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-brand-blue/10 border border-brand-blue/30">
+                      <div className="text-lg">🦑</div>
                       <div>
-                        <div className="text-xs font-bold text-brand-heading">{r.label}</div>
-                        <div className="text-xs text-brand-text/50">{r.sub}</div>
+                        <div className="text-xs font-bold text-brand-heading">Master MT5</div>
+                        <div className="text-xs text-brand-text/60">FX Blue sender</div>
                       </div>
                     </div>
-                  ))}
-                  <div className="text-center text-xs text-brand-text/40 font-mono">+ up to 7 total</div>
+                    {/* Divider with arrow */}
+                    <div className="flex items-center justify-center gap-1">
+                      <div className="flex-1 h-px bg-brand-cyan/30" />
+                      <div className="text-brand-cyan text-xs font-mono px-2 py-0.5 rounded bg-brand-cyan/10 border border-brand-cyan/20 whitespace-nowrap">copies locally</div>
+                      <div className="flex-1 h-px bg-brand-cyan/30" />
+                    </div>
+                    {/* Receivers */}
+                    {[
+                      { label: "Receiver 1", sub: "Sized for $10k account" },
+                      { label: "Receiver 2", sub: "Sized for $25k account" },
+                      { label: "Receiver 3", sub: "Sized for $50k account" },
+                    ].map((r, i) => (
+                      <div key={i} className="flex items-center gap-2 px-3 py-2 rounded-xl bg-green-500/5 border border-green-500/20">
+                        <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse flex-shrink-0" />
+                        <div>
+                          <div className="text-xs font-bold text-brand-heading">{r.label}</div>
+                          <div className="text-xs text-brand-text/50">{r.sub}</div>
+                        </div>
+                      </div>
+                    ))}
+                    <div className="text-center text-xs text-brand-text/40 font-mono">+ up to 7 total</div>
+                  </div>
                 </div>
+                <div className="text-xs text-brand-cyan/80 font-semibold text-center">Always-on VPS — everything runs here</div>
               </div>
             </div>
 

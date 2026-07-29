@@ -74,7 +74,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-xl font-bold text-brand-heading mb-3">5. Subprocessors and Data Location</h2>
             <p>
-              We use trusted third-party subprocessors to provide our Services. Our infrastructure is hosted on secure servers located in the United States, and we use internal tools to monitor server health and uptime. By using our Services, you consent to the processing of your data in the United States.
+              We use trusted third-party subprocessors to provide our Services. Our infrastructure is hosted on dedicated secure servers, and we use internal tools to monitor server health and uptime.
             </p>
           </section>
 

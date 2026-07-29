@@ -41,7 +41,7 @@ export default function Story() {
               <div className="space-y-3 text-sm text-brand-text">
                 <div className="flex items-start gap-3">
                   <span className="text-brand-cyan font-semibold flex-shrink-0">Location</span>
-                  <span>Built by prop traders in Tampa, FL. Operating entity registered in the United States.</span>
+                  <span>Built by prop traders. Operating entity registered internationally.</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="text-brand-cyan font-semibold flex-shrink-0">Team</span>
@@ -205,7 +205,7 @@ export default function Story() {
             We still run our own accounts on it every day. That is the only endorsement that matters.
           </blockquote>
           <div className="mt-4 sm:mt-6 text-brand-text text-sm">
-            — The Calamari Team, prop traders in Tampa, FL
+            — The Calamari Team
           </div>
         </div>
       </div>
