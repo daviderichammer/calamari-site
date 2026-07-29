@@ -28,8 +28,8 @@ export default function Features() {
     {
       icon: "🛡️",
       title: "Layer 4: Monitor & Protect",
-      desc: "Drawdown alerts, daily loss limits, prop firm compliance tracking. If MT4/MT5 crashes, the watchdog restarts it automatically. Your accounts never go unmonitored — not at 3am, not on weekends.",
-      tags: ["Drawdown alerts", "Loss limits", "Auto-restart"],
+      desc: "Two distinct functions: Monitoring delivers real-time alerts and warnings — drawdown approaching limits, daily loss thresholds, copy failures, terminal crashes. Enforcement actions (blocking trades, reducing size, pausing receivers, closing positions) are on the active development roadmap and will be clearly labeled when available.",
+      tags: ["Alerts (live)", "Warnings (live)", "Enforcement (roadmap)"],
       color: "from-red-500/20 to-transparent",
       borderColor: "hover:border-red-500/40",
     },
@@ -66,7 +66,6 @@ export default function Features() {
       borderColor: "hover:border-indigo-500/40",
     },
   ];
-
   return (
     <section id="features" className="relative py-16 sm:py-24 overflow-hidden">
       {/* Background */}
@@ -89,6 +88,48 @@ export default function Features() {
           <p className="text-base sm:text-lg text-brand-text max-w-2xl mx-auto px-2">
             Every layer below exists so you can focus on your edge — your read on the market, your timing, your entries — and nothing else.
           </p>
+        </div>
+
+        {/* Monitor & Protect detail callout */}
+        <div className="mb-8 sm:mb-12 rounded-2xl bg-brand-card border border-red-500/20 p-5 sm:p-8 max-w-4xl mx-auto">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start">
+            <div className="text-3xl sm:text-4xl flex-shrink-0">🛡️</div>
+            <div className="flex-1">
+              <h3 className="text-base sm:text-lg font-bold text-brand-heading mb-3">
+                What &ldquo;Monitor &amp; Protect&rdquo; actually means
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="p-4 rounded-xl bg-green-500/5 border border-green-500/20">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="w-2 h-2 rounded-full bg-green-400" />
+                    <span className="text-xs font-bold text-green-400 uppercase tracking-wider">Monitoring — Live Now</span>
+                  </div>
+                  <ul className="space-y-1.5 text-xs sm:text-sm text-brand-text">
+                    <li>• Real-time drawdown alerts as limits approach</li>
+                    <li>• Daily loss threshold warnings</li>
+                    <li>• Copy failure notifications</li>
+                    <li>• Terminal crash detection and auto-restart</li>
+                    <li>• Incident diagnosis and failure reporting</li>
+                  </ul>
+                </div>
+                <div className="p-4 rounded-xl bg-yellow-500/5 border border-yellow-500/20">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="w-2 h-2 rounded-full bg-yellow-400" />
+                    <span className="text-xs font-bold text-yellow-400 uppercase tracking-wider">Enforcement — Roadmap</span>
+                  </div>
+                  <ul className="space-y-1.5 text-xs sm:text-sm text-brand-text">
+                    <li>• Block new trades when limits are reached</li>
+                    <li>• Automatically reduce position size</li>
+                    <li>• Pause individual receiver accounts</li>
+                    <li>• Close positions on breach threshold</li>
+                  </ul>
+                  <p className="text-xs text-brand-text/50 mt-2 italic">
+                    Enforcement features will be clearly labeled when available.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Features grid */}

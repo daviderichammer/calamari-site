@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-
 export default function Pricing() {
   return (
     <>
@@ -22,11 +21,10 @@ export default function Pricing() {
               <span className="gradient-text">No tiers. No gotchas.</span>
             </h2>
             <p className="text-base sm:text-lg text-brand-text max-w-2xl mx-auto px-2">
-              A raw VPS costs $20–50/month and you still have to build everything yourself.
-              Calamari gives you the VPS <em>plus</em> the full managed stack — for less than the cost of one blown challenge.
+              You are not paying for a server. You are paying for accountable humans who set it up correctly,
+              keep it running, and are reachable when something goes wrong.
             </p>
           </div>
-
           {/* Single pricing card */}
           <div className="w-full sm:max-w-lg sm:mx-auto">
             <div className="relative rounded-2xl p-6 sm:p-8 bg-brand-card border border-brand-blue/50 pricing-popular shadow-2xl shadow-brand-blue/20">
@@ -85,7 +83,7 @@ export default function Pricing() {
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        strokeWidth={2.5}
+                        strokeWidth={2}
                         d="M5 13l4 4L19 7"
                       />
                     </svg>
@@ -109,39 +107,37 @@ export default function Pricing() {
             </div>
           </div>
 
-          {/* Value comparison */}
+          {/* Human accountability comparison */}
           <div className="mt-10 sm:mt-16 rounded-2xl bg-brand-card border border-brand-border p-4 sm:p-8 max-w-4xl mx-auto">
-            <h3 className="text-base sm:text-lg font-bold text-brand-heading mb-4 sm:mb-6 text-center">
-              Why Calamari beats DIY every time
+            <h3 className="text-base sm:text-lg font-bold text-brand-heading mb-2 text-center">
+              What you are actually paying for
             </h3>
-            <div className="overflow-x-auto -mx-4 sm:mx-0 px-4 sm:px-0">
-              <table className="w-full text-xs sm:text-sm min-w-[400px]">
-                <thead>
-                  <tr className="border-b border-brand-border">
-                    <th className="text-left py-2 sm:py-3 text-brand-text font-medium pr-2">Feature</th>
-                    <th className="text-center py-2 sm:py-3 text-brand-text font-medium px-2">DIY Setup</th>
-                    <th className="text-center py-2 sm:py-3 text-brand-cyan font-medium pl-2">Calamari</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-brand-border">
-                  {[
-                    ["Windows VPS", "$20–50/mo each", "Included"],
-                    ["MT4/MT5 Setup", "2–4 hours each", "Automatic"],
-                    ["Trade Copying", "Manual or expensive EA", "FX Blue — configured by us"],
-                    ["Monitoring", "None / manual checks", "99.9% uptime target"],
-                    ["Crash Recovery", "Wake up and fix it yourself", "Auto-restart"],
-                    ["LiveView", "Need RDP client", "Browser-based"],
-                    ["Multi-account view", "Multiple portals", "One dashboard"],
-                    ["Total cost (7 instances)", "$140–350/mo + 10hrs/wk", "$199/mo, zero maintenance"],
-                  ].map(([feature, diy, cal], i) => (
-                    <tr key={i} className="hover:bg-brand-blue/5 transition-colors">
-                      <td className="py-2 sm:py-3 text-brand-heading font-medium pr-2">{feature}</td>
-                      <td className="py-2 sm:py-3 text-center text-red-400 px-2">{diy}</td>
-                      <td className="py-2 sm:py-3 text-center text-green-400 font-semibold pl-2">{cal}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+            <p className="text-sm text-brand-text text-center mb-6 max-w-2xl mx-auto">
+              A raw VPS is $20–50/month. Calamari is $199/month. The difference is not the server — it is the accountable humans behind it.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+              {[
+                { phase: "Setup", items: ["Initial setup and configuration", "Compatibility review for each prop firm and program", "FX Blue copier configuration", "Symbol mapping between master and receivers", "Risk-setting review with you"] },
+                { phase: "Go-Live", items: ["Test-trade validation before production", "You approve before anything goes live", "Full walkthrough of your dashboard", "Confirmation that every receiver is copying correctly"] },
+                { phase: "Ongoing", items: ["Active failure alerts — you hear about problems before you notice them", "Incident diagnosis when something goes wrong", "Configuration maintenance as your accounts change", "Recovery support after any failure"] },
+                { phase: "What DIY costs you", items: ["Hours setting up each MT4/MT5 instance", "Hours configuring FX Blue correctly", "Waking up to a crashed terminal at 3am", "Diagnosing copy failures yourself", "No one to call when it breaks"] },
+              ].map((group, i) => (
+                <div key={i} className={`p-4 rounded-xl border ${i === 3 ? "border-red-500/20 bg-red-500/5" : "border-brand-blue/20 bg-brand-blue/5"}`}>
+                  <div className={`text-xs font-bold uppercase tracking-wider mb-3 ${i === 3 ? "text-red-400" : "text-brand-cyan"}`}>
+                    {group.phase}
+                  </div>
+                  <ul className="space-y-1.5">
+                    {group.items.map((item, j) => (
+                      <li key={j} className="flex items-start gap-2 text-xs sm:text-sm text-brand-text">
+                        <span className={`mt-1 flex-shrink-0 ${i === 3 ? "text-red-400" : "text-green-400"}`}>
+                          {i === 3 ? "✗" : "✓"}
+                        </span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -176,12 +172,9 @@ export default function Pricing() {
               We handle the technical setup. You review and approve before anything goes live.
             </p>
           </div>
-
           {/* Steps timeline */}
           <div className="relative">
-            {/* Vertical line */}
             <div className="absolute left-6 sm:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-brand-blue/50 via-brand-cyan/30 to-transparent hidden sm:block" />
-
             <div className="space-y-6 sm:space-y-8">
               {[
                 {
@@ -252,7 +245,6 @@ export default function Pricing() {
               ))}
             </div>
           </div>
-
           {/* CTA after onboarding */}
           <div className="text-center mt-12 sm:mt-16">
             <Link

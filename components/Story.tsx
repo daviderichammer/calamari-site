@@ -10,8 +10,7 @@ export default function Story() {
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 items-start">
-
-          {/* Left: Origin story — trimmed to 2-3 paragraphs */}
+          {/* Left: Origin story */}
           <div>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-purple/10 border border-brand-purple/30 text-purple-400 text-sm font-medium mb-6">
               Our Story
@@ -31,6 +30,28 @@ export default function Story() {
               <p className="text-brand-heading font-semibold">
                 That is Calamari. Built by traders who were frustrated enough to build it themselves, and confident enough in what we built to offer it to you.
               </p>
+            </div>
+
+            {/* Company Identity */}
+            <div className="mt-8 p-5 sm:p-6 rounded-2xl bg-brand-card border border-brand-purple/20">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="text-xl">📍</span>
+                <span className="text-sm font-bold text-brand-heading">About the company</span>
+              </div>
+              <div className="space-y-3 text-sm text-brand-text">
+                <div className="flex items-start gap-3">
+                  <span className="text-brand-cyan font-semibold flex-shrink-0">Location</span>
+                  <span>Built by prop traders in Tampa, FL. Operating entity registered in the United States.</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-brand-cyan font-semibold flex-shrink-0">Team</span>
+                  <span>The Calamari Team — active Forex and CFD prop traders. We trade the same accounts this platform manages.</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-brand-cyan font-semibold flex-shrink-0">Mission</span>
+                  <span>Infrastructure for traders who manage their own accounts. Not signals. Not account management. Tools.</span>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -98,6 +119,84 @@ export default function Story() {
           </div>
         </div>
 
+        {/* Ideal Customer Definition */}
+        <div className="mt-12 sm:mt-16 rounded-2xl bg-brand-card border border-brand-border p-6 sm:p-10 max-w-4xl mx-auto">
+          <div className="text-center mb-6 sm:mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-blue/10 border border-brand-blue/30 text-brand-cyan text-sm font-medium mb-4">
+              Who Calamari is built for
+            </div>
+            <h3 className="text-xl sm:text-2xl font-bold text-brand-heading">
+              Designed for a specific trader. Not for everyone.
+            </h3>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {/* Good fit */}
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <span className="w-2 h-2 rounded-full bg-green-400" />
+                <span className="text-sm font-bold text-green-400 uppercase tracking-wider">Calamari is right for you if</span>
+              </div>
+              <ul className="space-y-3 text-sm text-brand-text">
+                <li className="flex items-start gap-2">
+                  <span className="text-green-400 mt-0.5 flex-shrink-0">✓</span>
+                  You trade Forex or CFDs on MetaTrader 4 or MetaTrader 5
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-400 mt-0.5 flex-shrink-0">✓</span>
+                  You manage approximately four to seven MT4/MT5 accounts that you own
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-400 mt-0.5 flex-shrink-0">✓</span>
+                  All accounts execute from the same strategy — you want them synchronized
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-400 mt-0.5 flex-shrink-0">✓</span>
+                  Each account has different sizing requirements that need to be applied automatically
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-400 mt-0.5 flex-shrink-0">✓</span>
+                  You want one place to see all accounts, positions, and health at once
+                </li>
+              </ul>
+            </div>
+            {/* Not a fit */}
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <span className="w-2 h-2 rounded-full bg-red-400" />
+                <span className="text-sm font-bold text-red-400 uppercase tracking-wider">Calamari is not right for you if</span>
+              </div>
+              <ul className="space-y-3 text-sm text-brand-text">
+                <li className="flex items-start gap-2">
+                  <span className="text-red-400 mt-0.5 flex-shrink-0">✗</span>
+                  You trade futures, options, or non-MT4/MT5 platforms
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-400 mt-0.5 flex-shrink-0">✗</span>
+                  You have a single account and do not need trade copying
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-400 mt-0.5 flex-shrink-0">✗</span>
+                  You are looking for trade signals or a strategy to follow
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-400 mt-0.5 flex-shrink-0">✗</span>
+                  You want someone else to manage accounts that belong to other people
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-400 mt-0.5 flex-shrink-0">✗</span>
+                  You need a PAMM, MAM, or third-party account management structure
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-6 pt-5 border-t border-brand-border text-center">
+            <p className="text-sm text-brand-text/70 italic">
+              Calamari is a tool for Forex and CFD traders managing their own same-owner MT4/MT5 accounts from a common execution strategy.
+              If that is you, it was built for you specifically.
+            </p>
+          </div>
+        </div>
+
         {/* Quote */}
         <div className="mt-12 sm:mt-16 max-w-3xl mx-auto text-center px-2">
           <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 opacity-30">&ldquo;</div>
@@ -106,7 +205,7 @@ export default function Story() {
             We still run our own accounts on it every day. That is the only endorsement that matters.
           </blockquote>
           <div className="mt-4 sm:mt-6 text-brand-text text-sm">
-            — The Calamari Team, prop traders first
+            — The Calamari Team, prop traders in Tampa, FL
           </div>
         </div>
       </div>
