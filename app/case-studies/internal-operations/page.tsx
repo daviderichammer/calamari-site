@@ -1,5 +1,6 @@
 import Link from "next/link";
-
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 export const metadata = {
   title: "Case Study: How We Run 17 Tentacles for Our Own Prop Trading Operation | Calamari Trading",
   description:
@@ -8,7 +9,9 @@ export const metadata = {
 
 export default function CaseStudyInternalOperations() {
   return (
-    <div className="min-h-screen bg-brand-darker pt-24 pb-16 sm:pt-32 sm:pb-24">
+    <>
+      <Navbar />
+      <div className="min-h-screen bg-brand-darker pt-24 pb-16 sm:pt-32 sm:pb-24">
       {/* Background glows */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-brand-blue/10 rounded-full blur-[120px]" />
@@ -542,5 +545,7 @@ export default function CaseStudyInternalOperations() {
         </div>
       </div>
     </div>
+    <Footer />
+    </>
   );
 }

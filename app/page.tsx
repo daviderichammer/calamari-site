@@ -5,6 +5,7 @@ import Solution from "@/components/Solution";
 import Features from "@/components/Features";
 import Story from "@/components/Story";
 import CompatibilityMatrix from "@/components/CompatibilityMatrix";
+import CaseStudiesProof from "@/components/CaseStudiesProof";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
@@ -24,6 +25,7 @@ export default function Home() {
       <Solution />
       <Features />
       <Story />
+      <CaseStudiesProof />
       <CompatibilityMatrix />
       <Pricing />
       <FAQ />
