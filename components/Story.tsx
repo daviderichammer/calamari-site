@@ -1,4 +1,6 @@
 "use client";
+import Link from "next/link";
+
 export default function Story() {
   return (
     <section id="story" className="relative py-16 sm:py-24 overflow-hidden">
@@ -160,6 +162,38 @@ export default function Story() {
           </blockquote>
           <div className="mt-4 sm:mt-6 text-brand-text text-sm">
             — The Calamari Team
+          </div>
+        </div>
+
+        {/* Case Study Teaser */}
+        <div className="mt-12 sm:mt-16 max-w-3xl mx-auto">
+          <div className="rounded-2xl border border-brand-purple/30 bg-brand-purple/5 p-6 sm:p-8">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
+              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-brand-purple/20 border border-brand-purple/30 flex items-center justify-center text-2xl">
+                📋
+              </div>
+              <div className="flex-1">
+                <div className="text-xs font-semibold text-brand-cyan uppercase tracking-wider mb-1">Case Study</div>
+                <div className="text-base sm:text-lg font-bold text-brand-heading mb-2">
+                  How We Run 17 Tentacles for Our Own Prop Trading Operation
+                </div>
+                <p className="text-xs sm:text-sm text-brand-text/70 leading-relaxed">
+                  A transparent look at our internal infrastructure: 17 Tentacles running simultaneously,
+                  100+ potential terminals, Watchdog auto-recovery, and $61k/year in hosting cost avoided.
+                </p>
+              </div>
+              <div className="flex-shrink-0">
+                <Link
+                  href="/case-studies/internal-operations"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold text-brand-cyan border border-brand-cyan/30 hover:border-brand-cyan/60 hover:text-white hover:bg-brand-cyan/10 transition-all duration-300 whitespace-nowrap"
+                >
+                  Read Case Study
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>

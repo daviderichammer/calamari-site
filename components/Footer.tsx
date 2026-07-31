@@ -39,6 +39,7 @@ export default function Footer() {
                 { label: "Compatibility", href: "/#compatibility" },
                 { label: "FAQ", href: "/#faq" },
                 { label: "Dashboard Login", href: "https://dashboard.calamaritrading.ai" },
+                { label: "Case Studies", href: "/case-studies/internal-operations" },
               ].map((link, i) => (
                 <li key={i}>
                   <a

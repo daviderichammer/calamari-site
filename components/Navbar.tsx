@@ -82,6 +82,12 @@ export default function Navbar() {
               >
                 FAQ
               </a>
+              <Link
+                href="/case-studies/internal-operations"
+                className="text-brand-text hover:text-brand-heading transition-colors text-sm font-medium"
+              >
+                Case Study
+              </Link>
               <a
                 href="https://dashboard.calamaritrading.ai"
                 target="_blank"
@@ -139,6 +145,7 @@ export default function Navbar() {
                 { label: "Pricing", href: "#pricing" },
                 { label: "Compatibility", href: "#compatibility" },
                 { label: "FAQ", href: "#faq" },
+                { label: "Case Study", href: "/case-studies/internal-operations" },
               ].map((item) => (
                 <a
                   key={item.label}
