@@ -99,7 +99,7 @@ export default function DashboardAnalytics() {
             </div>
           </div>
           <p className="text-xs sm:text-sm text-brand-text px-2">
-            No additional software to install. No extra EA on your chart. No third-party login. It&apos;s all built into your Calamari VM.
+            No additional software to install. No extra EA on your chart. No third-party login. It&apos;s all built into your Calamari Tentacle.
           </p>
         </div>
 
@@ -500,7 +500,7 @@ export default function DashboardAnalytics() {
             <p className="text-center text-brand-text text-xs sm:text-sm">
               <strong className="text-brand-heading">No additional software to install.</strong> No extra EA running on your chart.
               No third-party login. No monthly subscription for monitoring.
-              It&apos;s all built into your Calamari VM — accessible from any browser, anywhere.
+              It&apos;s all built into your Calamari Tentacle — accessible from any browser, anywhere.
             </p>
           </div>
         </div>

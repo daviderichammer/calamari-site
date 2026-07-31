@@ -55,7 +55,7 @@ export default function Problem() {
             {
               icon: "🔧",
               title: "Infrastructure is your problem",
-              desc: "You provision the VPS. You install the terminals. You configure the copier. You diagnose failures. You own every migration and recovery risk.",
+              desc: "You provision a raw server. You install the terminals. You configure the copier. You diagnose failures. You own every migration and recovery risk.",
             },
           ].map((pain, i) => (
             <div

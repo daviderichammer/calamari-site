@@ -30,7 +30,7 @@ export default function Terms() {
           <section>
             <h2 className="text-xl font-bold text-brand-heading mb-3">2. Service Description</h2>
             <p>
-              Calamari provides managed infrastructure and software configuration services for traders. Specifically, we provision and manage Windows Virtual Machines (VMs), install and configure MetaTrader 4 (MT4) and MetaTrader 5 (MT5) terminals, and set up trade copying software.
+              Calamari provides managed infrastructure and software configuration services for traders. Specifically, we provision and manage Tentacles, install and configure MetaTrader 4 (MT4) and MetaTrader 5 (MT5) terminals, and set up trade copying software.
               <br/><br/>
               <strong>Calamari is strictly an infrastructure provider. We do not provide trading signals, investment advice, or account management services.</strong> You are solely responsible for all trading decisions executed on your infrastructure.
             </p>
@@ -65,9 +65,9 @@ export default function Terms() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">6. VM Isolation</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">6. Tentacle Isolation</h2>
             <p>
-              Each customer receives an isolated Windows VM with allocated CPU, memory and storage. Customers do not share an operating-system environment or trading-terminal installation.
+              Each customer receives an isolated Tentacle with allocated CPU, memory and storage. Customers do not share an operating-system environment or trading-terminal installation.
             </p>
           </section>
 
@@ -88,14 +88,14 @@ export default function Terms() {
           <section>
             <h2 className="text-xl font-bold text-brand-heading mb-3">9. Data Ownership</h2>
             <p>
-              You own all trading execution data generated on your provisioned VM. We process this data solely to provide the Services, populate your dashboard, and monitor system health.
+              You own all trading execution data generated on your provisioned Tentacle. We process this data solely to provide the Services, populate your dashboard, and monitor system health.
             </p>
           </section>
 
           <section>
             <h2 className="text-xl font-bold text-brand-heading mb-3">10. Service Level</h2>
             <p>
-              We target a 99.9% uptime for our infrastructure services. However, this is a target, not a guarantee. We may perform scheduled maintenance with advance notice. We are not responsible for downtime caused by third-party cloud providers or factors outside our control. Calamari continuously monitors supported VM and terminal health signals while the service is operational, including nights and weekends.
+              We target a 99.9% uptime for our infrastructure services. However, this is a target, not a guarantee. We may perform scheduled maintenance with advance notice. We are not responsible for downtime caused by third-party cloud providers or factors outside our control. Calamari continuously monitors supported Tentacle and terminal health signals while the service is operational, including nights and weekends.
             </p>
           </section>
 

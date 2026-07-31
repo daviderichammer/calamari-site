@@ -10,7 +10,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Calamari Trading | Managed MT4/MT5 Infrastructure for Prop Traders",
   description:
-    "Managed MT4/MT5 infrastructure for prop firm traders. Dedicated Windows VM, up to 7 MT4/MT5 instances, FX Blue trade copying, 99.9% uptime target, and LiveView. Built by traders, for traders.",
+    "Managed MT4/MT5 infrastructure for prop firm traders. Dedicated Windows Tentacle, up to 7 MT4/MT5 instances, FX Blue trade copying, 99.9% uptime target, and LiveView. Built by traders, for traders.",
   keywords:
     "prop trading, MT4, MT5, prop firms, funded accounts, trade copying, VPS, forex, prop firm infrastructure",
   openGraph: {

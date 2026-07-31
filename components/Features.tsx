@@ -3,8 +3,8 @@ export default function Features() {
   const features = [
     {
       icon: "🖥️",
-      title: "Layer 1: Managed Windows VM",
-      desc: "Each customer receives an isolated Windows VM with allocated CPU, memory and storage. Customers do not share an operating-system environment or trading-terminal installation. Always-on, managed, and monitored. Up to 7 MT4/MT5 instances, any blend. We handle the infrastructure so you never have to think about it.",
+      title: "Layer 1: Your Tentacle (Managed Windows Appliance)",
+      desc: "Each customer receives an isolated Tentacle with allocated CPU, memory and storage. Customers do not share an operating-system environment or trading-terminal installation. Always-on, managed, and monitored. Up to 7 MT4/MT5 instances, any blend. We handle the infrastructure so you never have to think about it.",
       tags: ["Windows Server", "Always-on", "Fully managed"],
       color: "from-blue-500/20 to-transparent",
       borderColor: "hover:border-blue-500/40",
@@ -12,8 +12,8 @@ export default function Features() {
     {
       icon: "📡",
       title: "Layer 2: FX Blue Trade Copying",
-      desc: "FX Blue Personal Trade Copier runs as an EA directly inside MT4/MT5. Sender and receiver terminals communicate locally within the same VM, avoiding an external cloud-copying relay — sub-second local copy propagation. We configure and manage it for you.",
-      tags: ["FX Blue", "Sub-second local copy", "Intra-VM"],
+      desc: "FX Blue Personal Trade Copier runs as an EA directly inside MT4/MT5. Sender and receiver terminals communicate locally within the same Tentacle, avoiding an external cloud-copying relay — sub-second local copy propagation. We configure and manage it for you.",
+      tags: ["FX Blue", "Sub-second local copy", "Intra-Tentacle"],
       color: "from-cyan-500/20 to-transparent",
       borderColor: "hover:border-cyan-500/40",
     },
@@ -50,9 +50,17 @@ export default function Features() {
       borderColor: "hover:border-orange-500/40",
     },
     {
+      icon: "🔌",
+      title: "Tentacle API",
+      desc: "Every Tentacle exposes a RESTful API. Customers get programmatic access to query positions, account data, and trigger actions. Build your own integrations directly against your infrastructure.",
+      tags: ["REST API", "Programmatic access", "Build integrations"],
+      color: "from-pink-500/20 to-transparent",
+      borderColor: "hover:border-pink-500/40",
+    },
+    {
       icon: "🦑",
       title: "Tentacle Agent",
-      desc: "Our lightweight agent runs on your VM and connects it to the Calamari network. It enables remote management, trade data streaming, and health telemetry — all encrypted. The nervous system of the whole operation.",
+      desc: "Our lightweight agent runs on your Tentacle and connects it to the Calamari network. It enables remote management, trade data streaming, and health telemetry — all encrypted. The nervous system of the whole operation.",
       tags: ["Encrypted", "Lightweight", "Auto-reconnect"],
       color: "from-purple-500/20 to-transparent",
       borderColor: "hover:border-purple-500/40",
@@ -169,7 +177,7 @@ export default function Features() {
               </h3>
               <p className="text-brand-text text-sm leading-relaxed">
                 API-based and cloud-based copy services introduce latency, have outages, and when they fail, your trades do not copy.
-                FX Blue Personal Trade Copier runs as an EA directly inside MT4/MT5. Sender and receiver terminals communicate locally within the same VM,
+                FX Blue Personal Trade Copier runs as an EA directly inside MT4/MT5. Sender and receiver terminals communicate locally within the same Tentacle,
                 avoiding an external cloud-copying relay. <strong className="text-brand-heading">This is the only approach we trust with our own money.</strong>
               </p>
             </div>
@@ -185,7 +193,7 @@ export default function Features() {
           <p className="text-sm sm:text-base text-brand-text">
             Just like a real squid, Calamari extends its reach across your accounts simultaneously —
             monitoring, copying, recovering, and reporting — all from a single intelligent core.
-            Up to 7 MT4/MT5 instances per VM. You stay in control without being everywhere at once.
+            Up to 7 MT4/MT5 instances per Tentacle. You stay in control without being everywhere at once.
           </p>
         </div>
 
@@ -205,7 +213,7 @@ export default function Features() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
             {[
               "Centralized account telemetry",
-              "External VM and terminal health monitoring (outside-the-VM heartbeat)",
+              "External Tentacle and terminal health monitoring (outside-the-Tentacle heartbeat)",
               "Automatic terminal recovery",
               "Consolidated copy-event visibility",
               "Browser-based LiveView",

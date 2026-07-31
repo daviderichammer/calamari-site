@@ -23,7 +23,7 @@ export default function Story() {
 
           <div className="p-5 sm:p-6 rounded-2xl bg-brand-blue/5 border border-brand-blue/20 mb-8">
             <p className="text-sm sm:text-base text-brand-text leading-relaxed italic">
-              &ldquo;Your designated master account remains connected through a terminal on the Calamari VM. You may trade that account normally from your phone or computer. When the VM terminal detects the resulting trade, the local copier distributes the configured instructions to the receiving terminals.&rdquo;
+              &ldquo;Your designated master account remains connected through a terminal on your Tentacle. You may trade that account normally from your phone or computer. When the Tentacle terminal detects the resulting trade, the local copier distributes the configured instructions to the receiving terminals.&rdquo;
             </p>
           </div>
 
@@ -32,12 +32,12 @@ export default function Story() {
               {
                 icon: "📱",
                 title: "Trade from anywhere",
-                desc: "MetaTrader allows simultaneous logins. You can place trades into the master account from your phone, laptop, or any device. The terminal on the VM detects those trades and triggers the copy.",
+                desc: "MetaTrader allows simultaneous logins. You can place trades into the master account from your phone, laptop, or any device. The terminal on the Tentacle detects those trades and triggers the copy.",
               },
               {
                 icon: "🔢",
                 title: "Terminal limit includes master",
-                desc: "The master terminal counts toward the stated limit. Up to 7 total terminals per VM — including the master. For example: 1 master + 6 receivers.",
+                desc: "The master terminal counts toward the stated limit. Up to 7 total terminals per Tentacle — including the master. For example: 1 master + 6 receivers.",
               },
               {
                 icon: "🗂️",
@@ -57,7 +57,7 @@ export default function Story() {
               {
                 icon: "📊",
                 title: "Broker execution is independent",
-                desc: "Sub-second local copy propagation describes the intra-VM copy speed. Broker execution speed, fills and slippage remain dependent on the broker, market conditions and network connectivity.",
+                desc: "Sub-second local copy propagation describes the intra-Tentacle copy speed. Broker execution speed, fills and slippage remain dependent on the broker, market conditions and network connectivity.",
               },
             ].map((item, i) => (
               <div key={i} className="p-4 sm:p-5 rounded-xl bg-brand-card border border-brand-border">

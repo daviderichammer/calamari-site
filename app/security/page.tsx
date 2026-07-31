@@ -23,7 +23,7 @@ export default function Security() {
           <section>
             <h2 className="text-xl font-bold text-brand-heading mb-3">1. Isolated Infrastructure Architecture</h2>
             <p>
-              Each customer receives an isolated Windows VM with allocated CPU, memory and storage. Customers do not share an operating-system environment or trading-terminal installation. These virtual machines are deployed within secure virtual networks with strict firewall rules, exposing only the necessary ports for connectivity and remote management.
+              Each customer receives an isolated Tentacle with allocated CPU, memory and storage. Customers do not share an operating-system environment or trading-terminal installation. These Tentacles are deployed within secure virtual networks with strict firewall rules, exposing only the necessary ports for connectivity and remote management.
             </p>
           </section>
 
@@ -47,7 +47,7 @@ export default function Security() {
           <section>
             <h2 className="text-xl font-bold text-brand-heading mb-3">3. External Heartbeat Monitoring</h2>
             <p>
-              Calamari continuously monitors supported VM and terminal health signals while the service is operational, including nights and weekends. Monitoring systems operate <em>outside</em> your VM. External heartbeat monitoring means that if your VM crashes, freezes, or loses network connectivity, our systems detect the failure independently and can initiate automated recovery procedures, rather than relying on an internal agent that would fail alongside the VM.
+              Calamari continuously monitors supported Tentacle and terminal health signals while the service is operational, including nights and weekends. Monitoring systems operate <em>outside</em> your Tentacle. External heartbeat monitoring means that if your Tentacle crashes, freezes, or loses network connectivity, our systems detect the failure independently and can initiate automated recovery procedures, rather than relying on an internal agent that would fail alongside the Tentacle.
             </p>
           </section>
 
@@ -61,14 +61,14 @@ export default function Security() {
           <section>
             <h2 className="text-xl font-bold text-brand-heading mb-3">5. Support Access Model</h2>
             <p>
-              Staff do not have standing access to your VM. Temporary support access requires your explicit authorization before any session begins. All access events — including the timestamp, purpose, and personnel involved — are logged and continuously monitored. Calamari does not inspect, analyze, copy or reuse your trading strategy. Role-Based Access Control (RBAC) and Multi-Factor Authentication (MFA) are required for all administrative access.
+              Staff do not have standing access to your Tentacle. Temporary support access requires your explicit authorization before any session begins. All access events — including the timestamp, purpose, and personnel involved — are logged and continuously monitored. Calamari does not inspect, analyze, copy or reuse your trading strategy. Role-Based Access Control (RBAC) and Multi-Factor Authentication (MFA) are required for all administrative access.
             </p>
           </section>
 
           <section>
             <h2 className="text-xl font-bold text-brand-heading mb-3">6. Data Lifecycle and Deletion</h2>
             <p>
-              When you cancel your Calamari Trading service, your infrastructure is immediately queued for decommissioning. We retain your encrypted data and virtual machine snapshots for 30 days post-cancellation to allow for account recovery if you change your mind. After 30 days, or immediately upon your explicit request, all virtual machines are destroyed and all associated data, including credentials and trading history, are permanently wiped from our databases.
+              When you cancel your Calamari Trading service, your infrastructure is immediately queued for decommissioning. We retain your encrypted data and Tentacle snapshots for 30 days post-cancellation to allow for account recovery if you change your mind. After 30 days, or immediately upon your explicit request, all Tentacles are destroyed and all associated data, including credentials and trading history, are permanently wiped from our databases.
             </p>
           </section>
 

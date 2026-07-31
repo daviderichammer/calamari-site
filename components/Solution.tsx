@@ -49,7 +49,7 @@ export default function Solution() {
                   { label: "Total Balance", value: "$47,832", change: "+2.4%", up: true },
                   { label: "Open Positions", value: "12", change: "4 accounts", up: true },
                   { label: "Today&apos;s P&L", value: "+$1,247", change: "+2.67%", up: true },
-                  { label: "VM Uptime", value: "99.98%", change: "30 days", up: true },
+                  { label: "Tentacle Uptime", value: "99.98%", change: "30 days", up: true },
                 ].map((stat, i) => (
                   <div key={i} className="bg-[#0F1120] rounded-xl p-2 sm:p-4 border border-[#1E2035]">
                     <div className="text-xs text-brand-text mb-1">{stat.label}</div>
@@ -106,13 +106,13 @@ export default function Solution() {
           <h3 className="text-2xl sm:text-3xl font-black mb-8 text-brand-heading">Three steps. One platform.</h3>
           <div className="text-left space-y-4 sm:space-y-6">
             <div className="p-4 sm:p-6 rounded-xl bg-[#0F1120] border border-[#1E2035]">
-              <p className="text-sm sm:text-base text-brand-text"><strong className="text-brand-cyan">1. You trade on your device.</strong> Your phone, your laptop, MT4, MT5 — however you trade. Your designated master account remains connected through a terminal on the Calamari VM. You may trade that account normally from your phone or computer. When the VM terminal detects the resulting trade, the local copier distributes the configured instructions to the receiving terminals.</p>
+              <p className="text-sm sm:text-base text-brand-text"><strong className="text-brand-cyan">1. You trade on your device.</strong> Your phone, your laptop, MT4, MT5 — however you trade. Your designated master account remains connected through a terminal on your Tentacle. You may trade that account normally from your phone or computer. When the Tentacle terminal detects the resulting trade, the local copier distributes the configured instructions to the receiving terminals.</p>
             </div>
             <div className="p-4 sm:p-6 rounded-xl bg-[#0F1120] border border-[#1E2035]">
-              <p className="text-sm sm:text-base text-brand-text"><strong className="text-brand-cyan">2. Calamari copies those trades.</strong> To your MT4 and MT5 accounts — all running on your dedicated VM, all sized and filtered per-account. Sender and receiver terminals communicate locally within the same VM, avoiding an external cloud-copying relay. Broker execution speed, fills and slippage remain dependent on the broker, market conditions and network connectivity.</p>
+              <p className="text-sm sm:text-base text-brand-text"><strong className="text-brand-cyan">2. Calamari copies those trades.</strong> To your MT4 and MT5 accounts — all running on your dedicated Tentacle, all sized and filtered per-account. Sender and receiver terminals communicate locally within the same Tentacle, avoiding an external cloud-copying relay. Broker execution speed, fills and slippage remain dependent on the broker, market conditions and network connectivity.</p>
             </div>
             <div className="p-4 sm:p-6 rounded-xl bg-[#0F1120] border border-[#1E2035]">
-              <p className="text-sm sm:text-base text-brand-text"><strong className="text-brand-cyan">3. You focus on entries and exits.</strong> Calamari handles distribution, sizing, filtering, monitoring, and recovery. Calamari continuously monitors supported VM and terminal health signals while the service is operational, including nights and weekends.</p>
+              <p className="text-sm sm:text-base text-brand-text"><strong className="text-brand-cyan">3. You focus on entries and exits.</strong> Calamari handles distribution, sizing, filtering, monitoring, and recovery. Calamari continuously monitors supported Tentacle and terminal health signals while the service is operational, including nights and weekends.</p>
             </div>
           </div>
         </div>
@@ -126,7 +126,7 @@ export default function Solution() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
             <div className="p-4 rounded-xl border border-brand-border bg-brand-card flex items-start gap-3">
               <span className="text-green-400">✓</span>
-              <p className="text-sm text-brand-text">Calamari does not inspect, analyze, copy or reuse your trading strategy. Staff do not have standing access to your VM. Temporary support access requires authorization and is logged.</p>
+              <p className="text-sm text-brand-text">Calamari does not inspect, analyze, copy or reuse your trading strategy. Staff do not have standing access to your Tentacle. Temporary support access requires authorization and is logged.</p>
             </div>
             <div className="p-4 rounded-xl border border-brand-border bg-brand-card flex items-start gap-3">
               <span className="text-green-400">✓</span>
@@ -138,7 +138,7 @@ export default function Solution() {
             </div>
             <div className="p-4 rounded-xl border border-brand-border bg-brand-card flex items-start gap-3">
               <span className="text-green-400">✓</span>
-              <p className="text-sm text-brand-text">Each customer receives an isolated Windows VM with allocated CPU, memory and storage. Customers do not share an operating-system environment or trading-terminal installation.</p>
+              <p className="text-sm text-brand-text">Each customer receives an isolated Tentacle with allocated CPU, memory and storage. Customers do not share an operating-system environment or trading-terminal installation.</p>
             </div>
             <div className="p-4 rounded-xl border border-brand-border bg-brand-card flex items-start gap-3">
               <span className="text-green-400">✓</span>

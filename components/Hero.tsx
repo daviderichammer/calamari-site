@@ -41,13 +41,13 @@ export default function Hero() {
 
         {/* Implementation detail explanation */}
         <p className="text-sm sm:text-base text-brand-text/70 max-w-2xl mx-auto mb-4 sm:mb-6 animate-fade-in-up px-2" style={{ animationDelay: "0.15s" }}>
-          Under the hood: a dedicated Windows VM hosts your master terminal and all receiver accounts. FX Blue Personal Trade Copier
-          runs locally on that VM — sender and receiver terminals communicate locally within the same VM, avoiding an external cloud-copying relay.
+          Under the hood: your Tentacle hosts your master terminal and all receiver accounts. FX Blue Personal Trade Copier
+          runs locally on that Tentacle — sender and receiver terminals communicate locally within the same Tentacle, avoiding an external cloud-copying relay.
           Sub-second local copy propagation, with per-account lot sizing, symbol filters, and risk limits applied automatically.
         </p>
 
         <p className="text-sm sm:text-base text-brand-text/70 max-w-2xl mx-auto mb-8 sm:mb-10 animate-fade-in-up px-2" style={{ animationDelay: "0.2s" }}>
-          You trade from your phone or laptop. The master account runs on the VM. Calamari does the rest.
+          You trade from your phone or laptop. The master account runs on the Tentacle. Calamari does the rest.
         </p>
 
         {/* Professional distinction */}
@@ -105,11 +105,11 @@ export default function Hero() {
                 <div className="hidden sm:block text-brand-blue/60">▶</div>
               </div>
 
-              {/* Calamari VM — contains everything */}
+              {/* Your Tentacle — contains everything */}
               <div className="flex flex-col items-center gap-3 flex-shrink-0">
                 <div className="rounded-2xl border-2 border-brand-purple/50 bg-brand-purple/5 p-4 sm:p-5 relative">
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-brand-purple/20 border border-brand-purple/40 text-xs font-bold text-purple-300 whitespace-nowrap">
-                    Calamari VM
+                    Your Tentacle
                   </div>
                   <div className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-green-400 border-2 border-brand-darker animate-pulse" />
                   <div className="flex flex-col gap-2 mt-2">
@@ -144,7 +144,7 @@ export default function Hero() {
                     <div className="text-center text-xs text-brand-text/40 font-mono">+ up to 7 total including master</div>
                   </div>
                 </div>
-                <div className="text-xs text-brand-cyan/80 font-semibold text-center">Always-on VM — everything runs here</div>
+                <div className="text-xs text-brand-cyan/80 font-semibold text-center">Your Tentacle — everything runs here</div>
               </div>
             </div>
 
@@ -183,8 +183,8 @@ export default function Hero() {
           <div className="grid grid-cols-2 gap-3 sm:gap-6 text-left w-full max-w-sm sm:max-w-none sm:w-auto">
             {[
               { value: "99.9%", label: "Uptime Target", sub: "Watchdog auto-recovery" },
-              { value: "7", label: "MT4/MT5 Instances", sub: "Per VM, including master" },
-              { value: "<1s", label: "Local Copy Speed", sub: "Sub-second intra-VM propagation" },
+              { value: "7", label: "MT4/MT5 Instances", sub: "Per Tentacle, including master" },
+              { value: "<1s", label: "Local Copy Speed", sub: "Sub-second intra-Tentacle propagation" },
               { value: "MT4 & MT5", label: "Terminal Compatible", sub: "Most standard MT4 and MT5 broker terminals" },
             ].map((stat, i) => (
               <div

@@ -34,7 +34,7 @@ export default function Privacy() {
               <ul>
                 <li><strong>Account Information:</strong> Name, email address, and payment information (processed securely via Stripe).</li>
                 <li><strong>Trading-Platform Credentials:</strong> Broker or prop firm account numbers, passwords, and server details. These are stored securely as described in Section 3.</li>
-                <li><strong>Trade Execution Data:</strong> Orders, positions, and trading history generated on your provisioned Virtual Machine (VM).</li>
+                <li><strong>Trade Execution Data:</strong> Orders, positions, and trading history generated on your provisioned Tentacle (Tentacle).</li>
                 <li><strong>Terminal Health Metrics:</strong> CPU usage, memory consumption, connection status, and application crash logs.</li>
                 <li><strong>Dashboard Usage Data:</strong> How you interact with the Calamari dashboard.</li>
                 <li><strong>LiveView Session Data:</strong> LiveView streams your terminal interface directly to your browser. We do <strong>not</strong> retain or store these screenshots; they are streamed only.</li>
@@ -61,16 +61,16 @@ export default function Privacy() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-brand-heading mb-3">4. VM Isolation</h2>
+            <h2 className="text-xl font-bold text-brand-heading mb-3">4. Tentacle Isolation</h2>
             <p>
-              Each customer receives an isolated Windows VM with allocated CPU, memory and storage. Customers do not share an operating-system environment or trading-terminal installation. Your VM is deployed within a secure virtual network with strict firewall rules.
+              Each customer receives an isolated Tentacle with allocated CPU, memory and storage. Customers do not share an operating-system environment or trading-terminal installation. Your Tentacle is deployed within a secure virtual network with strict firewall rules.
             </p>
           </section>
 
           <section>
             <h2 className="text-xl font-bold text-brand-heading mb-3">5. Support Access Model</h2>
             <p>
-              Staff do not have standing access to your VM. Temporary support access requires your explicit authorization before any session begins. All access events — including the timestamp, purpose, and personnel involved — are logged. Calamari does not inspect, analyze, copy or reuse your trading strategy.
+              Staff do not have standing access to your Tentacle. Temporary support access requires your explicit authorization before any session begins. All access events — including the timestamp, purpose, and personnel involved — are logged. Calamari does not inspect, analyze, copy or reuse your trading strategy.
             </p>
           </section>
 
@@ -80,8 +80,8 @@ export default function Privacy() {
               We retain your data only as long as your service is active. Upon cancellation:
               <ul>
                 <li>Your infrastructure is queued for decommissioning.</li>
-                <li>We retain your encrypted data and VM snapshots for 30 days post-cancellation to allow for account recovery.</li>
-                <li>After 30 days, all VMs are destroyed, and all associated data (including credentials and trading history) are permanently wiped.</li>
+                <li>We retain your encrypted data and Tentacle snapshots for 30 days post-cancellation to allow for account recovery.</li>
+                <li>After 30 days, all Tentacles are destroyed, and all associated data (including credentials and trading history) are permanently wiped.</li>
               </ul>
               You may request immediate deletion of all data upon cancellation by contacting support.
             </p>
@@ -92,7 +92,7 @@ export default function Privacy() {
             <p>
               We use trusted third-party subprocessors to operate our Services:
               <ul>
-                <li><strong>Cloud Infrastructure Providers:</strong> For hosting your VMs.</li>
+                <li><strong>Cloud Infrastructure Providers:</strong> For hosting your Tentacles.</li>
                 <li><strong>Stripe:</strong> For payment processing.</li>
                 <li><strong>Monitoring Tools:</strong> For tracking system health metrics (CPU, memory, uptime).</li>
               </ul>
@@ -110,14 +110,14 @@ export default function Privacy() {
           <section>
             <h2 className="text-xl font-bold text-brand-heading mb-3">9. Security Measures and Backups</h2>
             <p>
-              We implement robust security measures, including encryption at rest and in transit, Role-Based Access Control (RBAC), Multi-Factor Authentication (MFA) for administrative access, and continuous monitoring. Your VM state is periodically backed up to allow for rapid recovery in the event of hardware failure. These backups are encrypted and subject to the same strict access controls and retention policies as live data.
+              We implement robust security measures, including encryption at rest and in transit, Role-Based Access Control (RBAC), Multi-Factor Authentication (MFA) for administrative access, and continuous monitoring. Your Tentacle state is periodically backed up to allow for rapid recovery in the event of hardware failure. These backups are encrypted and subject to the same strict access controls and retention policies as live data.
             </p>
           </section>
 
           <section>
             <h2 className="text-xl font-bold text-brand-heading mb-3">10. Monitoring</h2>
             <p>
-              Calamari continuously monitors supported VM and terminal health signals while the service is operational, including nights and weekends. Monitoring systems operate outside your VM, using external heartbeat checks so that VM-level failures are detected independently.
+              Calamari continuously monitors supported Tentacle and terminal health signals while the service is operational, including nights and weekends. Monitoring systems operate outside your Tentacle, using external heartbeat checks so that Tentacle-level failures are detected independently.
             </p>
           </section>
 

@@ -37,14 +37,14 @@ export default function Pricing() {
               </div>
               {/* Plan name */}
               <div className="mb-2 mt-2">
-                <h3 className="text-xl sm:text-2xl font-black text-brand-heading">Calamari VM</h3>
-                <p className="text-sm text-brand-text mt-1">One dedicated Windows VM. Up to 7 MT4/MT5 instances. Fully managed.</p>
+                <h3 className="text-xl sm:text-2xl font-black text-brand-heading">Your Tentacle</h3>
+                <p className="text-sm text-brand-text mt-1">One dedicated Tentacle. Up to 7 MT4/MT5 instances. Fully managed.</p>
               </div>
               {/* Price */}
               <div className="mb-6 sm:mb-8 mt-4 sm:mt-6">
                 <div className="flex items-baseline gap-1">
                   <span className="text-4xl sm:text-5xl font-black gradient-text">$199</span>
-                  <span className="text-brand-text text-sm">/month per VM</span>
+                  <span className="text-brand-text text-sm">/month per Tentacle</span>
                 </div>
                 <div className="text-xs text-brand-text mt-1">Billed monthly. Cancel anytime.</div>
               </div>
@@ -65,7 +65,7 @@ export default function Pricing() {
               {/* Features */}
               <div className="space-y-3">
                 {[
-                  "Dedicated Windows VM (always-on, managed, monitored)",
+                  "Dedicated Tentacle (always-on, managed, monitored)",
                   "Up to 7 MT4/MT5 instances — any combination",
                   "FX Blue trade copying (configured and managed by us)",
                   "Real-time dashboard with full analytics",
@@ -101,7 +101,7 @@ export default function Pricing() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                   </svg>
                   <span className="text-brand-text">
-                    <strong className="text-brand-heading">Need more capacity?</strong> Add another VM at $199/month. Each VM supports up to 7 instances.
+                    <strong className="text-brand-heading">Need more capacity?</strong> Add another Tentacle at $199/month. Each Tentacle supports up to 7 instances.
                   </span>
                 </div>
               </div>
@@ -127,7 +127,7 @@ export default function Pricing() {
                 </thead>
                 <tbody className="divide-y divide-brand-border">
                   {[
-                    ["Server provisioning", "You select and provision the server", "VM provisioned and managed"],
+                    ["Server provisioning", "You select and provision the server", "Tentacle provisioned and managed"],
                     ["Terminal installation", "You install and update terminals", "Installation handled"],
                     ["Copier configuration", "You configure copier mappings", "Configuration handled and tested"],
                     ["Health monitoring", "You monitor terminal health", "Automated monitoring and alerting"],
@@ -198,8 +198,8 @@ export default function Pricing() {
                 {
                   step: "02",
                   icon: "🔍",
-                  title: "We verify compatibility and provision your VM",
-                  desc: "We confirm your accounts are compatible with MT4/MT5 and provision your dedicated Windows VM. Each customer receives an isolated Windows VM with allocated CPU, memory and storage. Customers do not share an operating-system environment or trading-terminal installation.",
+                  title: "We verify compatibility and provision your Tentacle",
+                  desc: "We confirm your accounts are compatible with MT4/MT5 and provision your dedicated Tentacle. Each customer receives an isolated Tentacle with allocated CPU, memory and storage. Customers do not share an operating-system environment or trading-terminal installation.",
                   color: "border-brand-cyan/40 bg-brand-cyan/5",
                   dot: "bg-brand-cyan",
                 },
@@ -215,7 +215,7 @@ export default function Pricing() {
                   step: "04",
                   icon: "🗺️",
                   title: "Master and receivers mapped, risk settings reviewed",
-                  desc: "We configure FX Blue: your master account is set as sender, each prop account as a receiver with its own lot-sizing rules, symbol filters, and risk limits. Sender and receiver terminals communicate locally within the same VM.",
+                  desc: "We configure FX Blue: your master account is set as sender, each prop account as a receiver with its own lot-sizing rules, symbol filters, and risk limits. Sender and receiver terminals communicate locally within the same Tentacle.",
                   color: "border-yellow-500/40 bg-yellow-500/5",
                   dot: "bg-yellow-400",
                 },
@@ -231,7 +231,7 @@ export default function Pricing() {
                   step: "06",
                   icon: "🚀",
                   title: "You are live — monitor everything from one dashboard",
-                  desc: "Your setup is active. Every account, every position, every copy event — visible in real time from your Calamari dashboard. Calamari continuously monitors supported VM and terminal health signals while the service is operational, including nights and weekends.",
+                  desc: "Your setup is active. Every account, every position, every copy event — visible in real time from your Calamari dashboard. Calamari continuously monitors supported Tentacle and terminal health signals while the service is operational, including nights and weekends.",
                   color: "border-brand-purple/40 bg-brand-purple/5",
                   dot: "bg-brand-purple",
                 },

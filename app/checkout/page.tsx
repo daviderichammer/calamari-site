@@ -6,10 +6,10 @@ import Link from "next/link";
 
 const PLAN = {
   id: "calamari-vm",
-  name: "Calamari VM",
+  name: "Calamari Tentacle",
   price: 199,
   features: [
-    "Dedicated Windows VM (always-on, managed, monitored)",
+    "Dedicated Windows Tentacle (always-on, managed, monitored)",
     "Up to 7 MT4/MT5 instances — any combination",
     "FX Blue trade copying (configured and managed by us)",
     "Real-time dashboard with full analytics",
@@ -111,7 +111,7 @@ function CheckoutForm() {
             Welcome to Calamari!
           </h1>
           <p className="text-brand-text mb-6">
-            Your account has been created. Our team will contact you to begin onboarding and VM provisioning.
+            Your account has been created. Our team will contact you to begin onboarding and Tentacle provisioning.
             Check your email at <strong className="text-brand-cyan">{result.email}</strong> for your login credentials.
           </p>
           <div className="bg-brand-card border border-green-500/30 rounded-xl p-6 mb-8 text-left">

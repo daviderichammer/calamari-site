@@ -8,23 +8,23 @@ const faqs = [
   },
   {
     q: "Will this get my prop firm account banned?",
-    a: "No. Calamari runs on a dedicated VM — your own isolated Windows environment. From the prop firm's perspective, it looks exactly like a normal trader running MT4/MT5 on a VPS. We do not inject into the platform or modify its behavior in any way that would violate terms of service. Thousands of traders use VPS hosting for their prop accounts — that is completely standard practice. Firm, program and account eligibility is reviewed during onboarding.",
+    a: "No. Calamari runs on a dedicated Tentacle — your own isolated Windows environment. From the prop firm's perspective, it looks exactly like a normal trader running MT4/MT5 on a VPS. We do not inject into the platform or modify its behavior in any way that would violate terms of service. Thousands of traders use VPS hosting for their prop accounts — that is completely standard practice. Firm, program and account eligibility is reviewed during onboarding.",
   },
   {
     q: "Can Calamari see my strategy or copy my trades to other accounts?",
-    a: "Calamari does not inspect, analyze, copy or reuse your trading strategy. Staff do not have standing access to your VM. Temporary support access requires authorization and is logged. We do not copy your trades to any other account. We do not share your trading data with anyone for advertising, signal generation or proprietary trading purposes.",
+    a: "Calamari does not inspect, analyze, copy or reuse your trading strategy. Staff do not have standing access to your Tentacle. Temporary support access requires authorization and is logged. We do not copy your trades to any other account. We do not share your trading data with anyone for advertising, signal generation or proprietary trading purposes.",
   },
   {
     q: "How does the trade copying actually work?",
-    a: "We use FX Blue Personal Trade Copier — a proven EA that runs directly inside MT4/MT5. Sender and receiver terminals communicate locally within the same VM, avoiding an external cloud-copying relay. Sub-second local copy propagation. Broker execution speed, fills and slippage remain dependent on the broker, market conditions and network connectivity. We configure and manage FX Blue for you — you do not need to touch it.",
+    a: "We use FX Blue Personal Trade Copier — a proven EA that runs directly inside MT4/MT5. Sender and receiver terminals communicate locally within the same Tentacle, avoiding an external cloud-copying relay. Sub-second local copy propagation. Broker execution speed, fills and slippage remain dependent on the broker, market conditions and network connectivity. We configure and manage FX Blue for you — you do not need to touch it.",
   },
   {
     q: "What prop firms are supported?",
     a: "Calamari is technically compatible with standard MT4 and MT5 terminals. Firm, program and account eligibility is reviewed during onboarding. FTMO, The5ers, and FundedNext have been verified. If your firm runs MT4 or MT5, compatibility will be confirmed during your onboarding review.",
   },
   {
-    q: "What happens if my VM crashes?",
-    a: "Calamari continuously monitors supported VM and terminal health signals while the service is operational, including nights and weekends. If MT4/MT5 crashes, the Watchdog attempts to restart it automatically. If a VM health issue is detected, you receive an alert. We monitor it too — we run our own accounts on the same infrastructure.",
+    q: "What happens if my Tentacle crashes?",
+    a: "Calamari continuously monitors supported Tentacle and terminal health signals while the service is operational, including nights and weekends. If MT4/MT5 crashes, the Watchdog attempts to restart it automatically. If a Tentacle health issue is detected, you receive an alert. We monitor it too — we run our own accounts on the same infrastructure.",
   },
   {
     q: "Can I use my existing MT4/MT5 accounts?",
@@ -32,11 +32,11 @@ const faqs = [
   },
   {
     q: "How many MT4/MT5 instances can I run?",
-    a: "Up to 7 MT4/MT5 instances per VM — any combination of MT4 and MT5, including the master terminal. Need more? Add another VM at $199/month. Each VM is fully independent with its own dedicated Windows environment.",
+    a: "Up to 7 MT4/MT5 instances per Tentacle — any combination of MT4 and MT5, including the master terminal. Need more? Add another Tentacle at $199/month. Each Tentacle is fully independent with its own dedicated Windows environment.",
   },
   {
-    q: "How quickly will my VM be ready after I sign up?",
-    a: "After signup we verify your account compatibility, provision your dedicated VM, and walk through the full setup with you. The onboarding process typically completes within 24 hours. You will receive your dashboard login and connection details once your VM is live.",
+    q: "How quickly will my Tentacle be ready after I sign up?",
+    a: "After signup we verify your account compatibility, provision your dedicated Tentacle, and walk through the full setup with you. The onboarding process typically completes within 24 hours. You will receive your dashboard login and connection details once your Tentacle is live.",
   },
   {
     q: "Can I cancel anytime?",
@@ -45,6 +45,10 @@ const faqs = [
   {
     q: "Do I need any technical knowledge?",
     a: "Not really. If you can log into MT4/MT5 and enter a server, account number, and password, you can use Calamari. We handle all the infrastructure setup, including FX Blue configuration. The dashboard is designed to be intuitive for traders, not sysadmins.",
+  },
+  {
+    q: "Can I access my Tentacle programmatically?",
+    a: "Yes, every Tentacle exposes a RESTful API for querying positions, account data, and triggering actions.",
   },
   {
     q: "What is LiveView?",
