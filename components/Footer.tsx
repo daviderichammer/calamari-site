@@ -65,6 +65,7 @@ export default function Footer() {
                 { label: "Terms of Service", href: "/terms" },
                 { label: "Privacy Policy", href: "/privacy" },
                 { label: "Security", href: "/security" },
+                { label: "System Status", href: "/status" },
               ].map((link, i) => (
                 <li key={i}>
                   <a
