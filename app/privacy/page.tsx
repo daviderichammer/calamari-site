@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Privacy Policy | Calamari Trading",
@@ -8,7 +10,9 @@ export const metadata = {
 
 export default function Privacy() {
   return (
-    <div className="min-h-screen pt-24 pb-16 sm:pt-32 sm:pb-24">
+    <>
+      <Navbar />
+      <div className="min-h-screen pt-24 pb-16 sm:pt-32 sm:pb-24">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12 sm:mb-16">
@@ -398,5 +402,7 @@ export default function Privacy() {
         </div>
       </div>
     </div>
+      <Footer />
+    </>
   );
 }
