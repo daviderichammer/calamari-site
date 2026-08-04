@@ -50,7 +50,7 @@ export default function CaseStudiesProof() {
                     How We Run 17 Tentacles for Our Own Prop Trading Operation
                   </h3>
                   <p className="text-sm sm:text-base text-brand-text leading-relaxed mb-6">
-                    Real operational data from our 17-Tentacle Contabo Windows VM fleet — covering
+                    Real operational data from our 17-Tentacle enterprise-grade dedicated Windows Server fleet — covering
                     scale, Watchdog auto-recovery, FX Blue intra-Tentacle copying, LiveView remote
                     access, and cost efficiency.
                   </p>
